@@ -1,6 +1,6 @@
-import { normalizeHueDegrees, oklchToHex, parseHexToOklch } from './internal-culori';
 import type { ColorHarmony, GeneratedHarmonyRoleColors } from './harmony';
 import type { HexColor } from './hex';
+import { normalizeHueDegrees, oklchToHex, parseHexToOklch } from './internal-culori';
 import { type ColorSwatch, type ColorSwatchDiagnostics, generateColorSwatch } from './swatches';
 
 export const MIN_HUEFUL_CHROMA = 0.015;
@@ -16,7 +16,10 @@ export interface GeneratedNeutralMetadata {
   diagnostics: ColorSwatchDiagnostics;
 }
 
-function pickTintSourceHex(roleColors: GeneratedHarmonyRoleColors, harmony: ColorHarmony): HexColor {
+function pickTintSourceHex(
+  roleColors: GeneratedHarmonyRoleColors,
+  harmony: ColorHarmony,
+): HexColor {
   const byMapping: Partial<Record<ColorHarmony, HexColor | undefined>> = {
     monochromatic: roleColors.primary.hex,
     complementary: roleColors.secondary?.hex,

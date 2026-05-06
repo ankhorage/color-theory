@@ -1,7 +1,7 @@
-import { generateHarmonyRoleColors, type GeneratedHarmonyRoleColors } from './harmony';
+import { type GeneratedHarmonyRoleColors, generateHarmonyRoleColors } from './harmony';
 import type { HexColor } from './hex';
 import { parseHexColorOrThrow } from './hex';
-import { generateNeutralSwatch, type GeneratedNeutralMetadata } from './neutral';
+import { type GeneratedNeutralMetadata, generateNeutralSwatch } from './neutral';
 import { type ColorSwatch, generateColorSwatch } from './swatches';
 
 export interface ThemeModeColorInput {

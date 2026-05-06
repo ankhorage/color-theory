@@ -1,5 +1,5 @@
-import { normalizeHueDegrees, oklchToHex, parseHexToOklch } from './internal-culori';
 import type { HexColor } from './hex';
+import { normalizeHueDegrees, oklchToHex, parseHexToOklch } from './internal-culori';
 
 export const COLOR_HARMONIES = [
   'monochromatic',

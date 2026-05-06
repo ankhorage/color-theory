@@ -1,6 +1,6 @@
-import { contrastRatio } from './internal-culori';
 import type { HexColor } from './hex';
 import { parseHexColorOrThrow } from './hex';
+import { contrastRatio } from './internal-culori';
 
 export interface ReadableForegroundResult {
   foreground: HexColor;
