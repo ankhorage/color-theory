@@ -1,0 +1,60 @@
+import type { GeneratedColorRole } from './harmony';
+import type { ColorSwatchStep } from './swatches';
+
+export type ThemeColorMode = 'light' | 'dark';
+
+export type SemanticColorToken =
+  | 'background'
+  | 'surface'
+  | 'surfaceRaised'
+  | 'border'
+  | 'divider'
+  | 'text'
+  | 'textMuted'
+  | 'disabledBg'
+  | 'disabledText'
+  | 'brand'
+  | 'brandEmphasis'
+  | 'action'
+  | 'actionEmphasis';
+
+export type SemanticColorRole = 'neutral' | GeneratedColorRole;
+
+export interface SemanticColorReference {
+  role: SemanticColorRole;
+  step: ColorSwatchStep;
+}
+
+export type SemanticColorReferenceMap = Record<SemanticColorToken, SemanticColorReference>;
+
+export const LIGHT_SEMANTIC_COLOR_REFERENCES: SemanticColorReferenceMap = {
+  background: { role: 'neutral', step: 50 },
+  surface: { role: 'neutral', step: 100 },
+  surfaceRaised: { role: 'neutral', step: 50 },
+  border: { role: 'neutral', step: 200 },
+  divider: { role: 'neutral', step: 200 },
+  text: { role: 'neutral', step: 900 },
+  textMuted: { role: 'neutral', step: 700 },
+  disabledBg: { role: 'neutral', step: 200 },
+  disabledText: { role: 'neutral', step: 500 },
+  brand: { role: 'primary', step: 600 },
+  brandEmphasis: { role: 'primary', step: 700 },
+  action: { role: 'primary', step: 600 },
+  actionEmphasis: { role: 'primary', step: 700 },
+};
+
+export const DARK_SEMANTIC_COLOR_REFERENCES: SemanticColorReferenceMap = {
+  background: { role: 'neutral', step: 950 },
+  surface: { role: 'neutral', step: 900 },
+  surfaceRaised: { role: 'neutral', step: 900 },
+  border: { role: 'neutral', step: 800 },
+  divider: { role: 'neutral', step: 800 },
+  text: { role: 'neutral', step: 50 },
+  textMuted: { role: 'neutral', step: 200 },
+  disabledBg: { role: 'neutral', step: 800 },
+  disabledText: { role: 'neutral', step: 500 },
+  brand: { role: 'primary', step: 400 },
+  brandEmphasis: { role: 'primary', step: 300 },
+  action: { role: 'primary', step: 400 },
+  actionEmphasis: { role: 'primary', step: 300 },
+};
