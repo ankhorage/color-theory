@@ -1,10 +1,4 @@
-import {
-  converter,
-  differenceEuclidean,
-  formatHex,
-  toGamut,
-  wcagContrast,
-} from 'culori';
+import { converter, differenceEuclidean, formatHex, toGamut, wcagContrast } from 'culori';
 
 import type { HexColor } from './hex';
 import { parseHexColorOrThrow } from './hex';
