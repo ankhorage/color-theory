@@ -19,9 +19,6 @@ export function parseHexColorOrThrow(value: string): HexColor {
   return parsed;
 }
 
-export const normalizeHexColor = parseHexColor;
-export const normalizeHexColorOrThrow = parseHexColorOrThrow;
-
 export function assertHexColor(value: string): asserts value is HexColor {
   if (!isHexColor(value)) {
     throw new Error(`Invalid hex color (expected #RRGGBB or #rrggbb): ${JSON.stringify(value)}`);
