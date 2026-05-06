@@ -16,6 +16,9 @@ export interface GeneratedNeutralMetadata {
   diagnostics: ColorSwatchDiagnostics;
 }
 
+/***
+  Pick the harmony color that should tint the generated neutral swatch.
+*/
 function pickTintSourceHex(
   roleColors: GeneratedHarmonyRoleColors,
   harmony: ColorHarmony,
@@ -37,11 +40,17 @@ function pickTintSourceHex(
   );
 }
 
+/***
+  Clamp a number to a finite minimum and maximum range.
+*/
 function clampNumber(value: number, min: number, max: number): number {
   if (!Number.isFinite(value)) return min;
   return Math.min(max, Math.max(min, value));
 }
 
+/***
+  Generate a softly tinted neutral swatch from generated harmony role colors.
+*/
 export function generateNeutralSwatch(roleColors: GeneratedHarmonyRoleColors): NeutralSwatchResult {
   const tintSourceHex = pickTintSourceHex(roleColors, roleColors.harmony);
   const tintSource = parseHexToOklch(tintSourceHex);

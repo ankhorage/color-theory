@@ -28,10 +28,16 @@ export interface GeneratedThemeModeColors {
   neutral: GeneratedNeutralMetadata;
 }
 
+/***
+  Parse the primary color configured for a theme mode.
+*/
 export function getThemeModePrimaryHex(mode: ThemeModeColorInput): HexColor {
   return parseHexColorOrThrow(mode.primaryColor);
 }
 
+/***
+  Generate harmony role colors, swatches, and neutral metadata for a theme mode.
+*/
 export function generateThemeModeColors(mode: ThemeModeColorInput): GeneratedThemeModeColors {
   const primaryHex = getThemeModePrimaryHex(mode);
   const harmonyRoleColors = generateHarmonyRoleColors(primaryHex, mode.harmony);
@@ -66,6 +72,9 @@ export function generateThemeModeColors(mode: ThemeModeColorInput): GeneratedThe
   };
 }
 
+/***
+  Generate light and dark theme color outputs from theme color input.
+*/
 export function generateThemeColors(theme: ThemeColorInput): {
   light: GeneratedThemeModeColors;
   dark: GeneratedThemeModeColors;

@@ -48,6 +48,9 @@ const OFFSETS_BY_HARMONY: Record<ColorHarmony, readonly number[]> = {
   tetradic: [0, 90, 180, 270],
 };
 
+/***
+  Generate role-based harmony colors from a primary color and harmony strategy.
+*/
 export function generateHarmonyRoleColors(
   primaryColor: HexColor,
   harmony: ColorHarmony,
