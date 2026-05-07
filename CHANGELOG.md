@@ -1,5 +1,11 @@
 # @ankhorage/color-theory
 
+## 0.0.3
+
+### Patch Changes
+
+- b769031: Point exports to dist/
+
 ## 0.0.2
 
 ### Patch Changes
