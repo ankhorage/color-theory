@@ -29,7 +29,6 @@
   },
   "files": [
     "dist",
-    "src",
     "package.json",
     "README.md",
     "CHANGELOG.md",
@@ -37,8 +36,8 @@
   ],
   "exports": {
     ".": {
-      "react-native": "./src/index.ts",
-      "browser": "./src/index.ts",
+      "react-native": "./dist/index.js",
+      "browser": "./dist/index.js",
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
