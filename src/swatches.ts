@@ -48,11 +48,17 @@ const BASELINE_LIGHTNESS_BY_STEP: Record<ColorSwatchStep, number> = {
 const MIN_USABLE_ADJACENT_DELTA = 0.012;
 const MIN_USABLE_LIGHTNESS_RANGE = 0.35;
 
+/***
+  Clamp a number into the normalized zero-to-one range.
+*/
 function clamp01(value: number): number {
   if (!Number.isFinite(value)) return 0;
   return Math.min(1, Math.max(0, value));
 }
 
+/***
+  Return the chroma multiplier used for a swatch step.
+*/
 function chromaMultiplierForStep(step: ColorSwatchStep): number {
   if (step <= 200) return 0.55;
   if (step <= 400) return 0.75;
@@ -61,6 +67,9 @@ function chromaMultiplierForStep(step: ColorSwatchStep): number {
   return 0.8;
 }
 
+/***
+  Generate a full color swatch and diagnostics from a base color.
+*/
 export function generateColorSwatch(baseColor: HexColor): {
   swatch: ColorSwatch;
   diagnostics: ColorSwatchDiagnostics;
