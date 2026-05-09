@@ -4,6 +4,9 @@ import {
   COLOR_HARMONIES,
   COLOR_SWATCH_BASE_STEP,
   COLOR_SWATCH_STEPS,
+  createDefaultSemanticStatusSwatches,
+  createSemanticStatusSwatches,
+  DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS,
   generateColorSwatch,
   generateHarmonyRoleColors,
   generateNeutralSwatch,
@@ -87,5 +90,28 @@ describe('color theory', () => {
 
     expect(['#000000', '#FFFFFF']).toContain(foreground.foreground);
     expect(foreground.contrast).toBeGreaterThan(0);
+  });
+
+  it('ships stable default semantic status color seeds', () => {
+    expect(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS.danger).toBe('#ef4444');
+    expect(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS.success).toBe('#22c55e');
+    expect(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS.warning).toBe('#f59e0b');
+  });
+
+  it('generates deterministic semantic status swatches from default seeds', () => {
+    const first = createDefaultSemanticStatusSwatches();
+    const second = createDefaultSemanticStatusSwatches();
+
+    expect(first).toEqual(second);
+
+    for (const role of ['danger', 'success', 'warning'] as const) {
+      expect(first.seeds[role]).toBe(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS[role]);
+      expect(first.swatches[role][COLOR_SWATCH_BASE_STEP]).toBe(first.seeds[role]);
+      expect(first.diagnostics[role].warnings).toBeDefined();
+    }
+  });
+
+  it('throws deterministically on invalid semantic status seed input', () => {
+    expect(() => createSemanticStatusSwatches({ danger: 'not-a-hex-color' })).toThrow();
   });
 });
