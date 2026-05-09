@@ -1,5 +1,11 @@
 # @ankhorage/color-theory
 
+## 0.0.4
+
+### Patch Changes
+
+- c15063e: Add semantic status color seeds and deterministic status swatch generation helpers.
+
 ## 0.0.3
 
 ### Patch Changes

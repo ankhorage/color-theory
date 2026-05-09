@@ -1,7 +1,7 @@
 {
   "name": "@ankhorage/color-theory",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Standalone color theory, harmony, swatch, contrast, and theme color generation utilities.",
   "homepage": "https://github.com/ankhorage/color-theory#readme",
   "bugs": {
