@@ -1,0 +1,143 @@
+graph LR
+  module_src_contrast_ts["src/contrast.ts"]
+  module_src_culori_fn_ts["src/culori-fn.ts"]
+  module_src_culori_ts["src/culori.ts"]
+  module_src_harmony_ts["src/harmony.ts"]
+  module_src_hex_ts["src/hex.ts"]
+  module_src_index_ts["src/index.ts"]
+  module_src_internal_culori_ts["src/internal-culori.ts"]
+  module_src_neutral_ts["src/neutral.ts"]
+  module_src_semantic_status_ts["src/semantic-status.ts"]
+  module_src_semantics_ts["src/semantics.ts"]
+  module_src_swatches_ts["src/swatches.ts"]
+  module_src_theme_colors_ts["src/theme-colors.ts"]
+  export_assertHexColor["assertHexColor"]
+  module_src_hex_ts --> export_assertHexColor
+  export_COLOR_HARMONIES["COLOR_HARMONIES"]
+  module_src_harmony_ts --> export_COLOR_HARMONIES
+  export_COLOR_SWATCH_BASE_STEP["COLOR_SWATCH_BASE_STEP"]
+  module_src_swatches_ts --> export_COLOR_SWATCH_BASE_STEP
+  export_COLOR_SWATCH_STEPS["COLOR_SWATCH_STEPS"]
+  module_src_swatches_ts --> export_COLOR_SWATCH_STEPS
+  export_ColorHarmony["ColorHarmony"]
+  module_src_harmony_ts --> export_ColorHarmony
+  export_ColorSwatch["ColorSwatch"]
+  module_src_swatches_ts --> export_ColorSwatch
+  export_ColorSwatchDiagnostics["ColorSwatchDiagnostics"]
+  module_src_swatches_ts --> export_ColorSwatchDiagnostics
+  export_ColorSwatchDiagnostics -.-> export_ColorSwatchWarning
+  export_ColorSwatchStep["ColorSwatchStep"]
+  module_src_swatches_ts --> export_ColorSwatchStep
+  export_ColorSwatchWarning["ColorSwatchWarning"]
+  module_src_swatches_ts --> export_ColorSwatchWarning
+  export_ColorSwatchWarning -.-> export_ColorSwatchWarningCode
+  export_ColorSwatchWarningCode["ColorSwatchWarningCode"]
+  module_src_swatches_ts --> export_ColorSwatchWarningCode
+  export_createDefaultSemanticStatusSwatches["createDefaultSemanticStatusSwatches"]
+  module_src_semantic_status_ts --> export_createDefaultSemanticStatusSwatches
+  export_createDefaultSemanticStatusSwatches -.-> export_SemanticStatusSwatches
+  export_createSemanticStatusSwatches["createSemanticStatusSwatches"]
+  module_src_semantic_status_ts --> export_createSemanticStatusSwatches
+  export_createSemanticStatusSwatches -.-> export_SemanticStatusSeedInput
+  export_createSemanticStatusSwatches -.-> export_SemanticStatusSwatches
+  export_DARK_SEMANTIC_COLOR_REFERENCES["DARK_SEMANTIC_COLOR_REFERENCES"]
+  module_src_semantics_ts --> export_DARK_SEMANTIC_COLOR_REFERENCES
+  export_DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS["DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS"]
+  module_src_semantic_status_ts --> export_DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS
+  export_DefaultSemanticStatusRole["DefaultSemanticStatusRole"]
+  module_src_semantic_status_ts --> export_DefaultSemanticStatusRole
+  export_generateColorSwatch["generateColorSwatch"]
+  module_src_swatches_ts --> export_generateColorSwatch
+  export_generateColorSwatch -.-> export_ColorSwatch
+  export_generateColorSwatch -.-> export_ColorSwatchDiagnostics
+  export_generateColorSwatch -.-> export_HexColor
+  export_GeneratedColorRole["GeneratedColorRole"]
+  module_src_harmony_ts --> export_GeneratedColorRole
+  export_GeneratedHarmonyRoleColor["GeneratedHarmonyRoleColor"]
+  module_src_harmony_ts --> export_GeneratedHarmonyRoleColor
+  export_GeneratedHarmonyRoleColor -.-> export_GeneratedColorRole
+  export_GeneratedHarmonyRoleColor -.-> export_HexColor
+  export_GeneratedHarmonyRoleColors["GeneratedHarmonyRoleColors"]
+  module_src_harmony_ts --> export_GeneratedHarmonyRoleColors
+  export_GeneratedHarmonyRoleColors -.-> export_GeneratedHarmonyRoleColor
+  export_GeneratedNeutralMetadata["GeneratedNeutralMetadata"]
+  module_src_neutral_ts --> export_GeneratedNeutralMetadata
+  export_GeneratedNeutralMetadata -.-> export_ColorSwatchDiagnostics
+  export_GeneratedNeutralMetadata -.-> export_HexColor
+  export_GeneratedThemeModeColors["GeneratedThemeModeColors"]
+  module_src_theme_colors_ts --> export_GeneratedThemeModeColors
+  export_GeneratedThemeModeColors -.-> export_GeneratedHarmonyRoleColors
+  export_GeneratedThemeModeColors -.-> export_GeneratedNeutralMetadata
+  export_GeneratedThemeModeColors -.-> export_GeneratedThemeSwatches
+  export_GeneratedThemeSwatches["GeneratedThemeSwatches"]
+  module_src_theme_colors_ts --> export_GeneratedThemeSwatches
+  export_GeneratedThemeSwatches -.-> export_ColorSwatch
+  export_generateHarmonyRoleColors["generateHarmonyRoleColors"]
+  module_src_harmony_ts --> export_generateHarmonyRoleColors
+  export_generateHarmonyRoleColors -.-> export_GeneratedHarmonyRoleColors
+  export_generateHarmonyRoleColors -.-> export_HexColor
+  export_generateNeutralSwatch["generateNeutralSwatch"]
+  module_src_neutral_ts --> export_generateNeutralSwatch
+  export_generateNeutralSwatch -.-> export_GeneratedHarmonyRoleColors
+  export_generateNeutralSwatch -.-> export_NeutralSwatchResult
+  export_generateThemeColors["generateThemeColors"]
+  module_src_theme_colors_ts --> export_generateThemeColors
+  export_generateThemeColors -.-> export_GeneratedThemeModeColors
+  export_generateThemeColors -.-> export_ThemeColorInput
+  export_generateThemeModeColors["generateThemeModeColors"]
+  module_src_theme_colors_ts --> export_generateThemeModeColors
+  export_generateThemeModeColors -.-> export_GeneratedThemeModeColors
+  export_generateThemeModeColors -.-> export_ThemeModeColorInput
+  export_getReadableForeground["getReadableForeground"]
+  module_src_contrast_ts --> export_getReadableForeground
+  export_getReadableForeground -.-> export_HexColor
+  export_getReadableForeground -.-> export_ReadableForegroundResult
+  export_getThemeModePrimaryHex["getThemeModePrimaryHex"]
+  module_src_theme_colors_ts --> export_getThemeModePrimaryHex
+  export_getThemeModePrimaryHex -.-> export_HexColor
+  export_getThemeModePrimaryHex -.-> export_ThemeModeColorInput
+  export_HexColor["HexColor"]
+  module_src_hex_ts --> export_HexColor
+  export_isHexColor["isHexColor"]
+  module_src_hex_ts --> export_isHexColor
+  export_LIGHT_SEMANTIC_COLOR_REFERENCES["LIGHT_SEMANTIC_COLOR_REFERENCES"]
+  module_src_semantics_ts --> export_LIGHT_SEMANTIC_COLOR_REFERENCES
+  export_MIN_HUEFUL_CHROMA["MIN_HUEFUL_CHROMA"]
+  module_src_neutral_ts --> export_MIN_HUEFUL_CHROMA
+  export_NeutralSwatchResult["NeutralSwatchResult"]
+  module_src_neutral_ts --> export_NeutralSwatchResult
+  export_NeutralSwatchResult -.-> export_ColorSwatch
+  export_NeutralSwatchResult -.-> export_ColorSwatchDiagnostics
+  export_NeutralSwatchResult -.-> export_HexColor
+  export_parseHexColor["parseHexColor"]
+  module_src_hex_ts --> export_parseHexColor
+  export_parseHexColor -.-> export_HexColor
+  export_parseHexColorOrThrow["parseHexColorOrThrow"]
+  module_src_hex_ts --> export_parseHexColorOrThrow
+  export_parseHexColorOrThrow -.-> export_HexColor
+  export_ReadableForegroundResult["ReadableForegroundResult"]
+  module_src_contrast_ts --> export_ReadableForegroundResult
+  export_ReadableForegroundResult -.-> export_HexColor
+  export_SemanticColorReference["SemanticColorReference"]
+  module_src_semantics_ts --> export_SemanticColorReference
+  export_SemanticColorReference -.-> export_SemanticColorRole
+  export_SemanticColorReferenceMap["SemanticColorReferenceMap"]
+  module_src_semantics_ts --> export_SemanticColorReferenceMap
+  export_SemanticColorRole["SemanticColorRole"]
+  module_src_semantics_ts --> export_SemanticColorRole
+  export_SemanticColorToken["SemanticColorToken"]
+  module_src_semantics_ts --> export_SemanticColorToken
+  export_SemanticStatusSeedInput["SemanticStatusSeedInput"]
+  module_src_semantic_status_ts --> export_SemanticStatusSeedInput
+  export_SemanticStatusSwatches["SemanticStatusSwatches"]
+  module_src_semantic_status_ts --> export_SemanticStatusSwatches
+  export_SemanticStatusSwatches -.-> export_ColorSwatch
+  export_SemanticStatusSwatches -.-> export_ColorSwatchDiagnostics
+  export_SemanticStatusSwatches -.-> export_HexColor
+  export_ThemeColorInput["ThemeColorInput"]
+  module_src_theme_colors_ts --> export_ThemeColorInput
+  export_ThemeColorInput -.-> export_ThemeModeColorInput
+  export_ThemeColorMode["ThemeColorMode"]
+  module_src_semantics_ts --> export_ThemeColorMode
+  export_ThemeModeColorInput["ThemeModeColorInput"]
+  module_src_theme_colors_ts --> export_ThemeModeColorInput

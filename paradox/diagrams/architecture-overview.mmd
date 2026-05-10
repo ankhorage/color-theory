@@ -1,0 +1,46 @@
+graph TD
+  package__ankhorage_color_theory["@ankhorage/color-theory"]
+  entrypoint_src_index_ts["src/index.ts"]
+  package__ankhorage_color_theory --> entrypoint_src_index_ts
+  module_src_contrast_ts["src/contrast.ts"]
+  package__ankhorage_color_theory -.-> module_src_contrast_ts
+  module_src_contrast_ts --> module_src_hex_ts
+  module_src_contrast_ts --> module_src_internal_culori_ts
+  module_src_culori_fn_ts["src/culori-fn.ts"]
+  package__ankhorage_color_theory -.-> module_src_culori_fn_ts
+  module_src_culori_ts["src/culori.ts"]
+  package__ankhorage_color_theory -.-> module_src_culori_ts
+  module_src_harmony_ts["src/harmony.ts"]
+  package__ankhorage_color_theory -.-> module_src_harmony_ts
+  module_src_harmony_ts --> module_src_hex_ts
+  module_src_harmony_ts --> module_src_internal_culori_ts
+  module_src_hex_ts["src/hex.ts"]
+  package__ankhorage_color_theory -.-> module_src_hex_ts
+  module_src_index_ts["src/index.ts"]
+  module_src_internal_culori_ts["src/internal-culori.ts"]
+  package__ankhorage_color_theory -.-> module_src_internal_culori_ts
+  module_src_internal_culori_ts --> module_src_hex_ts
+  module_src_neutral_ts["src/neutral.ts"]
+  package__ankhorage_color_theory -.-> module_src_neutral_ts
+  module_src_neutral_ts --> module_src_harmony_ts
+  module_src_neutral_ts --> module_src_hex_ts
+  module_src_neutral_ts --> module_src_internal_culori_ts
+  module_src_neutral_ts --> module_src_swatches_ts
+  module_src_semantic_status_ts["src/semantic-status.ts"]
+  package__ankhorage_color_theory -.-> module_src_semantic_status_ts
+  module_src_semantic_status_ts --> module_src_hex_ts
+  module_src_semantic_status_ts --> module_src_swatches_ts
+  module_src_semantics_ts["src/semantics.ts"]
+  package__ankhorage_color_theory -.-> module_src_semantics_ts
+  module_src_semantics_ts --> module_src_harmony_ts
+  module_src_semantics_ts --> module_src_swatches_ts
+  module_src_swatches_ts["src/swatches.ts"]
+  package__ankhorage_color_theory -.-> module_src_swatches_ts
+  module_src_swatches_ts --> module_src_hex_ts
+  module_src_swatches_ts --> module_src_internal_culori_ts
+  module_src_theme_colors_ts["src/theme-colors.ts"]
+  package__ankhorage_color_theory -.-> module_src_theme_colors_ts
+  module_src_theme_colors_ts --> module_src_harmony_ts
+  module_src_theme_colors_ts --> module_src_hex_ts
+  module_src_theme_colors_ts --> module_src_neutral_ts
+  module_src_theme_colors_ts --> module_src_swatches_ts
