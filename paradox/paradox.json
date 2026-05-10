@@ -60,21 +60,13 @@
   ],
   "usage": null,
   "config": null,
-  "entrypoints": [
-    "src/index.ts"
-  ],
+  "entrypoints": ["src/index.ts"],
   "modules": [
     {
       "path": "src/contrast.ts",
       "isEntrypoint": false,
-      "dependencies": [
-        "src/hex.ts",
-        "src/internal-culori.ts"
-      ],
-      "exports": [
-        "getReadableForeground",
-        "ReadableForegroundResult"
-      ]
+      "dependencies": ["src/hex.ts", "src/internal-culori.ts"],
+      "exports": ["getReadableForeground", "ReadableForegroundResult"]
     },
     {
       "path": "src/culori-fn.ts",
@@ -565,10 +557,7 @@
     {
       "path": "src/harmony.ts",
       "isEntrypoint": false,
-      "dependencies": [
-        "src/hex.ts",
-        "src/internal-culori.ts"
-      ],
+      "dependencies": ["src/hex.ts", "src/internal-culori.ts"],
       "exports": [
         "COLOR_HARMONIES",
         "ColorHarmony",
@@ -645,9 +634,7 @@
     {
       "path": "src/internal-culori.ts",
       "isEntrypoint": false,
-      "dependencies": [
-        "src/hex.ts"
-      ],
+      "dependencies": ["src/hex.ts"],
       "exports": [
         "contrastRatio",
         "deltaEoklch",
@@ -659,12 +646,7 @@
     {
       "path": "src/neutral.ts",
       "isEntrypoint": false,
-      "dependencies": [
-        "src/harmony.ts",
-        "src/hex.ts",
-        "src/internal-culori.ts",
-        "src/swatches.ts"
-      ],
+      "dependencies": ["src/harmony.ts", "src/hex.ts", "src/internal-culori.ts", "src/swatches.ts"],
       "exports": [
         "GeneratedNeutralMetadata",
         "generateNeutralSwatch",
@@ -675,10 +657,7 @@
     {
       "path": "src/semantic-status.ts",
       "isEntrypoint": false,
-      "dependencies": [
-        "src/hex.ts",
-        "src/swatches.ts"
-      ],
+      "dependencies": ["src/hex.ts", "src/swatches.ts"],
       "exports": [
         "createDefaultSemanticStatusSwatches",
         "createSemanticStatusSwatches",
@@ -691,10 +670,7 @@
     {
       "path": "src/semantics.ts",
       "isEntrypoint": false,
-      "dependencies": [
-        "src/harmony.ts",
-        "src/swatches.ts"
-      ],
+      "dependencies": ["src/harmony.ts", "src/swatches.ts"],
       "exports": [
         "DARK_SEMANTIC_COLOR_REFERENCES",
         "LIGHT_SEMANTIC_COLOR_REFERENCES",
@@ -708,10 +684,7 @@
     {
       "path": "src/swatches.ts",
       "isEntrypoint": false,
-      "dependencies": [
-        "src/hex.ts",
-        "src/internal-culori.ts"
-      ],
+      "dependencies": ["src/hex.ts", "src/internal-culori.ts"],
       "exports": [
         "COLOR_SWATCH_BASE_STEP",
         "COLOR_SWATCH_STEPS",
@@ -726,12 +699,7 @@
     {
       "path": "src/theme-colors.ts",
       "isEntrypoint": false,
-      "dependencies": [
-        "src/harmony.ts",
-        "src/hex.ts",
-        "src/neutral.ts",
-        "src/swatches.ts"
-      ],
+      "dependencies": ["src/harmony.ts", "src/hex.ts", "src/neutral.ts", "src/swatches.ts"],
       "exports": [
         "GeneratedThemeModeColors",
         "GeneratedThemeSwatches",
@@ -754,9 +722,7 @@
         "line": 34,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [
         {
@@ -785,9 +751,7 @@
         "line": 4,
         "column": 14
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -802,9 +766,7 @@
         "line": 7,
         "column": 14
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -819,9 +781,7 @@
         "line": 4,
         "column": 14
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -836,9 +796,7 @@
         "line": 13,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -853,9 +811,7 @@
         "line": 9,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -870,12 +826,8 @@
         "line": 23,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "ColorSwatchWarning"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["ColorSwatchWarning"],
       "signatures": [],
       "members": [
         {
@@ -925,9 +877,7 @@
         "line": 5,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -942,12 +892,8 @@
         "line": 16,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "ColorSwatchWarningCode"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["ColorSwatchWarningCode"],
       "signatures": [],
       "members": [
         {
@@ -990,9 +936,7 @@
         "line": 11,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -1007,12 +951,8 @@
         "line": 44,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "SemanticStatusSwatches"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["SemanticStatusSwatches"],
       "signatures": [
         {
           "label": "() => SemanticStatusSwatches<\"danger\" | \"success\" | \"warning\">",
@@ -1033,13 +973,8 @@
         "line": 22,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "SemanticStatusSeedInput",
-        "SemanticStatusSwatches"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["SemanticStatusSeedInput", "SemanticStatusSwatches"],
       "signatures": [
         {
           "label": "(seeds: Record<Role, SemanticStatusSeedInput>) => SemanticStatusSwatches<Role>",
@@ -1067,9 +1002,7 @@
         "line": 46,
         "column": 14
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -1084,9 +1017,7 @@
         "line": 6,
         "column": 14
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -1101,9 +1032,7 @@
         "line": 12,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -1118,14 +1047,8 @@
         "line": 73,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "ColorSwatch",
-        "ColorSwatchDiagnostics",
-        "HexColor"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["ColorSwatch", "ColorSwatchDiagnostics", "HexColor"],
       "signatures": [
         {
           "label": "(baseColor: HexColor) => { swatch: ColorSwatch; diagnostics: ColorSwatchDiagnostics; }",
@@ -1153,9 +1076,7 @@
         "line": 15,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -1170,13 +1091,8 @@
         "line": 17,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "GeneratedColorRole",
-        "HexColor"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["GeneratedColorRole", "HexColor"],
       "signatures": [],
       "members": [
         {
@@ -1219,12 +1135,8 @@
         "line": 24,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "GeneratedHarmonyRoleColor"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["GeneratedHarmonyRoleColor"],
       "signatures": [],
       "members": [
         {
@@ -1281,13 +1193,8 @@
         "line": 14,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "ColorSwatchDiagnostics",
-        "HexColor"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["ColorSwatchDiagnostics", "HexColor"],
       "signatures": [],
       "members": [
         {
@@ -1316,9 +1223,7 @@
         "line": 25,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [
         "GeneratedHarmonyRoleColors",
         "GeneratedNeutralMetadata",
@@ -1359,12 +1264,8 @@
         "line": 17,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "ColorSwatch"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["ColorSwatch"],
       "signatures": [],
       "members": [
         {
@@ -1414,13 +1315,8 @@
         "line": 54,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "GeneratedHarmonyRoleColors",
-        "HexColor"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["GeneratedHarmonyRoleColors", "HexColor"],
       "signatures": [
         {
           "label": "(primaryColor: HexColor, harmony: \"monochromatic\" | \"analogous\" | \"complementary\" | \"triadic\" | \"tetradic\" | \"splitComplementary\") => GeneratedHarmonyRoleColors",
@@ -1454,13 +1350,8 @@
         "line": 54,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "GeneratedHarmonyRoleColors",
-        "NeutralSwatchResult"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["GeneratedHarmonyRoleColors", "NeutralSwatchResult"],
       "signatures": [
         {
           "label": "(roleColors: GeneratedHarmonyRoleColors) => NeutralSwatchResult",
@@ -1488,13 +1379,8 @@
         "line": 78,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "GeneratedThemeModeColors",
-        "ThemeColorInput"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["GeneratedThemeModeColors", "ThemeColorInput"],
       "signatures": [
         {
           "label": "(theme: ThemeColorInput) => { light: GeneratedThemeModeColors; dark: GeneratedThemeModeColors; }",
@@ -1522,13 +1408,8 @@
         "line": 41,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "GeneratedThemeModeColors",
-        "ThemeModeColorInput"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["GeneratedThemeModeColors", "ThemeModeColorInput"],
       "signatures": [
         {
           "label": "(mode: ThemeModeColorInput) => GeneratedThemeModeColors",
@@ -1556,13 +1437,8 @@
         "line": 16,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "HexColor",
-        "ReadableForegroundResult"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["HexColor", "ReadableForegroundResult"],
       "signatures": [
         {
           "label": "(background: HexColor) => ReadableForegroundResult",
@@ -1590,13 +1466,8 @@
         "line": 34,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "HexColor",
-        "ThemeModeColorInput"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["HexColor", "ThemeModeColorInput"],
       "signatures": [
         {
           "label": "(mode: ThemeModeColorInput) => HexColor",
@@ -1624,9 +1495,7 @@
         "line": 1,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -1641,9 +1510,7 @@
         "line": 8,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [
         {
@@ -1672,9 +1539,7 @@
         "line": 30,
         "column": 14
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -1689,9 +1554,7 @@
         "line": 6,
         "column": 14
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -1706,14 +1569,8 @@
         "line": 8,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "ColorSwatch",
-        "ColorSwatchDiagnostics",
-        "HexColor"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["ColorSwatch", "ColorSwatchDiagnostics", "HexColor"],
       "signatures": [],
       "members": [
         {
@@ -1749,12 +1606,8 @@
         "line": 15,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "HexColor"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["HexColor"],
       "signatures": [
         {
           "label": "(value: string) => HexColor | null",
@@ -1782,12 +1635,8 @@
         "line": 23,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "HexColor"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["HexColor"],
       "signatures": [
         {
           "label": "(value: string) => HexColor",
@@ -1815,12 +1664,8 @@
         "line": 5,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "HexColor"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["HexColor"],
       "signatures": [],
       "members": [
         {
@@ -1849,12 +1694,8 @@
         "line": 23,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "SemanticColorRole"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["SemanticColorRole"],
       "signatures": [],
       "members": [
         {
@@ -1883,9 +1724,7 @@
         "line": 28,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -1900,9 +1739,7 @@
         "line": 21,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -1917,9 +1754,7 @@
         "line": 6,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -1934,9 +1769,7 @@
         "line": 14,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -1951,14 +1784,8 @@
         "line": 16,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "ColorSwatch",
-        "ColorSwatchDiagnostics",
-        "HexColor"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["ColorSwatch", "ColorSwatchDiagnostics", "HexColor"],
       "signatures": [],
       "members": [
         {
@@ -1994,12 +1821,8 @@
         "line": 12,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
-      "relatedSymbols": [
-        "ThemeModeColorInput"
-      ],
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["ThemeModeColorInput"],
       "signatures": [],
       "members": [
         {
@@ -2028,9 +1851,7 @@
         "line": 4,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": []
@@ -2045,9 +1866,7 @@
         "line": 7,
         "column": 1
       },
-      "exportPaths": [
-        "src/index.ts"
-      ],
+      "exportPaths": ["src/index.ts"],
       "relatedSymbols": [],
       "signatures": [],
       "members": [

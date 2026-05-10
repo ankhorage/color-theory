@@ -52,13 +52,13 @@ Source: `src/swatches.ts:23:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| isUsable | property | `boolean` | yes |  |
-| lightnessRange | property | `{ min: number; max: number; }` | yes |  |
-| maxAdjacentDelta | property | `number` | yes |  |
-| minAdjacentDelta | property | `number` | yes |  |
-| warnings | property | `readonly ColorSwatchWarning[]` | yes |  |
+| Name             | Kind     | Type                            | Required | Description |
+| ---------------- | -------- | ------------------------------- | -------- | ----------- |
+| isUsable         | property | `boolean`                       | yes      |             |
+| lightnessRange   | property | `{ min: number; max: number; }` | yes      |             |
+| maxAdjacentDelta | property | `number`                        | yes      |             |
+| minAdjacentDelta | property | `number`                        | yes      |             |
+| warnings         | property | `readonly ColorSwatchWarning[]` | yes      |             |
 
 ## ColorSwatchStep
 
@@ -74,12 +74,12 @@ Source: `src/swatches.ts:16:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| code | property | `ColorSwatchWarningCode` | yes |  |
-| deltaEFromBase | property | `number \| undefined` | no |  |
-| message | property | `string` | yes |  |
-| step | property | `50 \| 100 \| 200 \| 300 \| 400 \| 500 \| 600 \| 700 \| 800 \| 900 \| 950 \| undefined` | no |  |
+| Name           | Kind     | Type                                                                                    | Required | Description |
+| -------------- | -------- | --------------------------------------------------------------------------------------- | -------- | ----------- |
+| code           | property | `ColorSwatchWarningCode`                                                                | yes      |             |
+| deltaEFromBase | property | `number \| undefined`                                                                   | no       |             |
+| message        | property | `string`                                                                                | yes      |             |
+| step           | property | `50 \| 100 \| 200 \| 300 \| 400 \| 500 \| 600 \| 700 \| 800 \| 900 \| 950 \| undefined` | no       |             |
 
 ## ColorSwatchWarningCode
 
@@ -156,12 +156,12 @@ Source: `src/harmony.ts:17:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| hex | property | `HexColor` | yes |  |
-| hueDegrees | property | `number` | yes |  |
-| role | property | `GeneratedColorRole` | yes |  |
-| source | property | `"selected" \| "generated"` | yes |  |
+| Name       | Kind     | Type                        | Required | Description |
+| ---------- | -------- | --------------------------- | -------- | ----------- |
+| hex        | property | `HexColor`                  | yes      |             |
+| hueDegrees | property | `number`                    | yes      |             |
+| role       | property | `GeneratedColorRole`        | yes      |             |
+| source     | property | `"selected" \| "generated"` | yes      |             |
 
 ## GeneratedHarmonyRoleColors
 
@@ -171,14 +171,14 @@ Source: `src/harmony.ts:24:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| colors | property | `readonly GeneratedHarmonyRoleColor[]` | yes |  |
-| harmony | property | `"monochromatic" \| "analogous" \| "complementary" \| "triadic" \| "tetradic" \| "splitComplementary"` | yes |  |
-| primary | property | `GeneratedHarmonyRoleColor` | yes |  |
-| quaternary | property | `GeneratedHarmonyRoleColor \| undefined` | no |  |
-| secondary | property | `GeneratedHarmonyRoleColor \| undefined` | no |  |
-| tertiary | property | `GeneratedHarmonyRoleColor \| undefined` | no |  |
+| Name       | Kind     | Type                                                                                                   | Required | Description |
+| ---------- | -------- | ------------------------------------------------------------------------------------------------------ | -------- | ----------- |
+| colors     | property | `readonly GeneratedHarmonyRoleColor[]`                                                                 | yes      |             |
+| harmony    | property | `"monochromatic" \| "analogous" \| "complementary" \| "triadic" \| "tetradic" \| "splitComplementary"` | yes      |             |
+| primary    | property | `GeneratedHarmonyRoleColor`                                                                            | yes      |             |
+| quaternary | property | `GeneratedHarmonyRoleColor \| undefined`                                                               | no       |             |
+| secondary  | property | `GeneratedHarmonyRoleColor \| undefined`                                                               | no       |             |
+| tertiary   | property | `GeneratedHarmonyRoleColor \| undefined`                                                               | no       |             |
 
 ## GeneratedNeutralMetadata
 
@@ -188,10 +188,10 @@ Source: `src/neutral.ts:14:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| diagnostics | property | `ColorSwatchDiagnostics` | yes |  |
-| neutralKeyColor | property | `HexColor` | yes |  |
+| Name            | Kind     | Type                     | Required | Description |
+| --------------- | -------- | ------------------------ | -------- | ----------- |
+| diagnostics     | property | `ColorSwatchDiagnostics` | yes      |             |
+| neutralKeyColor | property | `HexColor`               | yes      |             |
 
 ## GeneratedThemeModeColors
 
@@ -201,11 +201,11 @@ Source: `src/theme-colors.ts:25:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| harmonyRoleColors | property | `GeneratedHarmonyRoleColors` | yes |  |
-| neutral | property | `GeneratedNeutralMetadata` | yes |  |
-| swatches | property | `GeneratedThemeSwatches` | yes |  |
+| Name              | Kind     | Type                         | Required | Description |
+| ----------------- | -------- | ---------------------------- | -------- | ----------- |
+| harmonyRoleColors | property | `GeneratedHarmonyRoleColors` | yes      |             |
+| neutral           | property | `GeneratedNeutralMetadata`   | yes      |             |
+| swatches          | property | `GeneratedThemeSwatches`     | yes      |             |
 
 ## GeneratedThemeSwatches
 
@@ -215,13 +215,13 @@ Source: `src/theme-colors.ts:17:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| neutral | property | `ColorSwatch` | yes |  |
-| primary | property | `ColorSwatch` | yes |  |
-| quaternary | property | `ColorSwatch \| undefined` | no |  |
-| secondary | property | `ColorSwatch \| undefined` | no |  |
-| tertiary | property | `ColorSwatch \| undefined` | no |  |
+| Name       | Kind     | Type                       | Required | Description |
+| ---------- | -------- | -------------------------- | -------- | ----------- |
+| neutral    | property | `ColorSwatch`              | yes      |             |
+| primary    | property | `ColorSwatch`              | yes      |             |
+| quaternary | property | `ColorSwatch \| undefined` | no       |             |
+| secondary  | property | `ColorSwatch \| undefined` | no       |             |
+| tertiary   | property | `ColorSwatch \| undefined` | no       |             |
 
 ## generateHarmonyRoleColors
 
@@ -348,11 +348,11 @@ Source: `src/neutral.ts:8:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| diagnostics | property | `ColorSwatchDiagnostics` | yes |  |
-| neutral | property | `ColorSwatch` | yes |  |
-| neutralKeyColor | property | `HexColor` | yes |  |
+| Name            | Kind     | Type                     | Required | Description |
+| --------------- | -------- | ------------------------ | -------- | ----------- |
+| diagnostics     | property | `ColorSwatchDiagnostics` | yes      |             |
+| neutral         | property | `ColorSwatch`            | yes      |             |
+| neutralKeyColor | property | `HexColor`               | yes      |             |
 
 ## parseHexColor
 
@@ -390,10 +390,10 @@ Source: `src/contrast.ts:5:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| contrast | property | `number` | yes |  |
-| foreground | property | `HexColor` | yes |  |
+| Name       | Kind     | Type       | Required | Description |
+| ---------- | -------- | ---------- | -------- | ----------- |
+| contrast   | property | `number`   | yes      |             |
+| foreground | property | `HexColor` | yes      |             |
 
 ## SemanticColorReference
 
@@ -403,10 +403,10 @@ Source: `src/semantics.ts:23:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| role | property | `SemanticColorRole` | yes |  |
-| step | property | `50 \| 100 \| 200 \| 300 \| 400 \| 500 \| 600 \| 700 \| 800 \| 900 \| 950` | yes |  |
+| Name | Kind     | Type                                                                       | Required | Description |
+| ---- | -------- | -------------------------------------------------------------------------- | -------- | ----------- |
+| role | property | `SemanticColorRole`                                                        | yes      |             |
+| step | property | `50 \| 100 \| 200 \| 300 \| 400 \| 500 \| 600 \| 700 \| 800 \| 900 \| 950` | yes      |             |
 
 ## SemanticColorReferenceMap
 
@@ -440,11 +440,11 @@ Source: `src/semantic-status.ts:16:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| diagnostics | property | `Record<Role, ColorSwatchDiagnostics>` | yes |  |
-| seeds | property | `Record<Role, HexColor>` | yes |  |
-| swatches | property | `Record<Role, ColorSwatch>` | yes |  |
+| Name        | Kind     | Type                                   | Required | Description |
+| ----------- | -------- | -------------------------------------- | -------- | ----------- |
+| diagnostics | property | `Record<Role, ColorSwatchDiagnostics>` | yes      |             |
+| seeds       | property | `Record<Role, HexColor>`               | yes      |             |
+| swatches    | property | `Record<Role, ColorSwatch>`            | yes      |             |
 
 ## ThemeColorInput
 
@@ -454,10 +454,10 @@ Source: `src/theme-colors.ts:12:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| dark | property | `ThemeModeColorInput` | yes |  |
-| light | property | `ThemeModeColorInput` | yes |  |
+| Name  | Kind     | Type                  | Required | Description |
+| ----- | -------- | --------------------- | -------- | ----------- |
+| dark  | property | `ThemeModeColorInput` | yes      |             |
+| light | property | `ThemeModeColorInput` | yes      |             |
 
 ## ThemeColorMode
 
@@ -473,7 +473,7 @@ Source: `src/theme-colors.ts:7:1`
 
 ### Members
 
-| Name | Kind | Type | Required | Description |
-| --- | --- | --- | --- | --- |
-| harmony | property | `"monochromatic" \| "analogous" \| "complementary" \| "triadic" \| "tetradic" \| "splitComplementary"` | yes |  |
-| primaryColor | property | `string` | yes |  |
+| Name         | Kind     | Type                                                                                                   | Required | Description |
+| ------------ | -------- | ------------------------------------------------------------------------------------------------------ | -------- | ----------- |
+| harmony      | property | `"monochromatic" \| "analogous" \| "complementary" \| "triadic" \| "tetradic" \| "splitComplementary"` | yes      |             |
+| primaryColor | property | `string`                                                                                               | yes      |             |
