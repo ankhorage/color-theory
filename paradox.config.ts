@@ -15,6 +15,6 @@ export default defineParadoxConfig({
   },
 
   output: {
-    dir: '.',
+    dir: './paradox',
   },
 });

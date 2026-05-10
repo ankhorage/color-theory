@@ -1,9 +1,0 @@
-{
-  "packageName": "@ankhorage/color-theory",
-  "packageId": "@ankhorage/color-theory",
-  "description": "Standalone color theory, harmony, swatch, contrast, and theme color generation utilities.",
-  "usage": null,
-  "config": null,
-  "exports": [],
-  "components": []
-}
