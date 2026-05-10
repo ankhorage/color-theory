@@ -36,8 +36,8 @@
     {
       "id": "prettier",
       "label": "prettier",
-      "value": "configured",
-      "color": "2563eb"
+      "value": "checked",
+      "color": "0a7f3f"
     },
     {
       "id": "build",
