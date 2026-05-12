@@ -2,6 +2,8 @@
   {
     "name": "assertHexColor",
     "description": "Assert that a string is a valid six-digit hex color.",
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/hex.ts",
     "sourceLocation": {
@@ -31,6 +33,8 @@
   {
     "name": "COLOR_HARMONIES",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
@@ -46,6 +50,8 @@
   {
     "name": "COLOR_SWATCH_BASE_STEP",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -61,6 +67,8 @@
   {
     "name": "COLOR_SWATCH_STEPS",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -76,6 +84,8 @@
   {
     "name": "ColorHarmony",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
@@ -91,6 +101,8 @@
   {
     "name": "ColorSwatch",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -106,6 +118,8 @@
   {
     "name": "ColorSwatchDiagnostics",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -157,6 +171,8 @@
   {
     "name": "ColorSwatchStep",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -172,6 +188,8 @@
   {
     "name": "ColorSwatchWarning",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -216,6 +234,8 @@
   {
     "name": "ColorSwatchWarningCode",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -231,6 +251,8 @@
   {
     "name": "createDefaultSemanticStatusSwatches",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
@@ -253,6 +275,8 @@
   {
     "name": "createSemanticStatusSwatches",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
@@ -282,6 +306,8 @@
   {
     "name": "DARK_SEMANTIC_COLOR_REFERENCES",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -297,6 +323,8 @@
   {
     "name": "DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
@@ -312,6 +340,8 @@
   {
     "name": "DefaultSemanticStatusRole",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
@@ -327,6 +357,8 @@
   {
     "name": "generateColorSwatch",
     "description": "Generate a full color swatch and diagnostics from a base color.",
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -356,6 +388,8 @@
   {
     "name": "GeneratedColorRole",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
@@ -371,6 +405,8 @@
   {
     "name": "GeneratedHarmonyRoleColor",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
@@ -415,6 +451,8 @@
   {
     "name": "GeneratedHarmonyRoleColors",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
@@ -473,6 +511,8 @@
   {
     "name": "GeneratedNeutralMetadata",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/neutral.ts",
     "sourceLocation": {
@@ -503,6 +543,8 @@
   {
     "name": "GeneratedThemeModeColors",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -544,6 +586,8 @@
   {
     "name": "GeneratedThemeSwatches",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -595,6 +639,8 @@
   {
     "name": "generateHarmonyRoleColors",
     "description": "Generate role-based harmony colors from a primary color and harmony strategy.",
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
@@ -630,6 +676,8 @@
   {
     "name": "generateNeutralSwatch",
     "description": "Generate a softly tinted neutral swatch from generated harmony role colors.",
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/neutral.ts",
     "sourceLocation": {
@@ -659,6 +707,8 @@
   {
     "name": "generateThemeColors",
     "description": "Generate light and dark theme color outputs from theme color input.",
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -688,6 +738,8 @@
   {
     "name": "generateThemeModeColors",
     "description": "Generate harmony role colors, swatches, and neutral metadata for a theme mode.",
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -717,6 +769,8 @@
   {
     "name": "getReadableForeground",
     "description": "Return the readable black or white foreground color with the stronger contrast against a background color.",
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/contrast.ts",
     "sourceLocation": {
@@ -746,6 +800,8 @@
   {
     "name": "getThemeModePrimaryHex",
     "description": "Parse the primary color configured for a theme mode.",
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -775,6 +831,8 @@
   {
     "name": "HexColor",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/hex.ts",
     "sourceLocation": {
@@ -790,6 +848,8 @@
   {
     "name": "isHexColor",
     "description": "Check whether a string is a valid six-digit hex color.",
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/hex.ts",
     "sourceLocation": {
@@ -819,6 +879,8 @@
   {
     "name": "LIGHT_SEMANTIC_COLOR_REFERENCES",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -834,6 +896,8 @@
   {
     "name": "MIN_HUEFUL_CHROMA",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/neutral.ts",
     "sourceLocation": {
@@ -849,6 +913,8 @@
   {
     "name": "NeutralSwatchResult",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/neutral.ts",
     "sourceLocation": {
@@ -886,6 +952,8 @@
   {
     "name": "parseHexColor",
     "description": "Parse a string as a six-digit hex color and return null when it is invalid.",
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/hex.ts",
     "sourceLocation": {
@@ -915,6 +983,8 @@
   {
     "name": "parseHexColorOrThrow",
     "description": "Parse a string as a six-digit hex color or throw when it is invalid.",
+    "isReadme": false,
+    "examples": [],
     "kind": "function",
     "modulePath": "src/hex.ts",
     "sourceLocation": {
@@ -944,6 +1014,8 @@
   {
     "name": "ReadableForegroundResult",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/contrast.ts",
     "sourceLocation": {
@@ -974,6 +1046,8 @@
   {
     "name": "SemanticColorReference",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -1004,6 +1078,8 @@
   {
     "name": "SemanticColorReferenceMap",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -1019,6 +1095,8 @@
   {
     "name": "SemanticColorRole",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -1034,6 +1112,8 @@
   {
     "name": "SemanticColorToken",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -1049,6 +1129,8 @@
   {
     "name": "SemanticStatusSeedInput",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
@@ -1064,6 +1146,8 @@
   {
     "name": "SemanticStatusSwatches",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
@@ -1101,6 +1185,8 @@
   {
     "name": "ThemeColorInput",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -1131,6 +1217,8 @@
   {
     "name": "ThemeColorMode",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "unknown",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -1146,6 +1234,8 @@
   {
     "name": "ThemeModeColorInput",
     "description": null,
+    "isReadme": false,
+    "examples": [],
     "kind": "type",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {

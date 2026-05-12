@@ -1,0 +1,8 @@
+sequenceDiagram
+  participant participant_contrastRatio as contrastRatio
+  participant participant_getReadableForeground as getReadableForeground
+  participant participant_wcagContrast as wcagContrast
+  participant_getReadableForeground->>participant_contrastRatio: contrastRatio()
+  participant_contrastRatio->>participant_wcagContrast: wcagContrast()
+  participant_wcagContrast-->>participant_contrastRatio: return
+  participant_contrastRatio-->>participant_getReadableForeground: return

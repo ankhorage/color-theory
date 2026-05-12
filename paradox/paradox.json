@@ -715,6 +715,8 @@
     {
       "name": "assertHexColor",
       "description": "Assert that a string is a valid six-digit hex color.",
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/hex.ts",
       "sourceLocation": {
@@ -744,6 +746,8 @@
     {
       "name": "COLOR_HARMONIES",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
@@ -759,6 +763,8 @@
     {
       "name": "COLOR_SWATCH_BASE_STEP",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
@@ -774,6 +780,8 @@
     {
       "name": "COLOR_SWATCH_STEPS",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
@@ -789,6 +797,8 @@
     {
       "name": "ColorHarmony",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
@@ -804,6 +814,8 @@
     {
       "name": "ColorSwatch",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
@@ -819,6 +831,8 @@
     {
       "name": "ColorSwatchDiagnostics",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
@@ -870,6 +884,8 @@
     {
       "name": "ColorSwatchStep",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
@@ -885,6 +901,8 @@
     {
       "name": "ColorSwatchWarning",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
@@ -929,6 +947,8 @@
     {
       "name": "ColorSwatchWarningCode",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
@@ -944,6 +964,8 @@
     {
       "name": "createDefaultSemanticStatusSwatches",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/semantic-status.ts",
       "sourceLocation": {
@@ -966,6 +988,8 @@
     {
       "name": "createSemanticStatusSwatches",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/semantic-status.ts",
       "sourceLocation": {
@@ -995,6 +1019,8 @@
     {
       "name": "DARK_SEMANTIC_COLOR_REFERENCES",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/semantics.ts",
       "sourceLocation": {
@@ -1010,6 +1036,8 @@
     {
       "name": "DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/semantic-status.ts",
       "sourceLocation": {
@@ -1025,6 +1053,8 @@
     {
       "name": "DefaultSemanticStatusRole",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/semantic-status.ts",
       "sourceLocation": {
@@ -1040,6 +1070,8 @@
     {
       "name": "generateColorSwatch",
       "description": "Generate a full color swatch and diagnostics from a base color.",
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
@@ -1069,6 +1101,8 @@
     {
       "name": "GeneratedColorRole",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
@@ -1084,6 +1118,8 @@
     {
       "name": "GeneratedHarmonyRoleColor",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
@@ -1128,6 +1164,8 @@
     {
       "name": "GeneratedHarmonyRoleColors",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
@@ -1186,6 +1224,8 @@
     {
       "name": "GeneratedNeutralMetadata",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/neutral.ts",
       "sourceLocation": {
@@ -1216,6 +1256,8 @@
     {
       "name": "GeneratedThemeModeColors",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/theme-colors.ts",
       "sourceLocation": {
@@ -1257,6 +1299,8 @@
     {
       "name": "GeneratedThemeSwatches",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/theme-colors.ts",
       "sourceLocation": {
@@ -1308,6 +1352,8 @@
     {
       "name": "generateHarmonyRoleColors",
       "description": "Generate role-based harmony colors from a primary color and harmony strategy.",
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
@@ -1343,6 +1389,8 @@
     {
       "name": "generateNeutralSwatch",
       "description": "Generate a softly tinted neutral swatch from generated harmony role colors.",
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/neutral.ts",
       "sourceLocation": {
@@ -1372,6 +1420,8 @@
     {
       "name": "generateThemeColors",
       "description": "Generate light and dark theme color outputs from theme color input.",
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/theme-colors.ts",
       "sourceLocation": {
@@ -1401,6 +1451,8 @@
     {
       "name": "generateThemeModeColors",
       "description": "Generate harmony role colors, swatches, and neutral metadata for a theme mode.",
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/theme-colors.ts",
       "sourceLocation": {
@@ -1430,6 +1482,8 @@
     {
       "name": "getReadableForeground",
       "description": "Return the readable black or white foreground color with the stronger contrast against a background color.",
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/contrast.ts",
       "sourceLocation": {
@@ -1459,6 +1513,8 @@
     {
       "name": "getThemeModePrimaryHex",
       "description": "Parse the primary color configured for a theme mode.",
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/theme-colors.ts",
       "sourceLocation": {
@@ -1488,6 +1544,8 @@
     {
       "name": "HexColor",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/hex.ts",
       "sourceLocation": {
@@ -1503,6 +1561,8 @@
     {
       "name": "isHexColor",
       "description": "Check whether a string is a valid six-digit hex color.",
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/hex.ts",
       "sourceLocation": {
@@ -1532,6 +1592,8 @@
     {
       "name": "LIGHT_SEMANTIC_COLOR_REFERENCES",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/semantics.ts",
       "sourceLocation": {
@@ -1547,6 +1609,8 @@
     {
       "name": "MIN_HUEFUL_CHROMA",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/neutral.ts",
       "sourceLocation": {
@@ -1562,6 +1626,8 @@
     {
       "name": "NeutralSwatchResult",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/neutral.ts",
       "sourceLocation": {
@@ -1599,6 +1665,8 @@
     {
       "name": "parseHexColor",
       "description": "Parse a string as a six-digit hex color and return null when it is invalid.",
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/hex.ts",
       "sourceLocation": {
@@ -1628,6 +1696,8 @@
     {
       "name": "parseHexColorOrThrow",
       "description": "Parse a string as a six-digit hex color or throw when it is invalid.",
+      "isReadme": false,
+      "examples": [],
       "kind": "function",
       "modulePath": "src/hex.ts",
       "sourceLocation": {
@@ -1657,6 +1727,8 @@
     {
       "name": "ReadableForegroundResult",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/contrast.ts",
       "sourceLocation": {
@@ -1687,6 +1759,8 @@
     {
       "name": "SemanticColorReference",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/semantics.ts",
       "sourceLocation": {
@@ -1717,6 +1791,8 @@
     {
       "name": "SemanticColorReferenceMap",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/semantics.ts",
       "sourceLocation": {
@@ -1732,6 +1808,8 @@
     {
       "name": "SemanticColorRole",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/semantics.ts",
       "sourceLocation": {
@@ -1747,6 +1825,8 @@
     {
       "name": "SemanticColorToken",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/semantics.ts",
       "sourceLocation": {
@@ -1762,6 +1842,8 @@
     {
       "name": "SemanticStatusSeedInput",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/semantic-status.ts",
       "sourceLocation": {
@@ -1777,6 +1859,8 @@
     {
       "name": "SemanticStatusSwatches",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/semantic-status.ts",
       "sourceLocation": {
@@ -1814,6 +1898,8 @@
     {
       "name": "ThemeColorInput",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/theme-colors.ts",
       "sourceLocation": {
@@ -1844,6 +1930,8 @@
     {
       "name": "ThemeColorMode",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "unknown",
       "modulePath": "src/semantics.ts",
       "sourceLocation": {
@@ -1859,6 +1947,8 @@
     {
       "name": "ThemeModeColorInput",
       "description": null,
+      "isReadme": false,
+      "examples": [],
       "kind": "type",
       "modulePath": "src/theme-colors.ts",
       "sourceLocation": {
@@ -1887,5 +1977,693 @@
       ]
     }
   ],
-  "components": []
+  "components": [],
+  "sequenceScenarios": [
+    {
+      "kind": "export",
+      "name": "assertHexColor",
+      "sourcePath": "src/hex.ts",
+      "symbolName": "assertHexColor",
+      "description": "Assert that a string is a valid six-digit hex color.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "createDefaultSemanticStatusSwatches",
+      "sourcePath": "src/semantic-status.ts",
+      "symbolName": "createDefaultSemanticStatusSwatches",
+      "description": null,
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "createSemanticStatusSwatches",
+      "sourcePath": "src/semantic-status.ts",
+      "symbolName": "createSemanticStatusSwatches",
+      "description": null,
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "generateColorSwatch",
+      "sourcePath": "src/swatches.ts",
+      "symbolName": "generateColorSwatch",
+      "description": "Generate a full color swatch and diagnostics from a base color.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "generateHarmonyRoleColors",
+      "sourcePath": "src/harmony.ts",
+      "symbolName": "generateHarmonyRoleColors",
+      "description": "Generate role-based harmony colors from a primary color and harmony strategy.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "generateNeutralSwatch",
+      "sourcePath": "src/neutral.ts",
+      "symbolName": "generateNeutralSwatch",
+      "description": "Generate a softly tinted neutral swatch from generated harmony role colors.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "generateThemeColors",
+      "sourcePath": "src/theme-colors.ts",
+      "symbolName": "generateThemeColors",
+      "description": "Generate light and dark theme color outputs from theme color input.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "generateThemeModeColors",
+      "sourcePath": "src/theme-colors.ts",
+      "symbolName": "generateThemeModeColors",
+      "description": "Generate harmony role colors, swatches, and neutral metadata for a theme mode.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "getReadableForeground",
+      "sourcePath": "src/contrast.ts",
+      "symbolName": "getReadableForeground",
+      "description": "Return the readable black or white foreground color with the stronger contrast against a background color.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "getThemeModePrimaryHex",
+      "sourcePath": "src/theme-colors.ts",
+      "symbolName": "getThemeModePrimaryHex",
+      "description": "Parse the primary color configured for a theme mode.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "isHexColor",
+      "sourcePath": "src/hex.ts",
+      "symbolName": "isHexColor",
+      "description": "Check whether a string is a valid six-digit hex color.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "parseHexColor",
+      "sourcePath": "src/hex.ts",
+      "symbolName": "parseHexColor",
+      "description": "Parse a string as a six-digit hex color and return null when it is invalid.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "parseHexColorOrThrow",
+      "sourcePath": "src/hex.ts",
+      "symbolName": "parseHexColorOrThrow",
+      "description": "Parse a string as a six-digit hex color or throw when it is invalid.",
+      "isReadme": false
+    }
+  ],
+  "graphs": {
+    "imports": [
+      {
+        "fromPath": "src/contrast.ts",
+        "toPath": "src/hex.ts",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromPath": "src/contrast.ts",
+        "toPath": "src/internal-culori.ts",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromPath": "src/harmony.ts",
+        "toPath": "src/hex.ts",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromPath": "src/harmony.ts",
+        "toPath": "src/internal-culori.ts",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/contrast.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/harmony.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/hex.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/neutral.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/semantic-status.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/semantics.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/swatches.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/theme-colors.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/internal-culori.ts",
+        "toPath": "src/hex.ts",
+        "sourcePath": "src/internal-culori.ts"
+      },
+      {
+        "fromPath": "src/neutral.ts",
+        "toPath": "src/harmony.ts",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromPath": "src/neutral.ts",
+        "toPath": "src/hex.ts",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromPath": "src/neutral.ts",
+        "toPath": "src/internal-culori.ts",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromPath": "src/neutral.ts",
+        "toPath": "src/swatches.ts",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromPath": "src/semantic-status.ts",
+        "toPath": "src/hex.ts",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromPath": "src/semantic-status.ts",
+        "toPath": "src/swatches.ts",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromPath": "src/semantics.ts",
+        "toPath": "src/harmony.ts",
+        "sourcePath": "src/semantics.ts"
+      },
+      {
+        "fromPath": "src/semantics.ts",
+        "toPath": "src/swatches.ts",
+        "sourcePath": "src/semantics.ts"
+      },
+      {
+        "fromPath": "src/swatches.ts",
+        "toPath": "src/hex.ts",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromPath": "src/swatches.ts",
+        "toPath": "src/internal-culori.ts",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromPath": "src/theme-colors.ts",
+        "toPath": "src/harmony.ts",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromPath": "src/theme-colors.ts",
+        "toPath": "src/hex.ts",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromPath": "src/theme-colors.ts",
+        "toPath": "src/neutral.ts",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromPath": "src/theme-colors.ts",
+        "toPath": "src/swatches.ts",
+        "sourcePath": "src/theme-colors.ts"
+      }
+    ],
+    "calls": [
+      {
+        "fromSymbol": "src/contrast.ts",
+        "toSymbol": "parseHexColorOrThrow",
+        "callExpression": "parseHexColorOrThrow",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "getReadableForeground",
+        "toSymbol": "contrastRatio",
+        "callExpression": "contrastRatio",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "generateHarmonyRoleColors",
+        "toSymbol": "parseHexToOklch",
+        "callExpression": "parseHexToOklch",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "generateHarmonyRoleColors",
+        "toSymbol": "normalizeHueDegrees",
+        "callExpression": "normalizeHueDegrees",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "generateHarmonyRoleColors",
+        "toSymbol": "oklchToHex",
+        "callExpression": "oklchToHex",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "parseHexColorOrThrow",
+        "toSymbol": "parseHexColor",
+        "callExpression": "parseHexColor",
+        "sourcePath": "src/hex.ts"
+      },
+      {
+        "fromSymbol": "assertHexColor",
+        "toSymbol": "isHexColor",
+        "callExpression": "isHexColor",
+        "sourcePath": "src/hex.ts"
+      },
+      {
+        "fromSymbol": "src/internal-culori.ts",
+        "toSymbol": "converter",
+        "callExpression": "converter",
+        "sourcePath": "src/internal-culori.ts"
+      },
+      {
+        "fromSymbol": "src/internal-culori.ts",
+        "toSymbol": "toGamut",
+        "callExpression": "toGamut",
+        "sourcePath": "src/internal-culori.ts"
+      },
+      {
+        "fromSymbol": "src/internal-culori.ts",
+        "toSymbol": "differenceEuclidean",
+        "callExpression": "differenceEuclidean",
+        "sourcePath": "src/internal-culori.ts"
+      },
+      {
+        "fromSymbol": "parseHexToOklch",
+        "toSymbol": "toOklch",
+        "callExpression": "toOklch",
+        "sourcePath": "src/internal-culori.ts"
+      },
+      {
+        "fromSymbol": "parseHexToOklch",
+        "toSymbol": "clampNumber",
+        "callExpression": "clampNumber",
+        "sourcePath": "src/internal-culori.ts"
+      },
+      {
+        "fromSymbol": "parseHexToOklch",
+        "toSymbol": "normalizeHueDegrees",
+        "callExpression": "normalizeHueDegrees",
+        "sourcePath": "src/internal-culori.ts"
+      },
+      {
+        "fromSymbol": "oklchToHex",
+        "toSymbol": "toRgbGamut",
+        "callExpression": "toRgbGamut",
+        "sourcePath": "src/internal-culori.ts"
+      },
+      {
+        "fromSymbol": "oklchToHex",
+        "toSymbol": "formatHex",
+        "callExpression": "formatHex",
+        "sourcePath": "src/internal-culori.ts"
+      },
+      {
+        "fromSymbol": "oklchToHex",
+        "toSymbol": "parseHexColorOrThrow",
+        "callExpression": "parseHexColorOrThrow",
+        "sourcePath": "src/internal-culori.ts"
+      },
+      {
+        "fromSymbol": "deltaEoklch",
+        "toSymbol": "deltaE",
+        "callExpression": "deltaE",
+        "sourcePath": "src/internal-culori.ts"
+      },
+      {
+        "fromSymbol": "contrastRatio",
+        "toSymbol": "wcagContrast",
+        "callExpression": "wcagContrast",
+        "sourcePath": "src/internal-culori.ts"
+      },
+      {
+        "fromSymbol": "generateNeutralSwatch",
+        "toSymbol": "pickTintSourceHex",
+        "callExpression": "pickTintSourceHex",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "generateNeutralSwatch",
+        "toSymbol": "parseHexToOklch",
+        "callExpression": "parseHexToOklch",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "generateNeutralSwatch",
+        "toSymbol": "normalizeHueDegrees",
+        "callExpression": "normalizeHueDegrees",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "generateNeutralSwatch",
+        "toSymbol": "clampNumber",
+        "callExpression": "clampNumber",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "generateNeutralSwatch",
+        "toSymbol": "oklchToHex",
+        "callExpression": "oklchToHex",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "generateNeutralSwatch",
+        "toSymbol": "generateColorSwatch",
+        "callExpression": "generateColorSwatch",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "createSemanticStatusSwatches",
+        "toSymbol": "parseHexColorOrThrow",
+        "callExpression": "parseHexColorOrThrow",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "createSemanticStatusSwatches",
+        "toSymbol": "generateColorSwatch",
+        "callExpression": "generateColorSwatch",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "createDefaultSemanticStatusSwatches",
+        "toSymbol": "createSemanticStatusSwatches",
+        "callExpression": "createSemanticStatusSwatches",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "generateColorSwatch",
+        "toSymbol": "parseHexToOklch",
+        "callExpression": "parseHexToOklch",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "generateColorSwatch",
+        "toSymbol": "clamp01",
+        "callExpression": "clamp01",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "generateColorSwatch",
+        "toSymbol": "chromaMultiplierForStep",
+        "callExpression": "chromaMultiplierForStep",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "generateColorSwatch",
+        "toSymbol": "oklchToHex",
+        "callExpression": "oklchToHex",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "generateColorSwatch",
+        "toSymbol": "deltaEoklch",
+        "callExpression": "deltaEoklch",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "getThemeModePrimaryHex",
+        "toSymbol": "parseHexColorOrThrow",
+        "callExpression": "parseHexColorOrThrow",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "generateThemeModeColors",
+        "toSymbol": "getThemeModePrimaryHex",
+        "callExpression": "getThemeModePrimaryHex",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "generateThemeModeColors",
+        "toSymbol": "generateHarmonyRoleColors",
+        "callExpression": "generateHarmonyRoleColors",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "generateThemeModeColors",
+        "toSymbol": "generateColorSwatch",
+        "callExpression": "generateColorSwatch",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "generateThemeModeColors",
+        "toSymbol": "generateNeutralSwatch",
+        "callExpression": "generateNeutralSwatch",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "generateThemeColors",
+        "toSymbol": "generateThemeModeColors",
+        "callExpression": "generateThemeModeColors",
+        "sourcePath": "src/theme-colors.ts"
+      }
+    ],
+    "typeReferences": [
+      {
+        "fromSymbol": "getReadableForeground",
+        "toType": "HexColor",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "getReadableForeground",
+        "toType": "ReadableForegroundResult",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "ReadableForegroundResult",
+        "toType": "HexColor",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "generateHarmonyRoleColors",
+        "toType": "GeneratedHarmonyRoleColors",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "generateHarmonyRoleColors",
+        "toType": "HexColor",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "GeneratedHarmonyRoleColor",
+        "toType": "GeneratedColorRole",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "GeneratedHarmonyRoleColor",
+        "toType": "HexColor",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "GeneratedHarmonyRoleColors",
+        "toType": "GeneratedHarmonyRoleColor",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "parseHexColor",
+        "toType": "HexColor",
+        "sourcePath": "src/hex.ts"
+      },
+      {
+        "fromSymbol": "parseHexColorOrThrow",
+        "toType": "HexColor",
+        "sourcePath": "src/hex.ts"
+      },
+      {
+        "fromSymbol": "generateNeutralSwatch",
+        "toType": "GeneratedHarmonyRoleColors",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "generateNeutralSwatch",
+        "toType": "NeutralSwatchResult",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "NeutralSwatchResult",
+        "toType": "ColorSwatch",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "NeutralSwatchResult",
+        "toType": "ColorSwatchDiagnostics",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "NeutralSwatchResult",
+        "toType": "HexColor",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "GeneratedNeutralMetadata",
+        "toType": "ColorSwatchDiagnostics",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "GeneratedNeutralMetadata",
+        "toType": "HexColor",
+        "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "createSemanticStatusSwatches",
+        "toType": "Role",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "createSemanticStatusSwatches",
+        "toType": "SemanticStatusSeedInput",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "createSemanticStatusSwatches",
+        "toType": "SemanticStatusSwatches",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "createDefaultSemanticStatusSwatches",
+        "toType": "SemanticStatusSwatches",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "SemanticStatusSwatches",
+        "toType": "ColorSwatch",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "SemanticStatusSwatches",
+        "toType": "ColorSwatchDiagnostics",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "SemanticStatusSwatches",
+        "toType": "HexColor",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "SemanticStatusSwatches",
+        "toType": "Role",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "SemanticColorReference",
+        "toType": "SemanticColorRole",
+        "sourcePath": "src/semantics.ts"
+      },
+      {
+        "fromSymbol": "generateColorSwatch",
+        "toType": "ColorSwatch",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "generateColorSwatch",
+        "toType": "ColorSwatchDiagnostics",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "generateColorSwatch",
+        "toType": "HexColor",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "ColorSwatchWarning",
+        "toType": "ColorSwatchWarningCode",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "ColorSwatchDiagnostics",
+        "toType": "ColorSwatchWarning",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "getThemeModePrimaryHex",
+        "toType": "HexColor",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "getThemeModePrimaryHex",
+        "toType": "ThemeModeColorInput",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "generateThemeModeColors",
+        "toType": "GeneratedThemeModeColors",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "generateThemeModeColors",
+        "toType": "ThemeModeColorInput",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "generateThemeColors",
+        "toType": "GeneratedThemeModeColors",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "generateThemeColors",
+        "toType": "ThemeColorInput",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "ThemeColorInput",
+        "toType": "ThemeModeColorInput",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "GeneratedThemeSwatches",
+        "toType": "ColorSwatch",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "GeneratedThemeModeColors",
+        "toType": "GeneratedHarmonyRoleColors",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "GeneratedThemeModeColors",
+        "toType": "GeneratedNeutralMetadata",
+        "sourcePath": "src/theme-colors.ts"
+      },
+      {
+        "fromSymbol": "GeneratedThemeModeColors",
+        "toType": "GeneratedThemeSwatches",
+        "sourcePath": "src/theme-colors.ts"
+      }
+    ],
+    "componentComposition": []
+  }
 }

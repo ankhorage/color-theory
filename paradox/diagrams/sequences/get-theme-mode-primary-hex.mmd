@@ -1,0 +1,8 @@
+sequenceDiagram
+  participant participant_getThemeModePrimaryHex as getThemeModePrimaryHex
+  participant participant_parseHexColor as parseHexColor
+  participant participant_parseHexColorOrThrow as parseHexColorOrThrow
+  participant_getThemeModePrimaryHex->>participant_parseHexColorOrThrow: parseHexColorOrThrow()
+  participant_parseHexColorOrThrow->>participant_parseHexColor: parseHexColor()
+  participant_parseHexColor-->>participant_parseHexColorOrThrow: return
+  participant_parseHexColorOrThrow-->>participant_getThemeModePrimaryHex: return

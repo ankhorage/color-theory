@@ -2675,75 +2675,111 @@ graph LR
               >
             </details>
           </article>
-          <article class="item" data-search="Entrypoint sequence diagrams/entrypoint-sequence.mmd">
-            <h3>Entrypoint sequence</h3>
-            <p class="muted"><code>diagrams/entrypoint-sequence.mmd</code></p>
+          <article
+            class="item"
+            data-search="assertHexColor sequence diagrams/sequences/assert-hex-color.mmd"
+          >
+            <h3>assertHexColor sequence</h3>
+            <p class="muted"><code>diagrams/sequences/assert-hex-color.mmd</code></p>
             <div class="mermaid">
-              sequenceDiagram participant participant_src_contrast_ts as src/contrast.ts participant
-              participant_src_culori_fn_ts as src/culori-fn.ts participant participant_src_culori_ts
-              as src/culori.ts participant participant_src_harmony_ts as src/harmony.ts participant
-              participant_src_hex_ts as src/hex.ts participant participant_src_index_ts as
-              src/index.ts participant participant_src_internal_culori_ts as src/internal-culori.ts
-              participant participant_src_neutral_ts as src/neutral.ts participant
-              participant_src_semantic_status_ts as src/semantic-status.ts participant
-              participant_src_semantics_ts as src/semantics.ts participant
-              participant_src_swatches_ts as src/swatches.ts participant
-              participant_src_theme_colors_ts as src/theme-colors.ts
-              participant_src_contrast_ts-&gt;&gt;participant_src_hex_ts: imports
-              participant_src_contrast_ts-&gt;&gt;participant_src_internal_culori_ts: imports
-              participant_src_harmony_ts-&gt;&gt;participant_src_hex_ts: imports
-              participant_src_harmony_ts-&gt;&gt;participant_src_internal_culori_ts: imports
-              participant_src_internal_culori_ts-&gt;&gt;participant_src_hex_ts: imports
-              participant_src_neutral_ts-&gt;&gt;participant_src_harmony_ts: imports
-              participant_src_neutral_ts-&gt;&gt;participant_src_hex_ts: imports
-              participant_src_neutral_ts-&gt;&gt;participant_src_internal_culori_ts: imports
-              participant_src_neutral_ts-&gt;&gt;participant_src_swatches_ts: imports
-              participant_src_semantic_status_ts-&gt;&gt;participant_src_hex_ts: imports
-              participant_src_semantic_status_ts-&gt;&gt;participant_src_swatches_ts: imports
-              participant_src_semantics_ts-&gt;&gt;participant_src_harmony_ts: imports
-              participant_src_semantics_ts-&gt;&gt;participant_src_swatches_ts: imports
-              participant_src_swatches_ts-&gt;&gt;participant_src_hex_ts: imports
-              participant_src_swatches_ts-&gt;&gt;participant_src_internal_culori_ts: imports
-              participant_src_theme_colors_ts-&gt;&gt;participant_src_harmony_ts: imports
-              participant_src_theme_colors_ts-&gt;&gt;participant_src_hex_ts: imports
-              participant_src_theme_colors_ts-&gt;&gt;participant_src_neutral_ts: imports
-              participant_src_theme_colors_ts-&gt;&gt;participant_src_swatches_ts: imports
+              sequenceDiagram participant participant_assertHexColor as assertHexColor participant
+              participant_isHexColor as isHexColor
+              participant_assertHexColor-&gt;&gt;participant_isHexColor: isHexColor()
+              participant_isHexColor--&gt;&gt;participant_assertHexColor: return
             </div>
             <details>
               <summary>View Mermaid source</summary>
               <pre>
 sequenceDiagram
-participant participant_src_contrast_ts as src/contrast.ts
-participant participant_src_culori_fn_ts as src/culori-fn.ts
-participant participant_src_culori_ts as src/culori.ts
-participant participant_src_harmony_ts as src/harmony.ts
-participant participant_src_hex_ts as src/hex.ts
-participant participant_src_index_ts as src/index.ts
-participant participant_src_internal_culori_ts as src/internal-culori.ts
-participant participant_src_neutral_ts as src/neutral.ts
-participant participant_src_semantic_status_ts as src/semantic-status.ts
-participant participant_src_semantics_ts as src/semantics.ts
-participant participant_src_swatches_ts as src/swatches.ts
-participant participant_src_theme_colors_ts as src/theme-colors.ts
-  participant_src_contrast_ts-&gt;&gt;participant_src_hex_ts: imports
-  participant_src_contrast_ts-&gt;&gt;participant_src_internal_culori_ts: imports
-  participant_src_harmony_ts-&gt;&gt;participant_src_hex_ts: imports
-  participant_src_harmony_ts-&gt;&gt;participant_src_internal_culori_ts: imports
-  participant_src_internal_culori_ts-&gt;&gt;participant_src_hex_ts: imports
-  participant_src_neutral_ts-&gt;&gt;participant_src_harmony_ts: imports
-  participant_src_neutral_ts-&gt;&gt;participant_src_hex_ts: imports
-  participant_src_neutral_ts-&gt;&gt;participant_src_internal_culori_ts: imports
-  participant_src_neutral_ts-&gt;&gt;participant_src_swatches_ts: imports
-  participant_src_semantic_status_ts-&gt;&gt;participant_src_hex_ts: imports
-  participant_src_semantic_status_ts-&gt;&gt;participant_src_swatches_ts: imports
-  participant_src_semantics_ts-&gt;&gt;participant_src_harmony_ts: imports
-  participant_src_semantics_ts-&gt;&gt;participant_src_swatches_ts: imports
-  participant_src_swatches_ts-&gt;&gt;participant_src_hex_ts: imports
-  participant_src_swatches_ts-&gt;&gt;participant_src_internal_culori_ts: imports
-  participant_src_theme_colors_ts-&gt;&gt;participant_src_harmony_ts: imports
-  participant_src_theme_colors_ts-&gt;&gt;participant_src_hex_ts: imports
-  participant_src_theme_colors_ts-&gt;&gt;participant_src_neutral_ts: imports
-  participant_src_theme_colors_ts-&gt;&gt;participant_src_swatches_ts: imports
+  participant participant_assertHexColor as assertHexColor
+  participant participant_isHexColor as isHexColor
+  participant_assertHexColor-&gt;&gt;participant_isHexColor: isHexColor()
+  participant_isHexColor--&gt;&gt;participant_assertHexColor: return
+</pre
+              >
+            </details>
+          </article>
+          <article
+            class="item"
+            data-search="getReadableForeground sequence diagrams/sequences/get-readable-foreground.mmd"
+          >
+            <h3>getReadableForeground sequence</h3>
+            <p class="muted"><code>diagrams/sequences/get-readable-foreground.mmd</code></p>
+            <div class="mermaid">
+              sequenceDiagram participant participant_contrastRatio as contrastRatio participant
+              participant_getReadableForeground as getReadableForeground participant
+              participant_wcagContrast as wcagContrast
+              participant_getReadableForeground-&gt;&gt;participant_contrastRatio: contrastRatio()
+              participant_contrastRatio-&gt;&gt;participant_wcagContrast: wcagContrast()
+              participant_wcagContrast--&gt;&gt;participant_contrastRatio: return
+              participant_contrastRatio--&gt;&gt;participant_getReadableForeground: return
+            </div>
+            <details>
+              <summary>View Mermaid source</summary>
+              <pre>
+sequenceDiagram
+  participant participant_contrastRatio as contrastRatio
+  participant participant_getReadableForeground as getReadableForeground
+  participant participant_wcagContrast as wcagContrast
+  participant_getReadableForeground-&gt;&gt;participant_contrastRatio: contrastRatio()
+  participant_contrastRatio-&gt;&gt;participant_wcagContrast: wcagContrast()
+  participant_wcagContrast--&gt;&gt;participant_contrastRatio: return
+  participant_contrastRatio--&gt;&gt;participant_getReadableForeground: return
+</pre
+              >
+            </details>
+          </article>
+          <article
+            class="item"
+            data-search="getThemeModePrimaryHex sequence diagrams/sequences/get-theme-mode-primary-hex.mmd"
+          >
+            <h3>getThemeModePrimaryHex sequence</h3>
+            <p class="muted"><code>diagrams/sequences/get-theme-mode-primary-hex.mmd</code></p>
+            <div class="mermaid">
+              sequenceDiagram participant participant_getThemeModePrimaryHex as
+              getThemeModePrimaryHex participant participant_parseHexColor as parseHexColor
+              participant participant_parseHexColorOrThrow as parseHexColorOrThrow
+              participant_getThemeModePrimaryHex-&gt;&gt;participant_parseHexColorOrThrow:
+              parseHexColorOrThrow()
+              participant_parseHexColorOrThrow-&gt;&gt;participant_parseHexColor: parseHexColor()
+              participant_parseHexColor--&gt;&gt;participant_parseHexColorOrThrow: return
+              participant_parseHexColorOrThrow--&gt;&gt;participant_getThemeModePrimaryHex: return
+            </div>
+            <details>
+              <summary>View Mermaid source</summary>
+              <pre>
+sequenceDiagram
+  participant participant_getThemeModePrimaryHex as getThemeModePrimaryHex
+  participant participant_parseHexColor as parseHexColor
+  participant participant_parseHexColorOrThrow as parseHexColorOrThrow
+  participant_getThemeModePrimaryHex-&gt;&gt;participant_parseHexColorOrThrow: parseHexColorOrThrow()
+  participant_parseHexColorOrThrow-&gt;&gt;participant_parseHexColor: parseHexColor()
+  participant_parseHexColor--&gt;&gt;participant_parseHexColorOrThrow: return
+  participant_parseHexColorOrThrow--&gt;&gt;participant_getThemeModePrimaryHex: return
+</pre
+              >
+            </details>
+          </article>
+          <article
+            class="item"
+            data-search="parseHexColorOrThrow sequence diagrams/sequences/parse-hex-color-or-throw.mmd"
+          >
+            <h3>parseHexColorOrThrow sequence</h3>
+            <p class="muted"><code>diagrams/sequences/parse-hex-color-or-throw.mmd</code></p>
+            <div class="mermaid">
+              sequenceDiagram participant participant_parseHexColor as parseHexColor participant
+              participant_parseHexColorOrThrow as parseHexColorOrThrow
+              participant_parseHexColorOrThrow-&gt;&gt;participant_parseHexColor: parseHexColor()
+              participant_parseHexColor--&gt;&gt;participant_parseHexColorOrThrow: return
+            </div>
+            <details>
+              <summary>View Mermaid source</summary>
+              <pre>
+sequenceDiagram
+  participant participant_parseHexColor as parseHexColor
+  participant participant_parseHexColorOrThrow as parseHexColorOrThrow
+  participant_parseHexColorOrThrow-&gt;&gt;participant_parseHexColor: parseHexColor()
+  participant_parseHexColor--&gt;&gt;participant_parseHexColorOrThrow: return
 </pre
               >
             </details>
