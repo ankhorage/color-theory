@@ -1,5 +1,12 @@
 # @ankhorage/color-theory
 
+## 0.0.5
+
+### Patch Changes
+
+- bdb341f: Update docs
+- Update Docs
+
 ## 0.0.4
 
 ### Patch Changes
