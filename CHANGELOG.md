@@ -1,5 +1,11 @@
 # @ankhorage/color-theory
 
+## 0.0.6
+
+### Patch Changes
+
+- 151330d: Update docs
+
 ## 0.0.5
 
 ### Patch Changes
