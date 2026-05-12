@@ -1,5 +1,11 @@
 # @ankhorage/color-theory
 
+## 0.0.7
+
+### Patch Changes
+
+- f3945f3: Update packages
+
 ## 0.0.6
 
 ### Patch Changes
