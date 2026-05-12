@@ -28,14 +28,15 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "COLOR_HARMONIES",
     "description": null,
     "isReadme": false,
     "examples": [],
-    "kind": "unknown",
+    "kind": "value",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
       "filePath": "src/harmony.ts",
@@ -45,14 +46,15 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "COLOR_SWATCH_BASE_STEP",
     "description": null,
     "isReadme": false,
     "examples": [],
-    "kind": "unknown",
+    "kind": "value",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
       "filePath": "src/swatches.ts",
@@ -62,14 +64,15 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "COLOR_SWATCH_STEPS",
     "description": null,
     "isReadme": false,
     "examples": [],
-    "kind": "unknown",
+    "kind": "value",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
       "filePath": "src/swatches.ts",
@@ -79,7 +82,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "ColorHarmony",
@@ -96,7 +100,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "ColorSwatch",
@@ -113,7 +118,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "ColorSwatchDiagnostics",
@@ -166,7 +172,8 @@
         "required": true,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   },
   {
     "name": "ColorSwatchStep",
@@ -183,7 +190,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "ColorSwatchWarning",
@@ -229,7 +237,8 @@
         "required": false,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   },
   {
     "name": "ColorSwatchWarningCode",
@@ -246,7 +255,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "createDefaultSemanticStatusSwatches",
@@ -270,7 +280,8 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "createSemanticStatusSwatches",
@@ -301,14 +312,15 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "DARK_SEMANTIC_COLOR_REFERENCES",
     "description": null,
     "isReadme": false,
     "examples": [],
-    "kind": "unknown",
+    "kind": "value",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
       "filePath": "src/semantics.ts",
@@ -318,14 +330,15 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS",
     "description": null,
     "isReadme": false,
     "examples": [],
-    "kind": "unknown",
+    "kind": "value",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
       "filePath": "src/semantic-status.ts",
@@ -335,7 +348,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "DefaultSemanticStatusRole",
@@ -352,7 +366,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "generateColorSwatch",
@@ -383,7 +398,8 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "GeneratedColorRole",
@@ -400,7 +416,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "GeneratedHarmonyRoleColor",
@@ -446,7 +463,8 @@
         "required": true,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   },
   {
     "name": "GeneratedHarmonyRoleColors",
@@ -506,7 +524,8 @@
         "required": false,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   },
   {
     "name": "GeneratedNeutralMetadata",
@@ -538,7 +557,8 @@
         "required": true,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   },
   {
     "name": "GeneratedThemeModeColors",
@@ -581,7 +601,8 @@
         "required": true,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   },
   {
     "name": "GeneratedThemeSwatches",
@@ -634,7 +655,8 @@
         "required": false,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   },
   {
     "name": "generateHarmonyRoleColors",
@@ -671,7 +693,8 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "generateNeutralSwatch",
@@ -702,7 +725,8 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "generateThemeColors",
@@ -733,7 +757,8 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "generateThemeModeColors",
@@ -764,7 +789,8 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "getReadableForeground",
@@ -795,7 +821,8 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "getThemeModePrimaryHex",
@@ -826,7 +853,8 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "HexColor",
@@ -843,7 +871,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "isHexColor",
@@ -874,14 +903,15 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "LIGHT_SEMANTIC_COLOR_REFERENCES",
     "description": null,
     "isReadme": false,
     "examples": [],
-    "kind": "unknown",
+    "kind": "value",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
       "filePath": "src/semantics.ts",
@@ -891,14 +921,15 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "MIN_HUEFUL_CHROMA",
     "description": null,
     "isReadme": false,
     "examples": [],
-    "kind": "unknown",
+    "kind": "value",
     "modulePath": "src/neutral.ts",
     "sourceLocation": {
       "filePath": "src/neutral.ts",
@@ -908,7 +939,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "NeutralSwatchResult",
@@ -947,7 +979,8 @@
         "required": true,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   },
   {
     "name": "parseHexColor",
@@ -978,7 +1011,8 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "parseHexColorOrThrow",
@@ -1009,7 +1043,8 @@
         "returnDescription": null
       }
     ],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "ReadableForegroundResult",
@@ -1041,7 +1076,8 @@
         "required": true,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   },
   {
     "name": "SemanticColorReference",
@@ -1073,7 +1109,8 @@
         "required": true,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   },
   {
     "name": "SemanticColorReferenceMap",
@@ -1090,7 +1127,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "SemanticColorRole",
@@ -1107,7 +1145,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "SemanticColorToken",
@@ -1124,7 +1163,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "SemanticStatusSeedInput",
@@ -1141,7 +1181,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "SemanticStatusSwatches",
@@ -1180,7 +1221,8 @@
         "required": true,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   },
   {
     "name": "ThemeColorInput",
@@ -1212,7 +1254,8 @@
         "required": true,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   },
   {
     "name": "ThemeColorMode",
@@ -1229,7 +1272,8 @@
     "exportPaths": ["src/index.ts"],
     "relatedSymbols": [],
     "signatures": [],
-    "members": []
+    "members": [],
+    "structuredRows": []
   },
   {
     "name": "ThemeModeColorInput",
@@ -1261,6 +1305,7 @@
         "required": true,
         "description": null
       }
-    ]
+    ],
+    "structuredRows": []
   }
 ]

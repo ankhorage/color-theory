@@ -16,19 +16,19 @@ Assert that a string is a valid six-digit hex color.
 
 ## COLOR_HARMONIES
 
-Kind: `unknown`
+Kind: `value`
 Module: `src/harmony.ts`
 Source: `src/harmony.ts:4:14`
 
 ## COLOR_SWATCH_BASE_STEP
 
-Kind: `unknown`
+Kind: `value`
 Module: `src/swatches.ts`
 Source: `src/swatches.ts:7:14`
 
 ## COLOR_SWATCH_STEPS
 
-Kind: `unknown`
+Kind: `value`
 Module: `src/swatches.ts`
 Source: `src/swatches.ts:4:14`
 
@@ -112,13 +112,13 @@ Source: `src/semantic-status.ts:22:1`
 
 ## DARK_SEMANTIC_COLOR_REFERENCES
 
-Kind: `unknown`
+Kind: `value`
 Module: `src/semantics.ts`
 Source: `src/semantics.ts:46:14`
 
 ## DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS
 
-Kind: `unknown`
+Kind: `value`
 Module: `src/semantic-status.ts`
 Source: `src/semantic-status.ts:6:14`
 
@@ -330,13 +330,13 @@ Check whether a string is a valid six-digit hex color.
 
 ## LIGHT_SEMANTIC_COLOR_REFERENCES
 
-Kind: `unknown`
+Kind: `value`
 Module: `src/semantics.ts`
 Source: `src/semantics.ts:30:14`
 
 ## MIN_HUEFUL_CHROMA
 
-Kind: `unknown`
+Kind: `value`
 Module: `src/neutral.ts`
 Source: `src/neutral.ts:6:14`
 

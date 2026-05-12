@@ -7,29 +7,6 @@
 
 Standalone color theory, harmony, swatch, contrast, and theme color generation utilities.
 
-## Documentation Tags
-
-<details>
-<summary>@readme</summary>
-
-Includes a documentation block or exported symbol in README output.
-
-</details>
-
-<details>
-<summary>@config</summary>
-
-Marks a type or interface as part of the Paradox configuration model. `@config` alone does not imply README inclusion; use `@config` plus `@readme` for README output.
-
-</details>
-
-<details>
-<summary>@example</summary>
-
-Adds a titled fenced code example to the generated documentation for a symbol.
-
-</details>
-
 ## Generated documentation
 
 - [Interactive documentation app](././paradox/index.html)
