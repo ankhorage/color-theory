@@ -12,7 +12,7 @@
     {
       "id": "npm",
       "label": "npm",
-      "value": "v0.0.6",
+      "value": "v0.0.7",
       "color": "cb3837"
     },
     {
@@ -586,6 +586,7 @@
       "exports": [
         "assertHexColor",
         "COLOR_HARMONIES",
+        "COLOR_SWATCH_BASE_LIGHTNESS",
         "COLOR_SWATCH_BASE_STEP",
         "COLOR_SWATCH_STEPS",
         "ColorHarmony",
@@ -686,6 +687,7 @@
       "isEntrypoint": false,
       "dependencies": ["src/hex.ts", "src/internal-culori.ts"],
       "exports": [
+        "COLOR_SWATCH_BASE_LIGHTNESS",
         "COLOR_SWATCH_BASE_STEP",
         "COLOR_SWATCH_STEPS",
         "ColorSwatch",
@@ -763,6 +765,24 @@
       "structuredRows": []
     },
     {
+      "name": "COLOR_SWATCH_BASE_LIGHTNESS",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "value",
+      "modulePath": "src/swatches.ts",
+      "sourceLocation": {
+        "filePath": "src/swatches.ts",
+        "line": 8,
+        "column": 14
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
       "name": "COLOR_SWATCH_BASE_STEP",
       "description": null,
       "isReadme": false,
@@ -825,7 +845,7 @@
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 9,
+        "line": 10,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -843,7 +863,7 @@
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 23,
+        "line": 24,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -915,7 +935,7 @@
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 16,
+        "line": 17,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -962,7 +982,7 @@
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 11,
+        "line": 12,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1091,7 +1111,7 @@
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 73,
+        "line": 74,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1249,7 +1269,7 @@
       "modulePath": "src/neutral.ts",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 14,
+        "line": 19,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1418,7 +1438,7 @@
       "modulePath": "src/neutral.ts",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 54,
+        "line": 59,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1646,7 +1666,7 @@
       "modulePath": "src/neutral.ts",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 6,
+        "line": 11,
         "column": 14
       },
       "exportPaths": ["src/index.ts"],
@@ -1664,7 +1684,7 @@
       "modulePath": "src/neutral.ts",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 8,
+        "line": 13,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -2137,7 +2157,7 @@
       "description": "Pick the harmony color that should tint the generated neutral swatch.",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 22,
+        "line": 27,
         "column": 1
       }
     },
@@ -2146,7 +2166,7 @@
       "description": "Clamp a number to a finite minimum and maximum range.",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 46,
+        "line": 51,
         "column": 1
       }
     },
@@ -2155,7 +2175,7 @@
       "description": "Generate a softly tinted neutral swatch from generated harmony role colors.",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 54,
+        "line": 59,
         "column": 1
       }
     },
@@ -2182,7 +2202,7 @@
       "description": "Clamp a number into the normalized zero-to-one range.",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 54,
+        "line": 55,
         "column": 1
       }
     },
@@ -2191,7 +2211,7 @@
       "description": "Return the chroma multiplier used for a swatch step.",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 62,
+        "line": 63,
         "column": 1
       }
     },
@@ -2200,7 +2220,7 @@
       "description": "Generate a full color swatch and diagnostics from a base color.",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 73,
+        "line": 74,
         "column": 1
       }
     },
