@@ -1,5 +1,11 @@
 # @ankhorage/color-theory
 
+## 0.0.8
+
+### Patch Changes
+
+- cd67ac5: Align generated neutral key colors with the swatch base-step lightness so adjacent light neutral steps remain distinct.
+
 ## 0.0.7
 
 ### Patch Changes
