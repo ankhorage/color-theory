@@ -5,6 +5,7 @@ export const COLOR_SWATCH_STEPS = [50, 100, 200, 300, 400, 500, 600, 700, 800, 9
 export type ColorSwatchStep = (typeof COLOR_SWATCH_STEPS)[number];
 
 export const COLOR_SWATCH_BASE_STEP = 500 as const;
+export const COLOR_SWATCH_BASE_LIGHTNESS = 0.551;
 
 export type ColorSwatch = Record<ColorSwatchStep, HexColor>;
 
@@ -37,7 +38,7 @@ const BASELINE_LIGHTNESS_BY_STEP: Record<ColorSwatchStep, number> = {
   200: 0.928,
   300: 0.872,
   400: 0.707,
-  500: 0.551,
+  [COLOR_SWATCH_BASE_STEP]: COLOR_SWATCH_BASE_LIGHTNESS,
   600: 0.446,
   700: 0.373,
   800: 0.278,
@@ -75,7 +76,7 @@ export function generateColorSwatch(baseColor: HexColor): {
   diagnostics: ColorSwatchDiagnostics;
 } {
   const baseOklch = parseHexToOklch(baseColor);
-  const baseOffset = baseOklch.l - BASELINE_LIGHTNESS_BY_STEP[COLOR_SWATCH_BASE_STEP];
+  const baseOffset = baseOklch.l - COLOR_SWATCH_BASE_LIGHTNESS;
 
   const warnings: ColorSwatchWarning[] = [];
   const swatch = {} as ColorSwatch;
