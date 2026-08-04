@@ -1,7 +1,12 @@
 import type { ColorHarmony, GeneratedHarmonyRoleColors } from './harmony';
 import type { HexColor } from './hex';
 import { normalizeHueDegrees, oklchToHex, parseHexToOklch } from './internal-culori';
-import { type ColorSwatch, type ColorSwatchDiagnostics, generateColorSwatch } from './swatches';
+import {
+  COLOR_SWATCH_BASE_LIGHTNESS,
+  type ColorSwatch,
+  type ColorSwatchDiagnostics,
+  generateColorSwatch,
+} from './swatches';
 
 export const MIN_HUEFUL_CHROMA = 0.015;
 
@@ -66,7 +71,7 @@ export function generateNeutralSwatch(roleColors: GeneratedHarmonyRoleColors): N
 
   const neutralKeyColor = oklchToHex({
     mode: 'oklch',
-    l: 0.6,
+    l: COLOR_SWATCH_BASE_LIGHTNESS,
     c: neutralChroma,
     h: neutralHue,
   });
