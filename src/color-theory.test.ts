@@ -2,6 +2,7 @@ import { describe, expect, it } from 'bun:test';
 
 import {
   COLOR_HARMONIES,
+  COLOR_SWATCH_BASE_LIGHTNESS,
   COLOR_SWATCH_BASE_STEP,
   COLOR_SWATCH_STEPS,
   createDefaultSemanticStatusSwatches,
@@ -15,6 +16,7 @@ import {
   parseHexColor,
   parseHexColorOrThrow,
 } from './index';
+import { parseHexToOklch } from './internal-culori';
 
 describe('color theory', () => {
   it('parses valid hex colors and rejects invalid values', () => {
@@ -58,6 +60,13 @@ describe('color theory', () => {
     const neutral = generateNeutralSwatch(roleColors);
 
     expect(neutral.neutral[COLOR_SWATCH_BASE_STEP]).toBe(neutral.neutralKeyColor);
+    expect(parseHexToOklch(neutral.neutralKeyColor).l).toBeCloseTo(
+      COLOR_SWATCH_BASE_LIGHTNESS,
+      2,
+    );
+    expect(neutral.neutral[50]).not.toBe(neutral.neutral[100]);
+    expect(neutral.neutral[100]).not.toBe(neutral.neutral[200]);
+    expect(neutral.diagnostics.isUsable).toBe(true);
     expect(neutral.diagnostics.lightnessRange.max).toBeGreaterThanOrEqual(
       neutral.diagnostics.lightnessRange.min,
     );
