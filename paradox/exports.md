@@ -20,6 +20,12 @@ Kind: `value`
 Module: `src/harmony.ts`
 Source: `src/harmony.ts:4:14`
 
+## COLOR_SWATCH_BASE_LIGHTNESS
+
+Kind: `value`
+Module: `src/swatches.ts`
+Source: `src/swatches.ts:8:14`
+
 ## COLOR_SWATCH_BASE_STEP
 
 Kind: `value`
@@ -42,13 +48,13 @@ Source: `src/harmony.ts:13:1`
 
 Kind: `unknown`
 Module: `src/swatches.ts`
-Source: `src/swatches.ts:9:1`
+Source: `src/swatches.ts:10:1`
 
 ## ColorSwatchDiagnostics
 
 Kind: `type`
 Module: `src/swatches.ts`
-Source: `src/swatches.ts:23:1`
+Source: `src/swatches.ts:24:1`
 
 ### Members
 
@@ -70,7 +76,7 @@ Source: `src/swatches.ts:5:1`
 
 Kind: `type`
 Module: `src/swatches.ts`
-Source: `src/swatches.ts:16:1`
+Source: `src/swatches.ts:17:1`
 
 ### Members
 
@@ -85,7 +91,7 @@ Source: `src/swatches.ts:16:1`
 
 Kind: `unknown`
 Module: `src/swatches.ts`
-Source: `src/swatches.ts:11:1`
+Source: `src/swatches.ts:12:1`
 
 ## createDefaultSemanticStatusSwatches
 
@@ -132,7 +138,7 @@ Source: `src/semantic-status.ts:12:1`
 
 Kind: `function`
 Module: `src/swatches.ts`
-Source: `src/swatches.ts:73:1`
+Source: `src/swatches.ts:74:1`
 
 Generate a full color swatch and diagnostics from a base color.
 
@@ -184,7 +190,7 @@ Source: `src/harmony.ts:24:1`
 
 Kind: `type`
 Module: `src/neutral.ts`
-Source: `src/neutral.ts:14:1`
+Source: `src/neutral.ts:19:1`
 
 ### Members
 
@@ -242,7 +248,7 @@ Generate role-based harmony colors from a primary color and harmony strategy.
 
 Kind: `function`
 Module: `src/neutral.ts`
-Source: `src/neutral.ts:54:1`
+Source: `src/neutral.ts:59:1`
 
 Generate a softly tinted neutral swatch from generated harmony role colors.
 
@@ -338,13 +344,13 @@ Source: `src/semantics.ts:30:14`
 
 Kind: `value`
 Module: `src/neutral.ts`
-Source: `src/neutral.ts:6:14`
+Source: `src/neutral.ts:11:14`
 
 ## NeutralSwatchResult
 
 Kind: `type`
 Module: `src/neutral.ts`
-Source: `src/neutral.ts:8:1`
+Source: `src/neutral.ts:13:1`
 
 ### Members
 

@@ -60,10 +60,7 @@ describe('color theory', () => {
     const neutral = generateNeutralSwatch(roleColors);
 
     expect(neutral.neutral[COLOR_SWATCH_BASE_STEP]).toBe(neutral.neutralKeyColor);
-    expect(parseHexToOklch(neutral.neutralKeyColor).l).toBeCloseTo(
-      COLOR_SWATCH_BASE_LIGHTNESS,
-      2,
-    );
+    expect(parseHexToOklch(neutral.neutralKeyColor).l).toBeCloseTo(COLOR_SWATCH_BASE_LIGHTNESS, 2);
     expect(neutral.neutral[50]).not.toBe(neutral.neutral[100]);
     expect(neutral.neutral[100]).not.toBe(neutral.neutral[200]);
     expect(neutral.diagnostics.isUsable).toBe(true);
