@@ -54,7 +54,7 @@ Source: `src/swatches.ts:10:1`
 
 Kind: `type`
 Module: `src/swatches.ts`
-Source: `src/swatches.ts:24:1`
+Source: `src/swatches.ts:22:1`
 
 ### Members
 
@@ -76,7 +76,7 @@ Source: `src/swatches.ts:5:1`
 
 Kind: `type`
 Module: `src/swatches.ts`
-Source: `src/swatches.ts:17:1`
+Source: `src/swatches.ts:15:1`
 
 ### Members
 
@@ -97,7 +97,9 @@ Source: `src/swatches.ts:12:1`
 
 Kind: `function`
 Module: `src/semantic-status.ts`
-Source: `src/semantic-status.ts:44:1`
+Source: `src/semantic-status.ts:74:1`
+
+Generate the canonical default semantic status swatches.
 
 ### Signatures
 
@@ -108,7 +110,9 @@ Source: `src/semantic-status.ts:44:1`
 
 Kind: `function`
 Module: `src/semantic-status.ts`
-Source: `src/semantic-status.ts:22:1`
+Source: `src/semantic-status.ts:58:1`
+
+Generate semantic status swatches from a role-to-seed record.
 
 ### Signatures
 
@@ -138,7 +142,7 @@ Source: `src/semantic-status.ts:12:1`
 
 Kind: `function`
 Module: `src/swatches.ts`
-Source: `src/swatches.ts:74:1`
+Source: `src/swatches.ts:210:1`
 
 Generate a full color swatch and diagnostics from a base color.
 
@@ -233,7 +237,7 @@ Source: `src/theme-colors.ts:17:1`
 
 Kind: `function`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:54:1`
+Source: `src/harmony.ts:69:1`
 
 Generate role-based harmony colors from a primary color and harmony strategy.
 
@@ -248,7 +252,7 @@ Generate role-based harmony colors from a primary color and harmony strategy.
 
 Kind: `function`
 Module: `src/neutral.ts`
-Source: `src/neutral.ts:59:1`
+Source: `src/neutral.ts:49:1`
 
 Generate a softly tinted neutral swatch from generated harmony role colors.
 

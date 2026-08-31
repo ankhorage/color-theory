@@ -10,9 +10,7 @@ export const COLOR_SWATCH_BASE_LIGHTNESS = 0.551;
 export type ColorSwatch = Record<ColorSwatchStep, HexColor>;
 
 export type ColorSwatchWarningCode =
-  | 'weak_step'
-  | 'weak_adjacent_delta'
-  | 'limited_lightness_range';
+  'weak_step' | 'weak_adjacent_delta' | 'limited_lightness_range';
 
 export interface ColorSwatchWarning {
   code: ColorSwatchWarningCode;
@@ -32,22 +30,33 @@ export interface ColorSwatchDiagnostics {
   };
 }
 
-const BASELINE_LIGHTNESS_BY_STEP: Record<ColorSwatchStep, number> = {
-  50: 0.985,
-  100: 0.967,
-  200: 0.928,
-  300: 0.872,
-  400: 0.707,
-  [COLOR_SWATCH_BASE_STEP]: COLOR_SWATCH_BASE_LIGHTNESS,
-  600: 0.446,
-  700: 0.373,
-  800: 0.278,
-  900: 0.21,
-  950: 0.13,
-};
+const BASELINE_LIGHTNESS_BY_STEP = new Map<ColorSwatchStep, number>([
+  [50, 0.985],
+  [100, 0.967],
+  [200, 0.928],
+  [300, 0.872],
+  [400, 0.707],
+  [COLOR_SWATCH_BASE_STEP, COLOR_SWATCH_BASE_LIGHTNESS],
+  [600, 0.446],
+  [700, 0.373],
+  [800, 0.278],
+  [900, 0.21],
+  [950, 0.13],
+]);
 
 const MIN_USABLE_ADJACENT_DELTA = 0.012;
 const MIN_USABLE_LIGHTNESS_RANGE = 0.35;
+
+interface ColorSwatchSample {
+  readonly hex: HexColor;
+  readonly lightness: number;
+  readonly step: ColorSwatchStep;
+}
+
+interface GeneratedColorSwatchSamples {
+  readonly samples: readonly ColorSwatchSample[];
+  readonly warnings: readonly ColorSwatchWarning[];
+}
 
 /***
   Clamp a number into the normalized zero-to-one range.
@@ -69,93 +78,149 @@ function chromaMultiplierForStep(step: ColorSwatchStep): number {
 }
 
 /***
+  Resolve the canonical baseline lightness for a swatch step.
+*/
+function getBaselineLightness(step: ColorSwatchStep): number {
+  const lightness = BASELINE_LIGHTNESS_BY_STEP.get(step);
+  if (lightness === undefined) {
+    throw new Error(`[color-theory] Missing baseline lightness for swatch step ${step}.`);
+  }
+  return lightness;
+}
+
+/***
+  Generate one immutable swatch sample from the base color.
+*/
+function createSwatchSample(
+  baseColor: HexColor,
+  step: ColorSwatchStep,
+  baseOffset: number,
+): ColorSwatchSample {
+  const base = parseHexToOklch(baseColor);
+  if (step === COLOR_SWATCH_BASE_STEP) {
+    return { hex: baseColor, lightness: base.l, step };
+  }
+  const target = {
+    ...base,
+    l: clamp01(getBaselineLightness(step) + baseOffset),
+    c: clamp01(base.c * chromaMultiplierForStep(step)),
+  };
+  const hex = oklchToHex(target);
+  return { hex, lightness: parseHexToOklch(hex).l, step };
+}
+
+/***
+  Create any weak-step warning for a generated sample.
+*/
+function createWeakStepWarning(
+  baseColor: HexColor,
+  sample: ColorSwatchSample,
+): ColorSwatchWarning | undefined {
+  if (sample.step === COLOR_SWATCH_BASE_STEP) return undefined;
+  const deltaEFromBase = deltaEoklch(parseHexToOklch(baseColor), parseHexToOklch(sample.hex));
+  if (deltaEFromBase >= 0.02) return undefined;
+  return {
+    code: 'weak_step',
+    step: sample.step,
+    deltaEFromBase,
+    message: `Swatch step ${sample.step} is visually close to the base color.`,
+  };
+}
+
+/***
+  Generate immutable swatch samples and their per-step warnings.
+*/
+function generateSwatchSamples(baseColor: HexColor): GeneratedColorSwatchSamples {
+  const baseOffset = parseHexToOklch(baseColor).l - COLOR_SWATCH_BASE_LIGHTNESS;
+  const samples = COLOR_SWATCH_STEPS.map((step) => createSwatchSample(baseColor, step, baseOffset));
+  const warnings = samples
+    .map((sample) => createWeakStepWarning(baseColor, sample))
+    .filter((warning): warning is ColorSwatchWarning => warning !== undefined);
+  return { samples, warnings };
+}
+
+/***
+  Measure adjacent swatch samples and report weak transitions.
+*/
+function measureAdjacentSamples(samples: readonly ColorSwatchSample[]): {
+  readonly deltas: readonly number[];
+  readonly warnings: readonly ColorSwatchWarning[];
+} {
+  const pairs = samples
+    .slice(1)
+    .map((current, index) => ({ current, previous: samples.at(index) }));
+  const measured = pairs.flatMap(({ current, previous }) => {
+    if (!previous) return [];
+    const delta = deltaEoklch(parseHexToOklch(previous.hex), parseHexToOklch(current.hex));
+    const warning: ColorSwatchWarning | undefined =
+      delta < MIN_USABLE_ADJACENT_DELTA
+        ? {
+            code: 'weak_adjacent_delta',
+            step: current.step,
+            deltaEFromBase: delta,
+            message: `Swatch step ${current.step} is visually close to adjacent step ${previous.step}.`,
+          }
+        : undefined;
+    return [{ delta, warning }];
+  });
+  return {
+    deltas: measured.map(({ delta }) => delta),
+    warnings: measured
+      .map(({ warning }) => warning)
+      .filter((warning): warning is ColorSwatchWarning => warning !== undefined),
+  };
+}
+
+/***
+  Create diagnostics from generated samples and their adjacent deltas.
+*/
+function createSwatchDiagnostics(
+  samples: readonly ColorSwatchSample[],
+  adjacentDeltas: readonly number[],
+  warnings: readonly ColorSwatchWarning[],
+): ColorSwatchDiagnostics {
+  const minAdjacentDelta = Math.min(...adjacentDeltas);
+  const maxAdjacentDelta = Math.max(...adjacentDeltas);
+  const lightnessEntries = samples.map(({ lightness }) => lightness);
+  const minLightness = Math.min(...lightnessEntries);
+  const maxLightness = Math.max(...lightnessEntries);
+  const lightnessRange = maxLightness - minLightness;
+  const rangeWarnings: readonly ColorSwatchWarning[] =
+    lightnessRange < MIN_USABLE_LIGHTNESS_RANGE
+      ? [
+          {
+            code: 'limited_lightness_range',
+            message: 'Generated swatch has a limited lightness range.',
+          },
+        ]
+      : [];
+  return {
+    isUsable:
+      minAdjacentDelta >= MIN_USABLE_ADJACENT_DELTA && lightnessRange >= MIN_USABLE_LIGHTNESS_RANGE,
+    warnings: [...warnings, ...rangeWarnings],
+    minAdjacentDelta,
+    maxAdjacentDelta,
+    lightnessRange: { min: minLightness, max: maxLightness },
+  };
+}
+
+/***
   Generate a full color swatch and diagnostics from a base color.
 */
 export function generateColorSwatch(baseColor: HexColor): {
   swatch: ColorSwatch;
   diagnostics: ColorSwatchDiagnostics;
 } {
-  const baseOklch = parseHexToOklch(baseColor);
-  const baseOffset = baseOklch.l - COLOR_SWATCH_BASE_LIGHTNESS;
-
-  const warnings: ColorSwatchWarning[] = [];
-  const swatch = {} as ColorSwatch;
-  const lightnessEntries: number[] = [];
-  const adjacentDeltas: number[] = [];
-
-  for (const step of COLOR_SWATCH_STEPS) {
-    if (step === COLOR_SWATCH_BASE_STEP) {
-      swatch[step] = baseColor;
-      lightnessEntries.push(baseOklch.l);
-      continue;
-    }
-
-    const targetL = clamp01(BASELINE_LIGHTNESS_BY_STEP[step] + baseOffset);
-    const targetC = clamp01(baseOklch.c * chromaMultiplierForStep(step));
-    const target = { ...baseOklch, l: targetL, c: targetC };
-    const hex = oklchToHex(target);
-    swatch[step] = hex;
-
-    const candidateOklch = parseHexToOklch(hex);
-    lightnessEntries.push(candidateOklch.l);
-
-    const deltaEFromBase = deltaEoklch(baseOklch, candidateOklch);
-    if (deltaEFromBase < 0.02) {
-      warnings.push({
-        code: 'weak_step',
-        step,
-        deltaEFromBase,
-        message: `Swatch step ${step} is visually close to the base color.`,
-      });
-    }
-  }
-
-  for (let index = 1; index < COLOR_SWATCH_STEPS.length; index++) {
-    const previousStep = COLOR_SWATCH_STEPS[index - 1];
-    const currentStep = COLOR_SWATCH_STEPS[index];
-    if (previousStep === undefined || currentStep === undefined) continue;
-
-    const previous = parseHexToOklch(swatch[previousStep]);
-    const current = parseHexToOklch(swatch[currentStep]);
-    const adjacentDelta = deltaEoklch(previous, current);
-    adjacentDeltas.push(adjacentDelta);
-
-    if (adjacentDelta < MIN_USABLE_ADJACENT_DELTA) {
-      warnings.push({
-        code: 'weak_adjacent_delta',
-        step: currentStep,
-        deltaEFromBase: adjacentDelta,
-        message: `Swatch step ${currentStep} is visually close to adjacent step ${previousStep}.`,
-      });
-    }
-  }
-
-  const minAdjacentDelta = Math.min(...adjacentDeltas);
-  const maxAdjacentDelta = Math.max(...adjacentDeltas);
-  const minLightness = Math.min(...lightnessEntries);
-  const maxLightness = Math.max(...lightnessEntries);
-  const lightnessRange = maxLightness - minLightness;
-
-  if (lightnessRange < MIN_USABLE_LIGHTNESS_RANGE) {
-    warnings.push({
-      code: 'limited_lightness_range',
-      message: 'Generated swatch has a limited lightness range.',
-    });
-  }
-
+  const generated = generateSwatchSamples(baseColor);
+  const adjacent = measureAdjacentSamples(generated.samples);
+  const swatch = Object.fromEntries(
+    generated.samples.map(({ hex, step }) => [step, hex]),
+  ) as ColorSwatch;
   return {
     swatch,
-    diagnostics: {
-      isUsable:
-        minAdjacentDelta >= MIN_USABLE_ADJACENT_DELTA &&
-        lightnessRange >= MIN_USABLE_LIGHTNESS_RANGE,
-      warnings,
-      minAdjacentDelta,
-      maxAdjacentDelta,
-      lightnessRange: {
-        min: minLightness,
-        max: maxLightness,
-      },
-    },
+    diagnostics: createSwatchDiagnostics(generated.samples, adjacent.deltas, [
+      ...generated.warnings,
+      ...adjacent.warnings,
+    ]),
   };
 }

@@ -28,21 +28,11 @@ function pickTintSourceHex(
   roleColors: GeneratedHarmonyRoleColors,
   harmony: ColorHarmony,
 ): HexColor {
-  const byMapping: Partial<Record<ColorHarmony, HexColor | undefined>> = {
-    monochromatic: roleColors.primary.hex,
-    complementary: roleColors.secondary?.hex,
-    analogous: roleColors.tertiary?.hex,
-    splitComplementary: roleColors.tertiary?.hex,
-    triadic: roleColors.tertiary?.hex,
-    tetradic: roleColors.tertiary?.hex,
-  };
-
-  return (
-    byMapping[harmony] ??
-    roleColors.tertiary?.hex ??
-    roleColors.secondary?.hex ??
-    roleColors.primary.hex
-  );
+  if (harmony === 'monochromatic') return roleColors.primary.hex;
+  if (harmony === 'complementary') {
+    return roleColors.secondary?.hex ?? roleColors.primary.hex;
+  }
+  return roleColors.tertiary?.hex ?? roleColors.secondary?.hex ?? roleColors.primary.hex;
 }
 
 /***

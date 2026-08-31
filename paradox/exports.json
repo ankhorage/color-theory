@@ -148,7 +148,7 @@
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
       "filePath": "src/swatches.ts",
-      "line": 24,
+      "line": 22,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -220,7 +220,7 @@
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
       "filePath": "src/swatches.ts",
-      "line": 17,
+      "line": 15,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -278,14 +278,14 @@
   },
   {
     "name": "createDefaultSemanticStatusSwatches",
-    "description": null,
+    "description": "Generate the canonical default semantic status swatches.",
     "isReadme": false,
     "examples": [],
     "kind": "function",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
       "filePath": "src/semantic-status.ts",
-      "line": 44,
+      "line": 74,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -303,14 +303,14 @@
   },
   {
     "name": "createSemanticStatusSwatches",
-    "description": null,
+    "description": "Generate semantic status swatches from a role-to-seed record.",
     "isReadme": false,
     "examples": [],
     "kind": "function",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
       "filePath": "src/semantic-status.ts",
-      "line": 22,
+      "line": 58,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -396,7 +396,7 @@
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
       "filePath": "src/swatches.ts",
-      "line": 74,
+      "line": 210,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -685,7 +685,7 @@
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
       "filePath": "src/harmony.ts",
-      "line": 54,
+      "line": 69,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -723,7 +723,7 @@
     "modulePath": "src/neutral.ts",
     "sourceLocation": {
       "filePath": "src/neutral.ts",
-      "line": 59,
+      "line": 49,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],

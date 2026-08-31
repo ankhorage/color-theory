@@ -2,6 +2,8 @@
   "packageName": "@ankhorage/color-theory",
   "packageId": "@ankhorage/color-theory",
   "description": "Standalone color theory, harmony, swatch, contrast, and theme color generation utilities.",
+  "collaborators": null,
+  "donation": null,
   "badges": [
     {
       "id": "license",
@@ -12,7 +14,7 @@
     {
       "id": "npm",
       "label": "npm",
-      "value": "v0.0.7",
+      "value": "v0.0.8",
       "color": "cb3837"
     },
     {
@@ -59,6 +61,10 @@
     }
   ],
   "usage": null,
+  "readmeUsageDescription": null,
+  "readmeUsage": [],
+  "readmeCli": null,
+  "readmeConfig": null,
   "config": null,
   "entrypoints": ["src/index.ts"],
   "modules": [
@@ -863,7 +869,7 @@
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 24,
+        "line": 22,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -935,7 +941,7 @@
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 17,
+        "line": 15,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -993,14 +999,14 @@
     },
     {
       "name": "createDefaultSemanticStatusSwatches",
-      "description": null,
+      "description": "Generate the canonical default semantic status swatches.",
       "isReadme": false,
       "examples": [],
       "kind": "function",
       "modulePath": "src/semantic-status.ts",
       "sourceLocation": {
         "filePath": "src/semantic-status.ts",
-        "line": 44,
+        "line": 74,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1018,14 +1024,14 @@
     },
     {
       "name": "createSemanticStatusSwatches",
-      "description": null,
+      "description": "Generate semantic status swatches from a role-to-seed record.",
       "isReadme": false,
       "examples": [],
       "kind": "function",
       "modulePath": "src/semantic-status.ts",
       "sourceLocation": {
         "filePath": "src/semantic-status.ts",
-        "line": 22,
+        "line": 58,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1111,7 +1117,7 @@
       "modulePath": "src/swatches.ts",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 74,
+        "line": 210,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1400,7 +1406,7 @@
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
         "filePath": "src/harmony.ts",
-        "line": 54,
+        "line": 69,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1438,7 +1444,7 @@
       "modulePath": "src/neutral.ts",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 59,
+        "line": 49,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -2054,11 +2060,20 @@
       }
     },
     {
+      "name": "getHarmonyDefinition",
+      "description": "Resolve a complete harmony definition from the canonical maps.",
+      "sourceLocation": {
+        "filePath": "src/harmony.ts",
+        "line": 54,
+        "column": 1
+      }
+    },
+    {
       "name": "generateHarmonyRoleColors",
       "description": "Generate role-based harmony colors from a primary color and harmony strategy.",
       "sourceLocation": {
         "filePath": "src/harmony.ts",
-        "line": 54,
+        "line": 69,
         "column": 1
       }
     },
@@ -2166,7 +2181,7 @@
       "description": "Clamp a number to a finite minimum and maximum range.",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 51,
+        "line": 41,
         "column": 1
       }
     },
@@ -2175,25 +2190,43 @@
       "description": "Generate a softly tinted neutral swatch from generated harmony role colors.",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 59,
+        "line": 49,
+        "column": 1
+      }
+    },
+    {
+      "name": "createRoleRecord",
+      "description": "Convert typed entries into a role-keyed immutable result record.",
+      "sourceLocation": {
+        "filePath": "src/semantic-status.ts",
+        "line": 32,
+        "column": 1
+      }
+    },
+    {
+      "name": "generateSemanticStatus",
+      "description": "Normalize and generate one semantic status role.",
+      "sourceLocation": {
+        "filePath": "src/semantic-status.ts",
+        "line": 41,
         "column": 1
       }
     },
     {
       "name": "createSemanticStatusSwatches",
-      "description": null,
+      "description": "Generate semantic status swatches from a role-to-seed record.",
       "sourceLocation": {
         "filePath": "src/semantic-status.ts",
-        "line": 22,
+        "line": 58,
         "column": 1
       }
     },
     {
       "name": "createDefaultSemanticStatusSwatches",
-      "description": null,
+      "description": "Generate the canonical default semantic status swatches.",
       "sourceLocation": {
         "filePath": "src/semantic-status.ts",
-        "line": 44,
+        "line": 74,
         "column": 1
       }
     },
@@ -2202,7 +2235,7 @@
       "description": "Clamp a number into the normalized zero-to-one range.",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 55,
+        "line": 64,
         "column": 1
       }
     },
@@ -2211,7 +2244,61 @@
       "description": "Return the chroma multiplier used for a swatch step.",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 63,
+        "line": 72,
+        "column": 1
+      }
+    },
+    {
+      "name": "getBaselineLightness",
+      "description": "Resolve the canonical baseline lightness for a swatch step.",
+      "sourceLocation": {
+        "filePath": "src/swatches.ts",
+        "line": 83,
+        "column": 1
+      }
+    },
+    {
+      "name": "createSwatchSample",
+      "description": "Generate one immutable swatch sample from the base color.",
+      "sourceLocation": {
+        "filePath": "src/swatches.ts",
+        "line": 94,
+        "column": 1
+      }
+    },
+    {
+      "name": "createWeakStepWarning",
+      "description": "Create any weak-step warning for a generated sample.",
+      "sourceLocation": {
+        "filePath": "src/swatches.ts",
+        "line": 115,
+        "column": 1
+      }
+    },
+    {
+      "name": "generateSwatchSamples",
+      "description": "Generate immutable swatch samples and their per-step warnings.",
+      "sourceLocation": {
+        "filePath": "src/swatches.ts",
+        "line": 133,
+        "column": 1
+      }
+    },
+    {
+      "name": "measureAdjacentSamples",
+      "description": "Measure adjacent swatch samples and report weak transitions.",
+      "sourceLocation": {
+        "filePath": "src/swatches.ts",
+        "line": 145,
+        "column": 1
+      }
+    },
+    {
+      "name": "createSwatchDiagnostics",
+      "description": "Create diagnostics from generated samples and their adjacent deltas.",
+      "sourceLocation": {
+        "filePath": "src/swatches.ts",
+        "line": 177,
         "column": 1
       }
     },
@@ -2220,7 +2307,7 @@
       "description": "Generate a full color swatch and diagnostics from a base color.",
       "sourceLocation": {
         "filePath": "src/swatches.ts",
-        "line": 74,
+        "line": 210,
         "column": 1
       }
     },
@@ -2266,7 +2353,7 @@
       "name": "createDefaultSemanticStatusSwatches",
       "sourcePath": "src/semantic-status.ts",
       "symbolName": "createDefaultSemanticStatusSwatches",
-      "description": null,
+      "description": "Generate the canonical default semantic status swatches.",
       "isReadme": false
     },
     {
@@ -2274,7 +2361,7 @@
       "name": "createSemanticStatusSwatches",
       "sourcePath": "src/semantic-status.ts",
       "symbolName": "createSemanticStatusSwatches",
-      "description": null,
+      "description": "Generate semantic status swatches from a role-to-seed record.",
       "isReadme": false
     },
     {
@@ -2517,6 +2604,12 @@
       },
       {
         "fromSymbol": "generateHarmonyRoleColors",
+        "toSymbol": "getHarmonyDefinition",
+        "callExpression": "getHarmonyDefinition",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "generateHarmonyRoleColors",
         "toSymbol": "normalizeHueDegrees",
         "callExpression": "normalizeHueDegrees",
         "sourcePath": "src/harmony.ts"
@@ -2642,15 +2735,27 @@
         "sourcePath": "src/neutral.ts"
       },
       {
-        "fromSymbol": "createSemanticStatusSwatches",
+        "fromSymbol": "generateSemanticStatus",
         "toSymbol": "parseHexColorOrThrow",
         "callExpression": "parseHexColorOrThrow",
         "sourcePath": "src/semantic-status.ts"
       },
       {
-        "fromSymbol": "createSemanticStatusSwatches",
+        "fromSymbol": "generateSemanticStatus",
         "toSymbol": "generateColorSwatch",
         "callExpression": "generateColorSwatch",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "src/semantic-status.ts",
+        "toSymbol": "generateSemanticStatus",
+        "callExpression": "generateSemanticStatus",
+        "sourcePath": "src/semantic-status.ts"
+      },
+      {
+        "fromSymbol": "createSemanticStatusSwatches",
+        "toSymbol": "createRoleRecord",
+        "callExpression": "createRoleRecord",
         "sourcePath": "src/semantic-status.ts"
       },
       {
@@ -2660,33 +2765,93 @@
         "sourcePath": "src/semantic-status.ts"
       },
       {
-        "fromSymbol": "generateColorSwatch",
+        "fromSymbol": "createSwatchSample",
+        "toSymbol": "parseHexToOklch",
+        "callExpression": "parseHexToOklch",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "createSwatchSample",
+        "toSymbol": "clamp01",
+        "callExpression": "clamp01",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "createSwatchSample",
+        "toSymbol": "getBaselineLightness",
+        "callExpression": "getBaselineLightness",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "createSwatchSample",
+        "toSymbol": "chromaMultiplierForStep",
+        "callExpression": "chromaMultiplierForStep",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "createSwatchSample",
+        "toSymbol": "oklchToHex",
+        "callExpression": "oklchToHex",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "createWeakStepWarning",
+        "toSymbol": "deltaEoklch",
+        "callExpression": "deltaEoklch",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "createWeakStepWarning",
+        "toSymbol": "parseHexToOklch",
+        "callExpression": "parseHexToOklch",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "generateSwatchSamples",
+        "toSymbol": "parseHexToOklch",
+        "callExpression": "parseHexToOklch",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "src/swatches.ts",
+        "toSymbol": "createSwatchSample",
+        "callExpression": "createSwatchSample",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "src/swatches.ts",
+        "toSymbol": "createWeakStepWarning",
+        "callExpression": "createWeakStepWarning",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "src/swatches.ts",
+        "toSymbol": "deltaEoklch",
+        "callExpression": "deltaEoklch",
+        "sourcePath": "src/swatches.ts"
+      },
+      {
+        "fromSymbol": "src/swatches.ts",
         "toSymbol": "parseHexToOklch",
         "callExpression": "parseHexToOklch",
         "sourcePath": "src/swatches.ts"
       },
       {
         "fromSymbol": "generateColorSwatch",
-        "toSymbol": "clamp01",
-        "callExpression": "clamp01",
+        "toSymbol": "generateSwatchSamples",
+        "callExpression": "generateSwatchSamples",
         "sourcePath": "src/swatches.ts"
       },
       {
         "fromSymbol": "generateColorSwatch",
-        "toSymbol": "chromaMultiplierForStep",
-        "callExpression": "chromaMultiplierForStep",
+        "toSymbol": "measureAdjacentSamples",
+        "callExpression": "measureAdjacentSamples",
         "sourcePath": "src/swatches.ts"
       },
       {
         "fromSymbol": "generateColorSwatch",
-        "toSymbol": "oklchToHex",
-        "callExpression": "oklchToHex",
-        "sourcePath": "src/swatches.ts"
-      },
-      {
-        "fromSymbol": "generateColorSwatch",
-        "toSymbol": "deltaEoklch",
-        "callExpression": "deltaEoklch",
+        "toSymbol": "createSwatchDiagnostics",
+        "callExpression": "createSwatchDiagnostics",
         "sourcePath": "src/swatches.ts"
       },
       {
