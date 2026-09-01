@@ -18,13 +18,7 @@ Assert that a string is a valid six-digit hex color.
 
 Kind: `value`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:77:14`
-
-## COLOR_HARMONY_CATALOG
-
-Kind: `value`
-Module: `src/harmony.ts`
-Source: `src/harmony.ts:15:14`
+Source: `src/harmony.ts:4:14`
 
 ## COLOR_SWATCH_BASE_LIGHTNESS
 
@@ -44,23 +38,67 @@ Kind: `value`
 Module: `src/swatches.ts`
 Source: `src/swatches.ts:4:14`
 
+## ColorContrastContext
+
+Kind: `type`
+Module: `src/selection.ts`
+Source: `src/selection.ts:15:1`
+
+### Members
+
+| Name            | Kind     | Type       | Required | Description |
+| --------------- | -------- | ---------- | -------- | ----------- |
+| against         | property | `HexColor` | yes      |             |
+| id              | property | `string`   | yes      |             |
+| minimumContrast | property | `number`   | yes      |             |
+
+## ColorContrastMeasurement
+
+Kind: `type`
+Module: `src/selection.ts`
+Source: `src/selection.ts:21:1`
+
+### Members
+
+| Name            | Kind     | Type       | Required | Description |
+| --------------- | -------- | ---------- | -------- | ----------- |
+| against         | property | `HexColor` | yes      |             |
+| contrast        | property | `number`   | yes      |             |
+| id              | property | `string`   | yes      |             |
+| minimumContrast | property | `number`   | yes      |             |
+| passes          | property | `boolean`  | yes      |             |
+
 ## ColorHarmony
 
 Kind: `unknown`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:75:1`
+Source: `src/harmony.ts:13:1`
 
-## ColorHarmonyDefinition
+## ColorSelectionTarget
 
-Kind: `unknown`
-Module: `src/harmony.ts`
-Source: `src/harmony.ts:74:1`
+Kind: `type`
+Module: `src/selection.ts`
+Source: `src/selection.ts:9:1`
+
+### Members
+
+| Name       | Kind     | Type                  | Required | Description |
+| ---------- | -------- | --------------------- | -------- | ----------- |
+| chroma     | property | `number`              | yes      |             |
+| hueDegrees | property | `number \| undefined` | no       |             |
+| lightness  | property | `number`              | yes      |             |
 
 ## ColorSwatch
 
 Kind: `unknown`
 Module: `src/swatches.ts`
 Source: `src/swatches.ts:10:1`
+
+## ColorSwatchCandidateRejectionReason
+
+Kind: `unknown`
+Module: `src/selection.ts`
+Source: `src/selection.ts:26:1`
 
 ## ColorSwatchDiagnostics
 
@@ -78,11 +116,50 @@ Source: `src/swatches.ts:22:1`
 | minAdjacentDelta | property | `number`                        | yes      |             |
 | warnings         | property | `readonly ColorSwatchWarning[]` | yes      |             |
 
+## ColorSwatchSelectionCandidate
+
+Kind: `type`
+Module: `src/selection.ts`
+Source: `src/selection.ts:28:1`
+
+### Members
+
+| Name             | Kind     | Type                                                                       | Required | Description |
+| ---------------- | -------- | -------------------------------------------------------------------------- | -------- | ----------- |
+| contrasts        | property | `readonly ColorContrastMeasurement[]`                                      | yes      |             |
+| hex              | property | `HexColor`                                                                 | yes      |             |
+| rejectionReasons | property | `readonly ColorSwatchCandidateRejectionReason[]`                           | yes      |             |
+| selected         | property | `boolean`                                                                  | yes      |             |
+| step             | property | `50 \| 100 \| 200 \| 300 \| 400 \| 500 \| 600 \| 700 \| 800 \| 900 \| 950` | yes      |             |
+| targetDistance   | property | `number`                                                                   | yes      |             |
+
+## ColorSwatchSelectionResult
+
+Kind: `type`
+Module: `src/selection.ts`
+Source: `src/selection.ts:37:1`
+
+### Members
+
+| Name               | Kind     | Type                                                                                              | Required | Description |
+| ------------------ | -------- | ------------------------------------------------------------------------------------------------- | -------- | ----------- |
+| candidates         | property | `readonly ColorSwatchSelectionCandidate[]`                                                        | yes      |             |
+| rejectedCandidates | property | `readonly ColorSwatchSelectionCandidate[]`                                                        | yes      |             |
+| selected           | property | `ColorSwatchSelectionCandidate \| null`                                                           | yes      |             |
+| target             | property | `ColorSelectionTarget`                                                                            | yes      |             |
+| tieBreak           | property | `{ policy: ColorSwatchTiePolicy; applied: boolean; candidateSteps: readonly ColorSwatchStep[]; }` | yes      |             |
+
 ## ColorSwatchStep
 
 Kind: `unknown`
 Module: `src/swatches.ts`
 Source: `src/swatches.ts:5:1`
+
+## ColorSwatchTiePolicy
+
+Kind: `unknown`
+Module: `src/selection.ts`
+Source: `src/selection.ts:7:1`
 
 ## ColorSwatchWarning
 
@@ -150,6 +227,43 @@ Kind: `unknown`
 Module: `src/semantic-status.ts`
 Source: `src/semantic-status.ts:12:1`
 
+## ForegroundSelectionCandidate
+
+Kind: `type`
+Module: `src/contrast.ts`
+Source: `src/contrast.ts:12:1`
+
+### Members
+
+| Name            | Kind     | Type                                                                  | Required | Description |
+| --------------- | -------- | --------------------------------------------------------------------- | -------- | ----------- |
+| contrast        | property | `number`                                                              | yes      |             |
+| foreground      | property | `HexColor`                                                            | yes      |             |
+| passesMinimum   | property | `boolean`                                                             | yes      |             |
+| rejectionReason | property | `"minimum-contrast" \| "weaker-contrast" \| "tie-break" \| undefined` | no       |             |
+| selected        | property | `boolean`                                                             | yes      |             |
+
+## ForegroundSelectionResult
+
+Kind: `type`
+Module: `src/contrast.ts`
+Source: `src/contrast.ts:20:1`
+
+### Members
+
+| Name            | Kind     | Type                                                 | Required | Description |
+| --------------- | -------- | ---------------------------------------------------- | -------- | ----------- |
+| candidates      | property | `readonly ForegroundSelectionCandidate[]`            | yes      |             |
+| minimumContrast | property | `number`                                             | yes      |             |
+| selected        | property | `ForegroundSelectionCandidate \| null`               | yes      |             |
+| tieBreak        | property | `{ policy: ForegroundTiePolicy; applied: boolean; }` | yes      |             |
+
+## ForegroundTiePolicy
+
+Kind: `unknown`
+Module: `src/contrast.ts`
+Source: `src/contrast.ts:10:1`
+
 ## generateColorSwatch
 
 Kind: `function`
@@ -168,13 +282,13 @@ Generate a full color swatch and diagnostics from a base color.
 
 Kind: `unknown`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:4:1`
+Source: `src/harmony.ts:15:1`
 
 ## GeneratedHarmonyRoleColor
 
 Kind: `type`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:94:1`
+Source: `src/harmony.ts:17:1`
 
 ### Members
 
@@ -189,25 +303,24 @@ Source: `src/harmony.ts:94:1`
 
 Kind: `type`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:101:1`
+Source: `src/harmony.ts:24:1`
 
 ### Members
 
-| Name        | Kind     | Type                                                                                                               | Required | Description |
-| ----------- | -------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ----------- |
-| colors      | property | `readonly GeneratedHarmonyRoleColor[]`                                                                             | yes      |             |
-| diagnostics | property | `HarmonyGenerationDiagnostics`                                                                                     | yes      |             |
-| harmony     | property | `"monochromatic" \| "analogous" \| "complementary" \| "splitComplementary" \| "triadic" \| "tetradic" \| "square"` | yes      |             |
-| primary     | property | `GeneratedHarmonyRoleColor`                                                                                        | yes      |             |
-| quaternary  | property | `GeneratedHarmonyRoleColor \| undefined`                                                                           | no       |             |
-| secondary   | property | `GeneratedHarmonyRoleColor \| undefined`                                                                           | no       |             |
-| tertiary    | property | `GeneratedHarmonyRoleColor \| undefined`                                                                           | no       |             |
+| Name       | Kind     | Type                                                                                                   | Required | Description |
+| ---------- | -------- | ------------------------------------------------------------------------------------------------------ | -------- | ----------- |
+| colors     | property | `readonly GeneratedHarmonyRoleColor[]`                                                                 | yes      |             |
+| harmony    | property | `"monochromatic" \| "analogous" \| "complementary" \| "triadic" \| "tetradic" \| "splitComplementary"` | yes      |             |
+| primary    | property | `GeneratedHarmonyRoleColor`                                                                            | yes      |             |
+| quaternary | property | `GeneratedHarmonyRoleColor \| undefined`                                                               | no       |             |
+| secondary  | property | `GeneratedHarmonyRoleColor \| undefined`                                                               | no       |             |
+| tertiary   | property | `GeneratedHarmonyRoleColor \| undefined`                                                               | no       |             |
 
 ## GeneratedNeutralMetadata
 
 Kind: `type`
 Module: `src/neutral.ts`
-Source: `src/neutral.ts:17:1`
+Source: `src/neutral.ts:19:1`
 
 ### Members
 
@@ -250,14 +363,14 @@ Source: `src/theme-colors.ts:17:1`
 
 Kind: `function`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:149:1`
+Source: `src/harmony.ts:69:1`
 
 Generate role-based harmony colors from a primary color and harmony strategy.
 
 ### Signatures
 
-- `(primaryColor: HexColor, harmony: "monochromatic" | "analogous" | "complementary" | "splitComplementary" | "triadic" | "tetradic" | "square") => GeneratedHarmonyRoleColors`
-  - harmony: `"monochromatic" | "analogous" | "complementary" | "splitComplementary" | "triadic" | "tetradic" | "square"`
+- `(primaryColor: HexColor, harmony: "monochromatic" | "analogous" | "complementary" | "triadic" | "tetradic" | "splitComplementary") => GeneratedHarmonyRoleColors`
+  - harmony: `"monochromatic" | "analogous" | "complementary" | "triadic" | "tetradic" | "splitComplementary"`
   - primaryColor: `HexColor`
   - returns: `GeneratedHarmonyRoleColors`
 
@@ -265,7 +378,7 @@ Generate role-based harmony colors from a primary color and harmony strategy.
 
 Kind: `function`
 Module: `src/neutral.ts`
-Source: `src/neutral.ts:47:1`
+Source: `src/neutral.ts:49:1`
 
 Generate a softly tinted neutral swatch from generated harmony role colors.
 
@@ -303,11 +416,26 @@ Generate harmony role colors, swatches, and neutral metadata for a theme mode.
   - mode: `ThemeModeColorInput`
   - returns: `GeneratedThemeModeColors`
 
+## getContrastRatio
+
+Kind: `function`
+Module: `src/contrast.ts`
+Source: `src/contrast.ts:36:1`
+
+Measure the WCAG contrast ratio between two validated hex colors.
+
+### Signatures
+
+- `(colorA: HexColor, colorB: HexColor) => number`
+  - colorA: `HexColor`
+  - colorB: `HexColor`
+  - returns: `number`
+
 ## getReadableForeground
 
 Kind: `function`
 Module: `src/contrast.ts`
-Source: `src/contrast.ts:16:1`
+Source: `src/contrast.ts:99:1`
 
 Return the readable black or white foreground color with the stronger contrast against a background color.
 
@@ -330,39 +458,6 @@ Parse the primary color configured for a theme mode.
 - `(mode: ThemeModeColorInput) => HexColor`
   - mode: `ThemeModeColorInput`
   - returns: `HexColor`
-
-## HarmonyGenerationDiagnostics
-
-Kind: `type`
-Module: `src/harmony.ts`
-Source: `src/harmony.ts:88:1`
-
-### Members
-
-| Name          | Kind     | Type                                  | Required | Description |
-| ------------- | -------- | ------------------------------------- | -------- | ----------- |
-| isHueReliable | property | `boolean`                             | yes      |             |
-| primaryChroma | property | `number`                              | yes      |             |
-| warnings      | property | `readonly HarmonyGenerationWarning[]` | yes      |             |
-
-## HarmonyGenerationWarning
-
-Kind: `type`
-Module: `src/harmony.ts`
-Source: `src/harmony.ts:83:1`
-
-### Members
-
-| Name    | Kind     | Type                           | Required | Description |
-| ------- | -------- | ------------------------------ | -------- | ----------- |
-| code    | property | `HarmonyGenerationWarningCode` | yes      |             |
-| message | property | `string`                       | yes      |             |
-
-## HarmonyGenerationWarningCode
-
-Kind: `unknown`
-Module: `src/harmony.ts`
-Source: `src/harmony.ts:81:1`
 
 ## HexColor
 
@@ -393,14 +488,14 @@ Source: `src/semantics.ts:30:14`
 ## MIN_HUEFUL_CHROMA
 
 Kind: `value`
-Module: `src/harmony.ts`
-Source: `src/harmony.ts:79:14`
+Module: `src/neutral.ts`
+Source: `src/neutral.ts:11:14`
 
 ## NeutralSwatchResult
 
 Kind: `type`
 Module: `src/neutral.ts`
-Source: `src/neutral.ts:11:1`
+Source: `src/neutral.ts:13:1`
 
 ### Members
 
@@ -450,6 +545,40 @@ Source: `src/contrast.ts:5:1`
 | ---------- | -------- | ---------- | -------- | ----------- |
 | contrast   | property | `number`   | yes      |             |
 | foreground | property | `HexColor` | yes      |             |
+
+## selectColorSwatchStep
+
+Kind: `function`
+Module: `src/selection.ts`
+Source: `src/selection.ts:62:1`
+
+Select the swatch step nearest a perceptual target that passes every required contrast context.
+
+### Signatures
+
+- `(swatch: ColorSwatch, target: ColorSelectionTarget, contexts: readonly ColorContrastContext[], tiePolicy: ColorSwatchTiePolicy) => ColorSwatchSelectionResult`
+  - contexts: `readonly ColorContrastContext[]`
+  - swatch: `ColorSwatch`
+  - target: `ColorSelectionTarget`
+  - tiePolicy: `ColorSwatchTiePolicy`
+  - returns: `ColorSwatchSelectionResult`
+
+## selectReadableForeground
+
+Kind: `function`
+Module: `src/contrast.ts`
+Source: `src/contrast.ts:43:1`
+
+Select the strongest caller-provided foreground that meets a minimum WCAG contrast ratio.
+
+### Signatures
+
+- `(background: HexColor, foregrounds: readonly HexColor[], minimumContrast: number, tiePolicy: ForegroundTiePolicy) => ForegroundSelectionResult`
+  - background: `HexColor`
+  - foregrounds: `readonly HexColor[]`
+  - minimumContrast: `number`
+  - tiePolicy: `ForegroundTiePolicy`
+  - returns: `ForegroundSelectionResult`
 
 ## SemanticColorReference
 
@@ -529,7 +658,7 @@ Source: `src/theme-colors.ts:7:1`
 
 ### Members
 
-| Name         | Kind     | Type                                                                                                               | Required | Description |
-| ------------ | -------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ----------- |
-| harmony      | property | `"monochromatic" \| "analogous" \| "complementary" \| "splitComplementary" \| "triadic" \| "tetradic" \| "square"` | yes      |             |
-| primaryColor | property | `string`                                                                                                           | yes      |             |
+| Name         | Kind     | Type                                                                                                   | Required | Description |
+| ------------ | -------- | ------------------------------------------------------------------------------------------------------ | -------- | ----------- |
+| harmony      | property | `"monochromatic" \| "analogous" \| "complementary" \| "triadic" \| "tetradic" \| "splitComplementary"` | yes      |             |
+| primaryColor | property | `string`                                                                                               | yes      |             |

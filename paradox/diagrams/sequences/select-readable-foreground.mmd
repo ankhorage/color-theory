@@ -1,14 +1,11 @@
 sequenceDiagram
   participant participant_assertMinimumContrast as assertMinimumContrast
-  participant participant_getReadableForeground as getReadableForeground
   participant participant_parseHexColor as parseHexColor
   participant participant_parseHexColorOrThrow as parseHexColorOrThrow
   participant participant_selectReadableForeground as selectReadableForeground
-  participant_getReadableForeground->>participant_selectReadableForeground: selectReadableForeground()
   participant_selectReadableForeground->>participant_assertMinimumContrast: assertMinimumContrast()
   participant_assertMinimumContrast-->>participant_selectReadableForeground: return
   participant_selectReadableForeground->>participant_parseHexColorOrThrow: parseHexColorOrThrow()
   participant_parseHexColorOrThrow->>participant_parseHexColor: parseHexColor()
   participant_parseHexColor-->>participant_parseHexColorOrThrow: return
   participant_parseHexColorOrThrow-->>participant_selectReadableForeground: return
-  participant_selectReadableForeground-->>participant_getReadableForeground: return

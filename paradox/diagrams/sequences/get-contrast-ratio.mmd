@@ -1,0 +1,8 @@
+sequenceDiagram
+  participant participant_contrastRatio as contrastRatio
+  participant participant_getContrastRatio as getContrastRatio
+  participant participant_wcagContrast as wcagContrast
+  participant_getContrastRatio->>participant_contrastRatio: contrastRatio()
+  participant_contrastRatio->>participant_wcagContrast: wcagContrast()
+  participant_wcagContrast-->>participant_contrastRatio: return
+  participant_contrastRatio-->>participant_getContrastRatio: return
