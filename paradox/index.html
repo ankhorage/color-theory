@@ -200,7 +200,7 @@
             <li>
               <button class="nav-button" type="button" data-target="src/contrast.ts">
                 src/contrast.ts
-                <small>1 function</small>
+                <small>5 functions</small>
               </button>
             </li>
             <li>
@@ -225,6 +225,12 @@
               <button class="nav-button" type="button" data-target="src/neutral.ts">
                 src/neutral.ts
                 <small>3 functions</small>
+              </button>
+            </li>
+            <li>
+              <button class="nav-button" type="button" data-target="src/selection.ts">
+                src/selection.ts
+                <small>7 functions</small>
               </button>
             </li>
             <li>
@@ -253,9 +259,9 @@
           <section class="panel">
             <h2>Package overview</h2>
             <div class="summary">
-              <div><strong>46</strong><span class="muted">public exports</span></div>
+              <div><strong>59</strong><span class="muted">public exports</span></div>
               <div><strong>0</strong><span class="muted">components</span></div>
-              <div><strong>12</strong><span class="muted">modules</span></div>
+              <div><strong>13</strong><span class="muted">modules</span></div>
               <div><strong>1</strong><span class="muted">entrypoints</span></div>
             </div>
             <h3>Entrypoints</h3>
@@ -268,7 +274,7 @@
             <h2>Modules</h2>
             <article
               class="item"
-              data-search="src/contrast.ts src/hex.ts src/internal-culori.ts getReadableForeground ReadableForegroundResult"
+              data-search="src/contrast.ts src/hex.ts src/internal-culori.ts ForegroundSelectionCandidate ForegroundSelectionResult ForegroundTiePolicy getContrastRatio getReadableForeground ReadableForegroundResult selectReadableForeground"
             >
               <h3>src/contrast.ts</h3>
               <p class="muted">Referenced module</p>
@@ -277,8 +283,10 @@
                 <code>src/internal-culori.ts</code>
               </p>
               <p>
-                <strong>Exports:</strong> <code>getReadableForeground</code>,
-                <code>ReadableForegroundResult</code>
+                <strong>Exports:</strong> <code>ForegroundSelectionCandidate</code>,
+                <code>ForegroundSelectionResult</code>, <code>ForegroundTiePolicy</code>,
+                <code>getContrastRatio</code>, <code>getReadableForeground</code>,
+                <code>ReadableForegroundResult</code>, <code>selectReadableForeground</code>
               </p>
             </article>
             <article
@@ -518,7 +526,7 @@
             </article>
             <article
               class="item"
-              data-search="src/index.ts assertHexColor COLOR_HARMONIES COLOR_SWATCH_BASE_LIGHTNESS COLOR_SWATCH_BASE_STEP COLOR_SWATCH_STEPS ColorHarmony ColorSwatch ColorSwatchDiagnostics ColorSwatchStep ColorSwatchWarning ColorSwatchWarningCode createDefaultSemanticStatusSwatches createSemanticStatusSwatches DARK_SEMANTIC_COLOR_REFERENCES DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS DefaultSemanticStatusRole generateColorSwatch GeneratedColorRole GeneratedHarmonyRoleColor GeneratedHarmonyRoleColors GeneratedNeutralMetadata GeneratedThemeModeColors GeneratedThemeSwatches generateHarmonyRoleColors generateNeutralSwatch generateThemeColors generateThemeModeColors getReadableForeground getThemeModePrimaryHex HexColor isHexColor LIGHT_SEMANTIC_COLOR_REFERENCES MIN_HUEFUL_CHROMA NeutralSwatchResult parseHexColor parseHexColorOrThrow ReadableForegroundResult SemanticColorReference SemanticColorReferenceMap SemanticColorRole SemanticColorToken SemanticStatusSeedInput SemanticStatusSwatches ThemeColorInput ThemeColorMode ThemeModeColorInput"
+              data-search="src/index.ts assertHexColor COLOR_HARMONIES COLOR_SWATCH_BASE_LIGHTNESS COLOR_SWATCH_BASE_STEP COLOR_SWATCH_STEPS ColorContrastContext ColorContrastMeasurement ColorHarmony ColorSelectionTarget ColorSwatch ColorSwatchCandidateRejectionReason ColorSwatchDiagnostics ColorSwatchSelectionCandidate ColorSwatchSelectionResult ColorSwatchStep ColorSwatchTiePolicy ColorSwatchWarning ColorSwatchWarningCode createDefaultSemanticStatusSwatches createSemanticStatusSwatches DARK_SEMANTIC_COLOR_REFERENCES DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS DefaultSemanticStatusRole ForegroundSelectionCandidate ForegroundSelectionResult ForegroundTiePolicy generateColorSwatch GeneratedColorRole GeneratedHarmonyRoleColor GeneratedHarmonyRoleColors GeneratedNeutralMetadata GeneratedThemeModeColors GeneratedThemeSwatches generateHarmonyRoleColors generateNeutralSwatch generateThemeColors generateThemeModeColors getContrastRatio getReadableForeground getThemeModePrimaryHex HexColor isHexColor LIGHT_SEMANTIC_COLOR_REFERENCES MIN_HUEFUL_CHROMA NeutralSwatchResult parseHexColor parseHexColorOrThrow ReadableForegroundResult selectColorSwatchStep selectReadableForeground SemanticColorReference SemanticColorReferenceMap SemanticColorRole SemanticColorToken SemanticStatusSeedInput SemanticStatusSwatches ThemeColorInput ThemeColorMode ThemeModeColorInput"
             >
               <h3>src/index.ts</h3>
               <p class="muted">Configured entrypoint</p>
@@ -526,25 +534,32 @@
               <p>
                 <strong>Exports:</strong> <code>assertHexColor</code>, <code>COLOR_HARMONIES</code>,
                 <code>COLOR_SWATCH_BASE_LIGHTNESS</code>, <code>COLOR_SWATCH_BASE_STEP</code>,
-                <code>COLOR_SWATCH_STEPS</code>, <code>ColorHarmony</code>,
-                <code>ColorSwatch</code>, <code>ColorSwatchDiagnostics</code>,
-                <code>ColorSwatchStep</code>, <code>ColorSwatchWarning</code>,
+                <code>COLOR_SWATCH_STEPS</code>, <code>ColorContrastContext</code>,
+                <code>ColorContrastMeasurement</code>, <code>ColorHarmony</code>,
+                <code>ColorSelectionTarget</code>, <code>ColorSwatch</code>,
+                <code>ColorSwatchCandidateRejectionReason</code>,
+                <code>ColorSwatchDiagnostics</code>, <code>ColorSwatchSelectionCandidate</code>,
+                <code>ColorSwatchSelectionResult</code>, <code>ColorSwatchStep</code>,
+                <code>ColorSwatchTiePolicy</code>, <code>ColorSwatchWarning</code>,
                 <code>ColorSwatchWarningCode</code>,
                 <code>createDefaultSemanticStatusSwatches</code>,
                 <code>createSemanticStatusSwatches</code>,
                 <code>DARK_SEMANTIC_COLOR_REFERENCES</code>,
                 <code>DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS</code>,
-                <code>DefaultSemanticStatusRole</code>, <code>generateColorSwatch</code>,
-                <code>GeneratedColorRole</code>, <code>GeneratedHarmonyRoleColor</code>,
-                <code>GeneratedHarmonyRoleColors</code>, <code>GeneratedNeutralMetadata</code>,
-                <code>GeneratedThemeModeColors</code>, <code>GeneratedThemeSwatches</code>,
-                <code>generateHarmonyRoleColors</code>, <code>generateNeutralSwatch</code>,
-                <code>generateThemeColors</code>, <code>generateThemeModeColors</code>,
+                <code>DefaultSemanticStatusRole</code>, <code>ForegroundSelectionCandidate</code>,
+                <code>ForegroundSelectionResult</code>, <code>ForegroundTiePolicy</code>,
+                <code>generateColorSwatch</code>, <code>GeneratedColorRole</code>,
+                <code>GeneratedHarmonyRoleColor</code>, <code>GeneratedHarmonyRoleColors</code>,
+                <code>GeneratedNeutralMetadata</code>, <code>GeneratedThemeModeColors</code>,
+                <code>GeneratedThemeSwatches</code>, <code>generateHarmonyRoleColors</code>,
+                <code>generateNeutralSwatch</code>, <code>generateThemeColors</code>,
+                <code>generateThemeModeColors</code>, <code>getContrastRatio</code>,
                 <code>getReadableForeground</code>, <code>getThemeModePrimaryHex</code>,
                 <code>HexColor</code>, <code>isHexColor</code>,
                 <code>LIGHT_SEMANTIC_COLOR_REFERENCES</code>, <code>MIN_HUEFUL_CHROMA</code>,
                 <code>NeutralSwatchResult</code>, <code>parseHexColor</code>,
                 <code>parseHexColorOrThrow</code>, <code>ReadableForegroundResult</code>,
+                <code>selectColorSwatchStep</code>, <code>selectReadableForeground</code>,
                 <code>SemanticColorReference</code>, <code>SemanticColorReferenceMap</code>,
                 <code>SemanticColorRole</code>, <code>SemanticColorToken</code>,
                 <code>SemanticStatusSeedInput</code>, <code>SemanticStatusSwatches</code>,
@@ -579,6 +594,25 @@
                 <strong>Exports:</strong> <code>GeneratedNeutralMetadata</code>,
                 <code>generateNeutralSwatch</code>, <code>MIN_HUEFUL_CHROMA</code>,
                 <code>NeutralSwatchResult</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/selection.ts src/contrast.ts src/hex.ts src/internal-culori.ts src/swatches.ts ColorContrastContext ColorContrastMeasurement ColorSelectionTarget ColorSwatchCandidateRejectionReason ColorSwatchSelectionCandidate ColorSwatchSelectionResult ColorSwatchTiePolicy selectColorSwatchStep"
+            >
+              <h3>src/selection.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/contrast.ts</code>,
+                <code>src/hex.ts</code>, <code>src/internal-culori.ts</code>,
+                <code>src/swatches.ts</code>
+              </p>
+              <p>
+                <strong>Exports:</strong> <code>ColorContrastContext</code>,
+                <code>ColorContrastMeasurement</code>, <code>ColorSelectionTarget</code>,
+                <code>ColorSwatchCandidateRejectionReason</code>,
+                <code>ColorSwatchSelectionCandidate</code>, <code>ColorSwatchSelectionResult</code>,
+                <code>ColorSwatchTiePolicy</code>, <code>selectColorSwatchStep</code>
               </p>
             </article>
             <article
@@ -658,11 +692,196 @@
               <h3>src/contrast.ts</h3>
               <article
                 class="item"
+                id="symbol-foregroundselectioncandidate"
+                data-search="ForegroundSelectionCandidate type src/contrast.ts  HexColor"
+              >
+                <h4>ForegroundSelectionCandidate</h4>
+                <p class="muted">type • <code>src/contrast.ts:12:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">HexColor</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>contrast</code></td>
+                      <td>property</td>
+                      <td><code>number</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>foreground</code></td>
+                      <td>property</td>
+                      <td><code>HexColor</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>passesMinimum</code></td>
+                      <td>property</td>
+                      <td><code>boolean</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>rejectionReason</code></td>
+                      <td>property</td>
+                      <td>
+                        <code
+                          >&quot;minimum-contrast&quot; | &quot;weaker-contrast&quot; |
+                          &quot;tie-break&quot; | undefined</code
+                        >
+                      </td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>selected</code></td>
+                      <td>property</td>
+                      <td><code>boolean</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-foregroundselectionresult"
+                data-search="ForegroundSelectionResult type src/contrast.ts  ForegroundSelectionCandidate ForegroundTiePolicy"
+              >
+                <h4>ForegroundSelectionResult</h4>
+                <p class="muted">type • <code>src/contrast.ts:20:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">ForegroundSelectionCandidate</li>
+                    <li class="chip">ForegroundTiePolicy</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>candidates</code></td>
+                      <td>property</td>
+                      <td><code>readonly ForegroundSelectionCandidate[]</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>minimumContrast</code></td>
+                      <td>property</td>
+                      <td><code>number</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>selected</code></td>
+                      <td>property</td>
+                      <td><code>ForegroundSelectionCandidate | null</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>tieBreak</code></td>
+                      <td>property</td>
+                      <td><code>{ policy: ForegroundTiePolicy; applied: boolean; }</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-foregroundtiepolicy"
+                data-search="ForegroundTiePolicy unknown src/contrast.ts "
+              >
+                <h4>ForegroundTiePolicy</h4>
+                <p class="muted">unknown • <code>src/contrast.ts:10:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+              <article
+                class="item"
+                id="symbol-getcontrastratio"
+                data-search="getContrastRatio function src/contrast.ts Measure the WCAG contrast ratio between two validated hex colors. HexColor (colorA: HexColor, colorB: HexColor) =&gt; number"
+              >
+                <h4>getContrastRatio</h4>
+                <p class="muted">function • <code>src/contrast.ts:36:1</code></p>
+                <p>Measure the WCAG contrast ratio between two validated hex colors.</p>
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">HexColor</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>(colorA: HexColor, colorB: HexColor) =&gt; number</pre>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>colorA</code></td>
+                        <td><code>HexColor</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><code>colorB</code></td>
+                        <td><code>HexColor</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Returns:</strong> <code>number</code></p>
+                </div>
+              </article>
+              <article
+                class="item"
                 id="symbol-getreadableforeground"
                 data-search="getReadableForeground function src/contrast.ts Return the readable black or white foreground color with the stronger contrast against a background color. HexColor ReadableForegroundResult (background: HexColor) =&gt; ReadableForegroundResult"
               >
                 <h4>getReadableForeground</h4>
-                <p class="muted">function • <code>src/contrast.ts:16:1</code></p>
+                <p class="muted">function • <code>src/contrast.ts:99:1</code></p>
                 <p>
                   Return the readable black or white foreground color with the stronger contrast
                   against a background color.
@@ -742,6 +961,69 @@
                     </tr>
                   </tbody>
                 </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-selectreadableforeground"
+                data-search="selectReadableForeground function src/contrast.ts Select the strongest caller-provided foreground that meets a minimum WCAG contrast ratio. ForegroundSelectionResult ForegroundTiePolicy HexColor (background: HexColor, foregrounds: readonly HexColor[], minimumContrast: number, tiePolicy: ForegroundTiePolicy) =&gt; ForegroundSelectionResult"
+              >
+                <h4>selectReadableForeground</h4>
+                <p class="muted">function • <code>src/contrast.ts:43:1</code></p>
+                <p>
+                  Select the strongest caller-provided foreground that meets a minimum WCAG contrast
+                  ratio.
+                </p>
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">ForegroundSelectionResult</li>
+                    <li class="chip">ForegroundTiePolicy</li>
+                    <li class="chip">HexColor</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+(background: HexColor, foregrounds: readonly HexColor[], minimumContrast: number, tiePolicy: ForegroundTiePolicy) =&gt; ForegroundSelectionResult</pre>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>background</code></td>
+                        <td><code>HexColor</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><code>foregrounds</code></td>
+                        <td><code>readonly HexColor[]</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><code>minimumContrast</code></td>
+                        <td><code>number</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><code>tiePolicy</code></td>
+                        <td><code>ForegroundTiePolicy</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Returns:</strong> <code>ForegroundSelectionResult</code></p>
+                </div>
               </article>
             </section>
             <section>
@@ -1276,6 +1558,407 @@
                     </tr>
                   </tbody>
                 </table>
+              </article>
+            </section>
+            <section>
+              <h3>src/selection.ts</h3>
+              <article
+                class="item"
+                id="symbol-colorcontrastcontext"
+                data-search="ColorContrastContext type src/selection.ts  HexColor"
+              >
+                <h4>ColorContrastContext</h4>
+                <p class="muted">type • <code>src/selection.ts:15:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">HexColor</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>against</code></td>
+                      <td>property</td>
+                      <td><code>HexColor</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>id</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>minimumContrast</code></td>
+                      <td>property</td>
+                      <td><code>number</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-colorcontrastmeasurement"
+                data-search="ColorContrastMeasurement type src/selection.ts  HexColor"
+              >
+                <h4>ColorContrastMeasurement</h4>
+                <p class="muted">type • <code>src/selection.ts:21:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">HexColor</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>against</code></td>
+                      <td>property</td>
+                      <td><code>HexColor</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>contrast</code></td>
+                      <td>property</td>
+                      <td><code>number</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>id</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>minimumContrast</code></td>
+                      <td>property</td>
+                      <td><code>number</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>passes</code></td>
+                      <td>property</td>
+                      <td><code>boolean</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-colorselectiontarget"
+                data-search="ColorSelectionTarget type src/selection.ts "
+              >
+                <h4>ColorSelectionTarget</h4>
+                <p class="muted">type • <code>src/selection.ts:9:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>chroma</code></td>
+                      <td>property</td>
+                      <td><code>number</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>hueDegrees</code></td>
+                      <td>property</td>
+                      <td><code>number | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>lightness</code></td>
+                      <td>property</td>
+                      <td><code>number</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-colorswatchcandidaterejectionreason"
+                data-search="ColorSwatchCandidateRejectionReason unknown src/selection.ts "
+              >
+                <h4>ColorSwatchCandidateRejectionReason</h4>
+                <p class="muted">unknown • <code>src/selection.ts:26:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+              <article
+                class="item"
+                id="symbol-colorswatchselectioncandidate"
+                data-search="ColorSwatchSelectionCandidate type src/selection.ts  ColorContrastMeasurement ColorSwatchCandidateRejectionReason HexColor"
+              >
+                <h4>ColorSwatchSelectionCandidate</h4>
+                <p class="muted">type • <code>src/selection.ts:28:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">ColorContrastMeasurement</li>
+                    <li class="chip">ColorSwatchCandidateRejectionReason</li>
+                    <li class="chip">HexColor</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>contrasts</code></td>
+                      <td>property</td>
+                      <td><code>readonly ColorContrastMeasurement[]</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>hex</code></td>
+                      <td>property</td>
+                      <td><code>HexColor</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>rejectionReasons</code></td>
+                      <td>property</td>
+                      <td><code>readonly ColorSwatchCandidateRejectionReason[]</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>selected</code></td>
+                      <td>property</td>
+                      <td><code>boolean</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>step</code></td>
+                      <td>property</td>
+                      <td>
+                        <code>50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950</code>
+                      </td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>targetDistance</code></td>
+                      <td>property</td>
+                      <td><code>number</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-colorswatchselectionresult"
+                data-search="ColorSwatchSelectionResult type src/selection.ts  ColorSelectionTarget ColorSwatchSelectionCandidate ColorSwatchStep ColorSwatchTiePolicy"
+              >
+                <h4>ColorSwatchSelectionResult</h4>
+                <p class="muted">type • <code>src/selection.ts:37:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">ColorSelectionTarget</li>
+                    <li class="chip">ColorSwatchSelectionCandidate</li>
+                    <li class="chip">ColorSwatchStep</li>
+                    <li class="chip">ColorSwatchTiePolicy</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>candidates</code></td>
+                      <td>property</td>
+                      <td><code>readonly ColorSwatchSelectionCandidate[]</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>rejectedCandidates</code></td>
+                      <td>property</td>
+                      <td><code>readonly ColorSwatchSelectionCandidate[]</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>selected</code></td>
+                      <td>property</td>
+                      <td><code>ColorSwatchSelectionCandidate | null</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>target</code></td>
+                      <td>property</td>
+                      <td><code>ColorSelectionTarget</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>tieBreak</code></td>
+                      <td>property</td>
+                      <td>
+                        <code
+                          >{ policy: ColorSwatchTiePolicy; applied: boolean; candidateSteps:
+                          readonly ColorSwatchStep[]; }</code
+                        >
+                      </td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-colorswatchtiepolicy"
+                data-search="ColorSwatchTiePolicy unknown src/selection.ts "
+              >
+                <h4>ColorSwatchTiePolicy</h4>
+                <p class="muted">unknown • <code>src/selection.ts:7:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+              <article
+                class="item"
+                id="symbol-selectcolorswatchstep"
+                data-search="selectColorSwatchStep function src/selection.ts Select the swatch step nearest a perceptual target that passes every required contrast context. ColorContrastContext ColorSelectionTarget ColorSwatch ColorSwatchSelectionResult ColorSwatchTiePolicy (swatch: ColorSwatch, target: ColorSelectionTarget, contexts: readonly ColorContrastContext[], tiePolicy: ColorSwatchTiePolicy) =&gt; ColorSwatchSelectionResult"
+              >
+                <h4>selectColorSwatchStep</h4>
+                <p class="muted">function • <code>src/selection.ts:62:1</code></p>
+                <p>
+                  Select the swatch step nearest a perceptual target that passes every required
+                  contrast context.
+                </p>
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">ColorContrastContext</li>
+                    <li class="chip">ColorSelectionTarget</li>
+                    <li class="chip">ColorSwatch</li>
+                    <li class="chip">ColorSwatchSelectionResult</li>
+                    <li class="chip">ColorSwatchTiePolicy</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+(swatch: ColorSwatch, target: ColorSelectionTarget, contexts: readonly ColorContrastContext[], tiePolicy: ColorSwatchTiePolicy) =&gt; ColorSwatchSelectionResult</pre>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>contexts</code></td>
+                        <td><code>readonly ColorContrastContext[]</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><code>swatch</code></td>
+                        <td><code>ColorSwatch</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><code>target</code></td>
+                        <td><code>ColorSelectionTarget</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><code>tiePolicy</code></td>
+                        <td><code>ColorSwatchTiePolicy</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Returns:</strong> <code>ColorSwatchSelectionResult</code></p>
+                </div>
               </article>
             </section>
             <section>
@@ -2166,6 +2849,11 @@
                 -.-&gt; module_src_neutral_ts module_src_neutral_ts --&gt; module_src_harmony_ts
                 module_src_neutral_ts --&gt; module_src_hex_ts module_src_neutral_ts --&gt;
                 module_src_internal_culori_ts module_src_neutral_ts --&gt; module_src_swatches_ts
+                module_src_selection_ts[&quot;src/selection.ts&quot;]
+                package__ankhorage_color_theory -.-&gt; module_src_selection_ts
+                module_src_selection_ts --&gt; module_src_contrast_ts module_src_selection_ts --&gt;
+                module_src_hex_ts module_src_selection_ts --&gt; module_src_internal_culori_ts
+                module_src_selection_ts --&gt; module_src_swatches_ts
                 module_src_semantic_status_ts[&quot;src/semantic-status.ts&quot;]
                 package__ankhorage_color_theory -.-&gt; module_src_semantic_status_ts
                 module_src_semantic_status_ts --&gt; module_src_hex_ts module_src_semantic_status_ts
@@ -2213,6 +2901,12 @@ graph TD
   module_src_neutral_ts --&gt; module_src_hex_ts
   module_src_neutral_ts --&gt; module_src_internal_culori_ts
   module_src_neutral_ts --&gt; module_src_swatches_ts
+  module_src_selection_ts[&quot;src/selection.ts&quot;]
+  package__ankhorage_color_theory -.-&gt; module_src_selection_ts
+  module_src_selection_ts --&gt; module_src_contrast_ts
+  module_src_selection_ts --&gt; module_src_hex_ts
+  module_src_selection_ts --&gt; module_src_internal_culori_ts
+  module_src_selection_ts --&gt; module_src_swatches_ts
   module_src_semantic_status_ts[&quot;src/semantic-status.ts&quot;]
   package__ankhorage_color_theory -.-&gt; module_src_semantic_status_ts
   module_src_semantic_status_ts --&gt; module_src_hex_ts
@@ -2249,6 +2943,7 @@ graph TD
                 module_src_index_ts[&quot;src/index.ts&quot;]
                 module_src_internal_culori_ts[&quot;src/internal-culori.ts&quot;]
                 module_src_neutral_ts[&quot;src/neutral.ts&quot;]
+                module_src_selection_ts[&quot;src/selection.ts&quot;]
                 module_src_semantic_status_ts[&quot;src/semantic-status.ts&quot;]
                 module_src_semantics_ts[&quot;src/semantics.ts&quot;]
                 module_src_swatches_ts[&quot;src/swatches.ts&quot;]
@@ -2258,14 +2953,17 @@ graph TD
                 module_src_internal_culori_ts module_src_internal_culori_ts --&gt; module_src_hex_ts
                 module_src_neutral_ts --&gt; module_src_harmony_ts module_src_neutral_ts --&gt;
                 module_src_hex_ts module_src_neutral_ts --&gt; module_src_internal_culori_ts
-                module_src_neutral_ts --&gt; module_src_swatches_ts module_src_semantic_status_ts
-                --&gt; module_src_hex_ts module_src_semantic_status_ts --&gt; module_src_swatches_ts
-                module_src_semantics_ts --&gt; module_src_harmony_ts module_src_semantics_ts --&gt;
-                module_src_swatches_ts module_src_swatches_ts --&gt; module_src_hex_ts
-                module_src_swatches_ts --&gt; module_src_internal_culori_ts
-                module_src_theme_colors_ts --&gt; module_src_harmony_ts module_src_theme_colors_ts
-                --&gt; module_src_hex_ts module_src_theme_colors_ts --&gt; module_src_neutral_ts
-                module_src_theme_colors_ts --&gt; module_src_swatches_ts
+                module_src_neutral_ts --&gt; module_src_swatches_ts module_src_selection_ts --&gt;
+                module_src_contrast_ts module_src_selection_ts --&gt; module_src_hex_ts
+                module_src_selection_ts --&gt; module_src_internal_culori_ts module_src_selection_ts
+                --&gt; module_src_swatches_ts module_src_semantic_status_ts --&gt; module_src_hex_ts
+                module_src_semantic_status_ts --&gt; module_src_swatches_ts module_src_semantics_ts
+                --&gt; module_src_harmony_ts module_src_semantics_ts --&gt; module_src_swatches_ts
+                module_src_swatches_ts --&gt; module_src_hex_ts module_src_swatches_ts --&gt;
+                module_src_internal_culori_ts module_src_theme_colors_ts --&gt;
+                module_src_harmony_ts module_src_theme_colors_ts --&gt; module_src_hex_ts
+                module_src_theme_colors_ts --&gt; module_src_neutral_ts module_src_theme_colors_ts
+                --&gt; module_src_swatches_ts
               </div>
               <details>
                 <summary>View Mermaid source</summary>
@@ -2279,6 +2977,7 @@ graph LR
   module_src_index_ts[&quot;src/index.ts&quot;]
   module_src_internal_culori_ts[&quot;src/internal-culori.ts&quot;]
   module_src_neutral_ts[&quot;src/neutral.ts&quot;]
+  module_src_selection_ts[&quot;src/selection.ts&quot;]
   module_src_semantic_status_ts[&quot;src/semantic-status.ts&quot;]
   module_src_semantics_ts[&quot;src/semantics.ts&quot;]
   module_src_swatches_ts[&quot;src/swatches.ts&quot;]
@@ -2292,6 +2991,10 @@ graph LR
   module_src_neutral_ts --&gt; module_src_hex_ts
   module_src_neutral_ts --&gt; module_src_internal_culori_ts
   module_src_neutral_ts --&gt; module_src_swatches_ts
+  module_src_selection_ts --&gt; module_src_contrast_ts
+  module_src_selection_ts --&gt; module_src_hex_ts
+  module_src_selection_ts --&gt; module_src_internal_culori_ts
+  module_src_selection_ts --&gt; module_src_swatches_ts
   module_src_semantic_status_ts --&gt; module_src_hex_ts
   module_src_semantic_status_ts --&gt; module_src_swatches_ts
   module_src_semantics_ts --&gt; module_src_harmony_ts
@@ -2317,6 +3020,7 @@ graph LR
                 module_src_index_ts[&quot;src/index.ts&quot;]
                 module_src_internal_culori_ts[&quot;src/internal-culori.ts&quot;]
                 module_src_neutral_ts[&quot;src/neutral.ts&quot;]
+                module_src_selection_ts[&quot;src/selection.ts&quot;]
                 module_src_semantic_status_ts[&quot;src/semantic-status.ts&quot;]
                 module_src_semantics_ts[&quot;src/semantics.ts&quot;]
                 module_src_swatches_ts[&quot;src/swatches.ts&quot;]
@@ -2329,16 +3033,41 @@ graph LR
                 export_COLOR_SWATCH_BASE_STEP[&quot;COLOR_SWATCH_BASE_STEP&quot;]
                 module_src_swatches_ts --&gt; export_COLOR_SWATCH_BASE_STEP
                 export_COLOR_SWATCH_STEPS[&quot;COLOR_SWATCH_STEPS&quot;] module_src_swatches_ts
-                --&gt; export_COLOR_SWATCH_STEPS export_ColorHarmony[&quot;ColorHarmony&quot;]
-                module_src_harmony_ts --&gt; export_ColorHarmony
+                --&gt; export_COLOR_SWATCH_STEPS
+                export_ColorContrastContext[&quot;ColorContrastContext&quot;]
+                module_src_selection_ts --&gt; export_ColorContrastContext
+                export_ColorContrastContext -.-&gt; export_HexColor
+                export_ColorContrastMeasurement[&quot;ColorContrastMeasurement&quot;]
+                module_src_selection_ts --&gt; export_ColorContrastMeasurement
+                export_ColorContrastMeasurement -.-&gt; export_HexColor
+                export_ColorHarmony[&quot;ColorHarmony&quot;] module_src_harmony_ts --&gt;
+                export_ColorHarmony export_ColorSelectionTarget[&quot;ColorSelectionTarget&quot;]
+                module_src_selection_ts --&gt; export_ColorSelectionTarget
                 export_ColorSwatch[&quot;ColorSwatch&quot;] module_src_swatches_ts --&gt;
-                export_ColorSwatch export_ColorSwatchDiagnostics[&quot;ColorSwatchDiagnostics&quot;]
+                export_ColorSwatch
+                export_ColorSwatchCandidateRejectionReason[&quot;ColorSwatchCandidateRejectionReason&quot;]
+                module_src_selection_ts --&gt; export_ColorSwatchCandidateRejectionReason
+                export_ColorSwatchDiagnostics[&quot;ColorSwatchDiagnostics&quot;]
                 module_src_swatches_ts --&gt; export_ColorSwatchDiagnostics
                 export_ColorSwatchDiagnostics -.-&gt; export_ColorSwatchWarning
+                export_ColorSwatchSelectionCandidate[&quot;ColorSwatchSelectionCandidate&quot;]
+                module_src_selection_ts --&gt; export_ColorSwatchSelectionCandidate
+                export_ColorSwatchSelectionCandidate -.-&gt; export_ColorContrastMeasurement
+                export_ColorSwatchSelectionCandidate -.-&gt;
+                export_ColorSwatchCandidateRejectionReason export_ColorSwatchSelectionCandidate
+                -.-&gt; export_HexColor
+                export_ColorSwatchSelectionResult[&quot;ColorSwatchSelectionResult&quot;]
+                module_src_selection_ts --&gt; export_ColorSwatchSelectionResult
+                export_ColorSwatchSelectionResult -.-&gt; export_ColorSelectionTarget
+                export_ColorSwatchSelectionResult -.-&gt; export_ColorSwatchSelectionCandidate
+                export_ColorSwatchSelectionResult -.-&gt; export_ColorSwatchStep
+                export_ColorSwatchSelectionResult -.-&gt; export_ColorSwatchTiePolicy
                 export_ColorSwatchStep[&quot;ColorSwatchStep&quot;] module_src_swatches_ts --&gt;
-                export_ColorSwatchStep export_ColorSwatchWarning[&quot;ColorSwatchWarning&quot;]
-                module_src_swatches_ts --&gt; export_ColorSwatchWarning export_ColorSwatchWarning
-                -.-&gt; export_ColorSwatchWarningCode
+                export_ColorSwatchStep export_ColorSwatchTiePolicy[&quot;ColorSwatchTiePolicy&quot;]
+                module_src_selection_ts --&gt; export_ColorSwatchTiePolicy
+                export_ColorSwatchWarning[&quot;ColorSwatchWarning&quot;] module_src_swatches_ts
+                --&gt; export_ColorSwatchWarning export_ColorSwatchWarning -.-&gt;
+                export_ColorSwatchWarningCode
                 export_ColorSwatchWarningCode[&quot;ColorSwatchWarningCode&quot;]
                 module_src_swatches_ts --&gt; export_ColorSwatchWarningCode
                 export_createDefaultSemanticStatusSwatches[&quot;createDefaultSemanticStatusSwatches&quot;]
@@ -2354,6 +3083,15 @@ graph LR
                 module_src_semantic_status_ts --&gt; export_DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS
                 export_DefaultSemanticStatusRole[&quot;DefaultSemanticStatusRole&quot;]
                 module_src_semantic_status_ts --&gt; export_DefaultSemanticStatusRole
+                export_ForegroundSelectionCandidate[&quot;ForegroundSelectionCandidate&quot;]
+                module_src_contrast_ts --&gt; export_ForegroundSelectionCandidate
+                export_ForegroundSelectionCandidate -.-&gt; export_HexColor
+                export_ForegroundSelectionResult[&quot;ForegroundSelectionResult&quot;]
+                module_src_contrast_ts --&gt; export_ForegroundSelectionResult
+                export_ForegroundSelectionResult -.-&gt; export_ForegroundSelectionCandidate
+                export_ForegroundSelectionResult -.-&gt; export_ForegroundTiePolicy
+                export_ForegroundTiePolicy[&quot;ForegroundTiePolicy&quot;] module_src_contrast_ts
+                --&gt; export_ForegroundTiePolicy
                 export_generateColorSwatch[&quot;generateColorSwatch&quot;] module_src_swatches_ts
                 --&gt; export_generateColorSwatch export_generateColorSwatch -.-&gt;
                 export_ColorSwatch export_generateColorSwatch -.-&gt; export_ColorSwatchDiagnostics
@@ -2395,6 +3133,8 @@ graph LR
                 module_src_theme_colors_ts --&gt; export_generateThemeModeColors
                 export_generateThemeModeColors -.-&gt; export_GeneratedThemeModeColors
                 export_generateThemeModeColors -.-&gt; export_ThemeModeColorInput
+                export_getContrastRatio[&quot;getContrastRatio&quot;] module_src_contrast_ts --&gt;
+                export_getContrastRatio export_getContrastRatio -.-&gt; export_HexColor
                 export_getReadableForeground[&quot;getReadableForeground&quot;]
                 module_src_contrast_ts --&gt; export_getReadableForeground
                 export_getReadableForeground -.-&gt; export_HexColor export_getReadableForeground
@@ -2420,6 +3160,18 @@ graph LR
                 export_ReadableForegroundResult[&quot;ReadableForegroundResult&quot;]
                 module_src_contrast_ts --&gt; export_ReadableForegroundResult
                 export_ReadableForegroundResult -.-&gt; export_HexColor
+                export_selectColorSwatchStep[&quot;selectColorSwatchStep&quot;]
+                module_src_selection_ts --&gt; export_selectColorSwatchStep
+                export_selectColorSwatchStep -.-&gt; export_ColorContrastContext
+                export_selectColorSwatchStep -.-&gt; export_ColorSelectionTarget
+                export_selectColorSwatchStep -.-&gt; export_ColorSwatch export_selectColorSwatchStep
+                -.-&gt; export_ColorSwatchSelectionResult export_selectColorSwatchStep -.-&gt;
+                export_ColorSwatchTiePolicy
+                export_selectReadableForeground[&quot;selectReadableForeground&quot;]
+                module_src_contrast_ts --&gt; export_selectReadableForeground
+                export_selectReadableForeground -.-&gt; export_ForegroundSelectionResult
+                export_selectReadableForeground -.-&gt; export_ForegroundTiePolicy
+                export_selectReadableForeground -.-&gt; export_HexColor
                 export_SemanticColorReference[&quot;SemanticColorReference&quot;]
                 module_src_semantics_ts --&gt; export_SemanticColorReference
                 export_SemanticColorReference -.-&gt; export_SemanticColorRole
@@ -2455,6 +3207,7 @@ graph LR
   module_src_index_ts[&quot;src/index.ts&quot;]
   module_src_internal_culori_ts[&quot;src/internal-culori.ts&quot;]
   module_src_neutral_ts[&quot;src/neutral.ts&quot;]
+  module_src_selection_ts[&quot;src/selection.ts&quot;]
   module_src_semantic_status_ts[&quot;src/semantic-status.ts&quot;]
   module_src_semantics_ts[&quot;src/semantics.ts&quot;]
   module_src_swatches_ts[&quot;src/swatches.ts&quot;]
@@ -2469,15 +3222,38 @@ graph LR
   module_src_swatches_ts --&gt; export_COLOR_SWATCH_BASE_STEP
   export_COLOR_SWATCH_STEPS[&quot;COLOR_SWATCH_STEPS&quot;]
   module_src_swatches_ts --&gt; export_COLOR_SWATCH_STEPS
+  export_ColorContrastContext[&quot;ColorContrastContext&quot;]
+  module_src_selection_ts --&gt; export_ColorContrastContext
+  export_ColorContrastContext -.-&gt; export_HexColor
+  export_ColorContrastMeasurement[&quot;ColorContrastMeasurement&quot;]
+  module_src_selection_ts --&gt; export_ColorContrastMeasurement
+  export_ColorContrastMeasurement -.-&gt; export_HexColor
   export_ColorHarmony[&quot;ColorHarmony&quot;]
   module_src_harmony_ts --&gt; export_ColorHarmony
+  export_ColorSelectionTarget[&quot;ColorSelectionTarget&quot;]
+  module_src_selection_ts --&gt; export_ColorSelectionTarget
   export_ColorSwatch[&quot;ColorSwatch&quot;]
   module_src_swatches_ts --&gt; export_ColorSwatch
+  export_ColorSwatchCandidateRejectionReason[&quot;ColorSwatchCandidateRejectionReason&quot;]
+  module_src_selection_ts --&gt; export_ColorSwatchCandidateRejectionReason
   export_ColorSwatchDiagnostics[&quot;ColorSwatchDiagnostics&quot;]
   module_src_swatches_ts --&gt; export_ColorSwatchDiagnostics
   export_ColorSwatchDiagnostics -.-&gt; export_ColorSwatchWarning
+  export_ColorSwatchSelectionCandidate[&quot;ColorSwatchSelectionCandidate&quot;]
+  module_src_selection_ts --&gt; export_ColorSwatchSelectionCandidate
+  export_ColorSwatchSelectionCandidate -.-&gt; export_ColorContrastMeasurement
+  export_ColorSwatchSelectionCandidate -.-&gt; export_ColorSwatchCandidateRejectionReason
+  export_ColorSwatchSelectionCandidate -.-&gt; export_HexColor
+  export_ColorSwatchSelectionResult[&quot;ColorSwatchSelectionResult&quot;]
+  module_src_selection_ts --&gt; export_ColorSwatchSelectionResult
+  export_ColorSwatchSelectionResult -.-&gt; export_ColorSelectionTarget
+  export_ColorSwatchSelectionResult -.-&gt; export_ColorSwatchSelectionCandidate
+  export_ColorSwatchSelectionResult -.-&gt; export_ColorSwatchStep
+  export_ColorSwatchSelectionResult -.-&gt; export_ColorSwatchTiePolicy
   export_ColorSwatchStep[&quot;ColorSwatchStep&quot;]
   module_src_swatches_ts --&gt; export_ColorSwatchStep
+  export_ColorSwatchTiePolicy[&quot;ColorSwatchTiePolicy&quot;]
+  module_src_selection_ts --&gt; export_ColorSwatchTiePolicy
   export_ColorSwatchWarning[&quot;ColorSwatchWarning&quot;]
   module_src_swatches_ts --&gt; export_ColorSwatchWarning
   export_ColorSwatchWarning -.-&gt; export_ColorSwatchWarningCode
@@ -2496,6 +3272,15 @@ graph LR
   module_src_semantic_status_ts --&gt; export_DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS
   export_DefaultSemanticStatusRole[&quot;DefaultSemanticStatusRole&quot;]
   module_src_semantic_status_ts --&gt; export_DefaultSemanticStatusRole
+  export_ForegroundSelectionCandidate[&quot;ForegroundSelectionCandidate&quot;]
+  module_src_contrast_ts --&gt; export_ForegroundSelectionCandidate
+  export_ForegroundSelectionCandidate -.-&gt; export_HexColor
+  export_ForegroundSelectionResult[&quot;ForegroundSelectionResult&quot;]
+  module_src_contrast_ts --&gt; export_ForegroundSelectionResult
+  export_ForegroundSelectionResult -.-&gt; export_ForegroundSelectionCandidate
+  export_ForegroundSelectionResult -.-&gt; export_ForegroundTiePolicy
+  export_ForegroundTiePolicy[&quot;ForegroundTiePolicy&quot;]
+  module_src_contrast_ts --&gt; export_ForegroundTiePolicy
   export_generateColorSwatch[&quot;generateColorSwatch&quot;]
   module_src_swatches_ts --&gt; export_generateColorSwatch
   export_generateColorSwatch -.-&gt; export_ColorSwatch
@@ -2538,6 +3323,9 @@ graph LR
   module_src_theme_colors_ts --&gt; export_generateThemeModeColors
   export_generateThemeModeColors -.-&gt; export_GeneratedThemeModeColors
   export_generateThemeModeColors -.-&gt; export_ThemeModeColorInput
+  export_getContrastRatio[&quot;getContrastRatio&quot;]
+  module_src_contrast_ts --&gt; export_getContrastRatio
+  export_getContrastRatio -.-&gt; export_HexColor
   export_getReadableForeground[&quot;getReadableForeground&quot;]
   module_src_contrast_ts --&gt; export_getReadableForeground
   export_getReadableForeground -.-&gt; export_HexColor
@@ -2568,6 +3356,18 @@ graph LR
   export_ReadableForegroundResult[&quot;ReadableForegroundResult&quot;]
   module_src_contrast_ts --&gt; export_ReadableForegroundResult
   export_ReadableForegroundResult -.-&gt; export_HexColor
+  export_selectColorSwatchStep[&quot;selectColorSwatchStep&quot;]
+  module_src_selection_ts --&gt; export_selectColorSwatchStep
+  export_selectColorSwatchStep -.-&gt; export_ColorContrastContext
+  export_selectColorSwatchStep -.-&gt; export_ColorSelectionTarget
+  export_selectColorSwatchStep -.-&gt; export_ColorSwatch
+  export_selectColorSwatchStep -.-&gt; export_ColorSwatchSelectionResult
+  export_selectColorSwatchStep -.-&gt; export_ColorSwatchTiePolicy
+  export_selectReadableForeground[&quot;selectReadableForeground&quot;]
+  module_src_contrast_ts --&gt; export_selectReadableForeground
+  export_selectReadableForeground -.-&gt; export_ForegroundSelectionResult
+  export_selectReadableForeground -.-&gt; export_ForegroundTiePolicy
+  export_selectReadableForeground -.-&gt; export_HexColor
   export_SemanticColorReference[&quot;SemanticColorReference&quot;]
   module_src_semantics_ts --&gt; export_SemanticColorReference
   export_SemanticColorReference -.-&gt; export_SemanticColorRole
@@ -2744,30 +3544,77 @@ sequenceDiagram
             </article>
             <article
               class="item"
-              data-search="getReadableForeground sequence diagrams/sequences/get-readable-foreground.mmd"
+              data-search="getContrastRatio sequence diagrams/sequences/get-contrast-ratio.mmd"
             >
-              <h3>getReadableForeground sequence</h3>
-              <p class="muted"><code>diagrams/sequences/get-readable-foreground.mmd</code></p>
+              <h3>getContrastRatio sequence</h3>
+              <p class="muted"><code>diagrams/sequences/get-contrast-ratio.mmd</code></p>
               <div class="mermaid">
                 sequenceDiagram participant participant_contrastRatio as contrastRatio participant
-                participant_getReadableForeground as getReadableForeground participant
+                participant_getContrastRatio as getContrastRatio participant
                 participant_wcagContrast as wcagContrast
-                participant_getReadableForeground-&gt;&gt;participant_contrastRatio: contrastRatio()
+                participant_getContrastRatio-&gt;&gt;participant_contrastRatio: contrastRatio()
                 participant_contrastRatio-&gt;&gt;participant_wcagContrast: wcagContrast()
                 participant_wcagContrast--&gt;&gt;participant_contrastRatio: return
-                participant_contrastRatio--&gt;&gt;participant_getReadableForeground: return
+                participant_contrastRatio--&gt;&gt;participant_getContrastRatio: return
               </div>
               <details>
                 <summary>View Mermaid source</summary>
                 <pre>
 sequenceDiagram
   participant participant_contrastRatio as contrastRatio
-  participant participant_getReadableForeground as getReadableForeground
+  participant participant_getContrastRatio as getContrastRatio
   participant participant_wcagContrast as wcagContrast
-  participant_getReadableForeground-&gt;&gt;participant_contrastRatio: contrastRatio()
+  participant_getContrastRatio-&gt;&gt;participant_contrastRatio: contrastRatio()
   participant_contrastRatio-&gt;&gt;participant_wcagContrast: wcagContrast()
   participant_wcagContrast--&gt;&gt;participant_contrastRatio: return
-  participant_contrastRatio--&gt;&gt;participant_getReadableForeground: return
+  participant_contrastRatio--&gt;&gt;participant_getContrastRatio: return
+</pre>
+              </details>
+            </article>
+            <article
+              class="item"
+              data-search="getReadableForeground sequence diagrams/sequences/get-readable-foreground.mmd"
+            >
+              <h3>getReadableForeground sequence</h3>
+              <p class="muted"><code>diagrams/sequences/get-readable-foreground.mmd</code></p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_assertMinimumContrast as
+                assertMinimumContrast participant participant_getReadableForeground as
+                getReadableForeground participant participant_parseHexColor as parseHexColor
+                participant participant_parseHexColorOrThrow as parseHexColorOrThrow participant
+                participant_selectReadableForeground as selectReadableForeground
+                participant_getReadableForeground-&gt;&gt;participant_selectReadableForeground:
+                selectReadableForeground()
+                participant_selectReadableForeground-&gt;&gt;participant_assertMinimumContrast:
+                assertMinimumContrast()
+                participant_assertMinimumContrast--&gt;&gt;participant_selectReadableForeground:
+                return
+                participant_selectReadableForeground-&gt;&gt;participant_parseHexColorOrThrow:
+                parseHexColorOrThrow()
+                participant_parseHexColorOrThrow-&gt;&gt;participant_parseHexColor: parseHexColor()
+                participant_parseHexColor--&gt;&gt;participant_parseHexColorOrThrow: return
+                participant_parseHexColorOrThrow--&gt;&gt;participant_selectReadableForeground:
+                return
+                participant_selectReadableForeground--&gt;&gt;participant_getReadableForeground:
+                return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_assertMinimumContrast as assertMinimumContrast
+  participant participant_getReadableForeground as getReadableForeground
+  participant participant_parseHexColor as parseHexColor
+  participant participant_parseHexColorOrThrow as parseHexColorOrThrow
+  participant participant_selectReadableForeground as selectReadableForeground
+  participant_getReadableForeground-&gt;&gt;participant_selectReadableForeground: selectReadableForeground()
+  participant_selectReadableForeground-&gt;&gt;participant_assertMinimumContrast: assertMinimumContrast()
+  participant_assertMinimumContrast--&gt;&gt;participant_selectReadableForeground: return
+  participant_selectReadableForeground-&gt;&gt;participant_parseHexColorOrThrow: parseHexColorOrThrow()
+  participant_parseHexColorOrThrow-&gt;&gt;participant_parseHexColor: parseHexColor()
+  participant_parseHexColor--&gt;&gt;participant_parseHexColorOrThrow: return
+  participant_parseHexColorOrThrow--&gt;&gt;participant_selectReadableForeground: return
+  participant_selectReadableForeground--&gt;&gt;participant_getReadableForeground: return
 </pre>
               </details>
             </article>
@@ -2824,6 +3671,83 @@ sequenceDiagram
 </pre>
               </details>
             </article>
+            <article
+              class="item"
+              data-search="selectColorSwatchStep sequence diagrams/sequences/select-color-swatch-step.mmd"
+            >
+              <h3>selectColorSwatchStep sequence</h3>
+              <p class="muted"><code>diagrams/sequences/select-color-swatch-step.mmd</code></p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_normalizeContexts as normalizeContexts
+                participant participant_normalizeHueDegrees as normalizeHueDegrees participant
+                participant_normalizeTarget as normalizeTarget participant
+                participant_selectColorSwatchStep as selectColorSwatchStep
+                participant_selectColorSwatchStep-&gt;&gt;participant_normalizeTarget:
+                normalizeTarget()
+                participant_normalizeTarget-&gt;&gt;participant_normalizeHueDegrees:
+                normalizeHueDegrees()
+                participant_normalizeHueDegrees--&gt;&gt;participant_normalizeTarget: return
+                participant_normalizeTarget--&gt;&gt;participant_selectColorSwatchStep: return
+                participant_selectColorSwatchStep-&gt;&gt;participant_normalizeContexts:
+                normalizeContexts()
+                participant_normalizeContexts--&gt;&gt;participant_selectColorSwatchStep: return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_normalizeContexts as normalizeContexts
+  participant participant_normalizeHueDegrees as normalizeHueDegrees
+  participant participant_normalizeTarget as normalizeTarget
+  participant participant_selectColorSwatchStep as selectColorSwatchStep
+  participant_selectColorSwatchStep-&gt;&gt;participant_normalizeTarget: normalizeTarget()
+  participant_normalizeTarget-&gt;&gt;participant_normalizeHueDegrees: normalizeHueDegrees()
+  participant_normalizeHueDegrees--&gt;&gt;participant_normalizeTarget: return
+  participant_normalizeTarget--&gt;&gt;participant_selectColorSwatchStep: return
+  participant_selectColorSwatchStep-&gt;&gt;participant_normalizeContexts: normalizeContexts()
+  participant_normalizeContexts--&gt;&gt;participant_selectColorSwatchStep: return
+</pre>
+              </details>
+            </article>
+            <article
+              class="item"
+              data-search="selectReadableForeground sequence diagrams/sequences/select-readable-foreground.mmd"
+            >
+              <h3>selectReadableForeground sequence</h3>
+              <p class="muted"><code>diagrams/sequences/select-readable-foreground.mmd</code></p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_assertMinimumContrast as
+                assertMinimumContrast participant participant_parseHexColor as parseHexColor
+                participant participant_parseHexColorOrThrow as parseHexColorOrThrow participant
+                participant_selectReadableForeground as selectReadableForeground
+                participant_selectReadableForeground-&gt;&gt;participant_assertMinimumContrast:
+                assertMinimumContrast()
+                participant_assertMinimumContrast--&gt;&gt;participant_selectReadableForeground:
+                return
+                participant_selectReadableForeground-&gt;&gt;participant_parseHexColorOrThrow:
+                parseHexColorOrThrow()
+                participant_parseHexColorOrThrow-&gt;&gt;participant_parseHexColor: parseHexColor()
+                participant_parseHexColor--&gt;&gt;participant_parseHexColorOrThrow: return
+                participant_parseHexColorOrThrow--&gt;&gt;participant_selectReadableForeground:
+                return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_assertMinimumContrast as assertMinimumContrast
+  participant participant_parseHexColor as parseHexColor
+  participant participant_parseHexColorOrThrow as parseHexColorOrThrow
+  participant participant_selectReadableForeground as selectReadableForeground
+  participant_selectReadableForeground-&gt;&gt;participant_assertMinimumContrast: assertMinimumContrast()
+  participant_assertMinimumContrast--&gt;&gt;participant_selectReadableForeground: return
+  participant_selectReadableForeground-&gt;&gt;participant_parseHexColorOrThrow: parseHexColorOrThrow()
+  participant_parseHexColorOrThrow-&gt;&gt;participant_parseHexColor: parseHexColor()
+  participant_parseHexColor--&gt;&gt;participant_parseHexColorOrThrow: return
+  participant_parseHexColorOrThrow--&gt;&gt;participant_selectReadableForeground: return
+</pre>
+              </details>
+            </article>
           </section>
         </section>
         <section id="view-src-contrast-ts" class="view" data-view="src/contrast.ts" hidden>
@@ -2831,14 +3755,49 @@ sequenceDiagram
             <h2>src/contrast.ts</h2>
             <article
               class="item"
+              data-search="getContrastRatio src/contrast.ts Measure the WCAG contrast ratio between two validated hex colors."
+            >
+              <h3>getContrastRatio</h3>
+              <p class="muted"><code>src/contrast.ts:36:1</code></p>
+              <p>Measure the WCAG contrast ratio between two validated hex colors.</p>
+            </article>
+            <article
+              class="item"
+              data-search="selectReadableForeground src/contrast.ts Select the strongest caller-provided foreground that meets a minimum WCAG contrast ratio."
+            >
+              <h3>selectReadableForeground</h3>
+              <p class="muted"><code>src/contrast.ts:43:1</code></p>
+              <p>
+                Select the strongest caller-provided foreground that meets a minimum WCAG contrast
+                ratio.
+              </p>
+            </article>
+            <article
+              class="item"
               data-search="getReadableForeground src/contrast.ts Return the readable black or white foreground color with the stronger contrast against a background color."
             >
               <h3>getReadableForeground</h3>
-              <p class="muted"><code>src/contrast.ts:16:1</code></p>
+              <p class="muted"><code>src/contrast.ts:99:1</code></p>
               <p>
                 Return the readable black or white foreground color with the stronger contrast
                 against a background color.
               </p>
+            </article>
+            <article
+              class="item"
+              data-search="assertMinimumContrast src/contrast.ts Validate a WCAG contrast threshold."
+            >
+              <h3>assertMinimumContrast</h3>
+              <p class="muted"><code>src/contrast.ts:114:1</code></p>
+              <p>Validate a WCAG contrast threshold.</p>
+            </article>
+            <article
+              class="item"
+              data-search="getForegroundRejectionReason src/contrast.ts Explain why a foreground candidate was not selected."
+            >
+              <h3>getForegroundRejectionReason</h3>
+              <p class="muted"><code>src/contrast.ts:125:1</code></p>
+              <p>Explain why a foreground candidate was not selected.</p>
             </article>
           </section>
         </section>
@@ -2984,6 +3943,70 @@ sequenceDiagram
               <h3>generateNeutralSwatch</h3>
               <p class="muted"><code>src/neutral.ts:49:1</code></p>
               <p>Generate a softly tinted neutral swatch from generated harmony role colors.</p>
+            </article>
+          </section>
+        </section>
+        <section id="view-src-selection-ts" class="view" data-view="src/selection.ts" hidden>
+          <section class="panel">
+            <h2>src/selection.ts</h2>
+            <article
+              class="item"
+              data-search="selectColorSwatchStep src/selection.ts Select the swatch step nearest a perceptual target that passes every required contrast context."
+            >
+              <h3>selectColorSwatchStep</h3>
+              <p class="muted"><code>src/selection.ts:62:1</code></p>
+              <p>
+                Select the swatch step nearest a perceptual target that passes every required
+                contrast context.
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="createSelectionCandidate src/selection.ts Convert a measured candidate into its public selection diagnostic."
+            >
+              <h3>createSelectionCandidate</h3>
+              <p class="muted"><code>src/selection.ts:101:1</code></p>
+              <p>Convert a measured candidate into its public selection diagnostic.</p>
+            </article>
+            <article
+              class="item"
+              data-search="getCandidateRejectionReasons src/selection.ts Explain every reason a candidate was not selected."
+            >
+              <h3>getCandidateRejectionReasons</h3>
+              <p class="muted"><code>src/selection.ts:126:1</code></p>
+              <p>Explain every reason a candidate was not selected.</p>
+            </article>
+            <article
+              class="item"
+              data-search="measureCandidate src/selection.ts Measure a swatch candidate against the target and required contrast contexts."
+            >
+              <h3>measureCandidate</h3>
+              <p class="muted"><code>src/selection.ts:144:1</code></p>
+              <p>Measure a swatch candidate against the target and required contrast contexts.</p>
+            </article>
+            <article
+              class="item"
+              data-search="measureTargetDistance src/selection.ts Measure target distance with hue included only when the caller supplied it."
+            >
+              <h3>measureTargetDistance</h3>
+              <p class="muted"><code>src/selection.ts:171:1</code></p>
+              <p>Measure target distance with hue included only when the caller supplied it.</p>
+            </article>
+            <article
+              class="item"
+              data-search="normalizeContexts src/selection.ts Validate and normalize contrast contexts for deterministic measurement."
+            >
+              <h3>normalizeContexts</h3>
+              <p class="muted"><code>src/selection.ts:187:1</code></p>
+              <p>Validate and normalize contrast contexts for deterministic measurement.</p>
+            </article>
+            <article
+              class="item"
+              data-search="normalizeTarget src/selection.ts Validate and normalize a perceptual color-selection target."
+            >
+              <h3>normalizeTarget</h3>
+              <p class="muted"><code>src/selection.ts:221:1</code></p>
+              <p>Validate and normalize a perceptual color-selection target.</p>
             </article>
           </section>
         </section>

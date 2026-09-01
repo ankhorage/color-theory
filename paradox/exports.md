@@ -38,17 +38,67 @@ Kind: `value`
 Module: `src/swatches.ts`
 Source: `src/swatches.ts:4:14`
 
+## ColorContrastContext
+
+Kind: `type`
+Module: `src/selection.ts`
+Source: `src/selection.ts:15:1`
+
+### Members
+
+| Name            | Kind     | Type       | Required | Description |
+| --------------- | -------- | ---------- | -------- | ----------- |
+| against         | property | `HexColor` | yes      |             |
+| id              | property | `string`   | yes      |             |
+| minimumContrast | property | `number`   | yes      |             |
+
+## ColorContrastMeasurement
+
+Kind: `type`
+Module: `src/selection.ts`
+Source: `src/selection.ts:21:1`
+
+### Members
+
+| Name            | Kind     | Type       | Required | Description |
+| --------------- | -------- | ---------- | -------- | ----------- |
+| against         | property | `HexColor` | yes      |             |
+| contrast        | property | `number`   | yes      |             |
+| id              | property | `string`   | yes      |             |
+| minimumContrast | property | `number`   | yes      |             |
+| passes          | property | `boolean`  | yes      |             |
+
 ## ColorHarmony
 
 Kind: `unknown`
 Module: `src/harmony.ts`
 Source: `src/harmony.ts:13:1`
 
+## ColorSelectionTarget
+
+Kind: `type`
+Module: `src/selection.ts`
+Source: `src/selection.ts:9:1`
+
+### Members
+
+| Name       | Kind     | Type                  | Required | Description |
+| ---------- | -------- | --------------------- | -------- | ----------- |
+| chroma     | property | `number`              | yes      |             |
+| hueDegrees | property | `number \| undefined` | no       |             |
+| lightness  | property | `number`              | yes      |             |
+
 ## ColorSwatch
 
 Kind: `unknown`
 Module: `src/swatches.ts`
 Source: `src/swatches.ts:10:1`
+
+## ColorSwatchCandidateRejectionReason
+
+Kind: `unknown`
+Module: `src/selection.ts`
+Source: `src/selection.ts:26:1`
 
 ## ColorSwatchDiagnostics
 
@@ -66,11 +116,50 @@ Source: `src/swatches.ts:22:1`
 | minAdjacentDelta | property | `number`                        | yes      |             |
 | warnings         | property | `readonly ColorSwatchWarning[]` | yes      |             |
 
+## ColorSwatchSelectionCandidate
+
+Kind: `type`
+Module: `src/selection.ts`
+Source: `src/selection.ts:28:1`
+
+### Members
+
+| Name             | Kind     | Type                                                                       | Required | Description |
+| ---------------- | -------- | -------------------------------------------------------------------------- | -------- | ----------- |
+| contrasts        | property | `readonly ColorContrastMeasurement[]`                                      | yes      |             |
+| hex              | property | `HexColor`                                                                 | yes      |             |
+| rejectionReasons | property | `readonly ColorSwatchCandidateRejectionReason[]`                           | yes      |             |
+| selected         | property | `boolean`                                                                  | yes      |             |
+| step             | property | `50 \| 100 \| 200 \| 300 \| 400 \| 500 \| 600 \| 700 \| 800 \| 900 \| 950` | yes      |             |
+| targetDistance   | property | `number`                                                                   | yes      |             |
+
+## ColorSwatchSelectionResult
+
+Kind: `type`
+Module: `src/selection.ts`
+Source: `src/selection.ts:37:1`
+
+### Members
+
+| Name               | Kind     | Type                                                                                              | Required | Description |
+| ------------------ | -------- | ------------------------------------------------------------------------------------------------- | -------- | ----------- |
+| candidates         | property | `readonly ColorSwatchSelectionCandidate[]`                                                        | yes      |             |
+| rejectedCandidates | property | `readonly ColorSwatchSelectionCandidate[]`                                                        | yes      |             |
+| selected           | property | `ColorSwatchSelectionCandidate \| null`                                                           | yes      |             |
+| target             | property | `ColorSelectionTarget`                                                                            | yes      |             |
+| tieBreak           | property | `{ policy: ColorSwatchTiePolicy; applied: boolean; candidateSteps: readonly ColorSwatchStep[]; }` | yes      |             |
+
 ## ColorSwatchStep
 
 Kind: `unknown`
 Module: `src/swatches.ts`
 Source: `src/swatches.ts:5:1`
+
+## ColorSwatchTiePolicy
+
+Kind: `unknown`
+Module: `src/selection.ts`
+Source: `src/selection.ts:7:1`
 
 ## ColorSwatchWarning
 
@@ -137,6 +226,43 @@ Source: `src/semantic-status.ts:6:14`
 Kind: `unknown`
 Module: `src/semantic-status.ts`
 Source: `src/semantic-status.ts:12:1`
+
+## ForegroundSelectionCandidate
+
+Kind: `type`
+Module: `src/contrast.ts`
+Source: `src/contrast.ts:12:1`
+
+### Members
+
+| Name            | Kind     | Type                                                                  | Required | Description |
+| --------------- | -------- | --------------------------------------------------------------------- | -------- | ----------- |
+| contrast        | property | `number`                                                              | yes      |             |
+| foreground      | property | `HexColor`                                                            | yes      |             |
+| passesMinimum   | property | `boolean`                                                             | yes      |             |
+| rejectionReason | property | `"minimum-contrast" \| "weaker-contrast" \| "tie-break" \| undefined` | no       |             |
+| selected        | property | `boolean`                                                             | yes      |             |
+
+## ForegroundSelectionResult
+
+Kind: `type`
+Module: `src/contrast.ts`
+Source: `src/contrast.ts:20:1`
+
+### Members
+
+| Name            | Kind     | Type                                                 | Required | Description |
+| --------------- | -------- | ---------------------------------------------------- | -------- | ----------- |
+| candidates      | property | `readonly ForegroundSelectionCandidate[]`            | yes      |             |
+| minimumContrast | property | `number`                                             | yes      |             |
+| selected        | property | `ForegroundSelectionCandidate \| null`               | yes      |             |
+| tieBreak        | property | `{ policy: ForegroundTiePolicy; applied: boolean; }` | yes      |             |
+
+## ForegroundTiePolicy
+
+Kind: `unknown`
+Module: `src/contrast.ts`
+Source: `src/contrast.ts:10:1`
 
 ## generateColorSwatch
 
@@ -290,11 +416,26 @@ Generate harmony role colors, swatches, and neutral metadata for a theme mode.
   - mode: `ThemeModeColorInput`
   - returns: `GeneratedThemeModeColors`
 
+## getContrastRatio
+
+Kind: `function`
+Module: `src/contrast.ts`
+Source: `src/contrast.ts:36:1`
+
+Measure the WCAG contrast ratio between two validated hex colors.
+
+### Signatures
+
+- `(colorA: HexColor, colorB: HexColor) => number`
+  - colorA: `HexColor`
+  - colorB: `HexColor`
+  - returns: `number`
+
 ## getReadableForeground
 
 Kind: `function`
 Module: `src/contrast.ts`
-Source: `src/contrast.ts:16:1`
+Source: `src/contrast.ts:99:1`
 
 Return the readable black or white foreground color with the stronger contrast against a background color.
 
@@ -404,6 +545,40 @@ Source: `src/contrast.ts:5:1`
 | ---------- | -------- | ---------- | -------- | ----------- |
 | contrast   | property | `number`   | yes      |             |
 | foreground | property | `HexColor` | yes      |             |
+
+## selectColorSwatchStep
+
+Kind: `function`
+Module: `src/selection.ts`
+Source: `src/selection.ts:62:1`
+
+Select the swatch step nearest a perceptual target that passes every required contrast context.
+
+### Signatures
+
+- `(swatch: ColorSwatch, target: ColorSelectionTarget, contexts: readonly ColorContrastContext[], tiePolicy: ColorSwatchTiePolicy) => ColorSwatchSelectionResult`
+  - contexts: `readonly ColorContrastContext[]`
+  - swatch: `ColorSwatch`
+  - target: `ColorSelectionTarget`
+  - tiePolicy: `ColorSwatchTiePolicy`
+  - returns: `ColorSwatchSelectionResult`
+
+## selectReadableForeground
+
+Kind: `function`
+Module: `src/contrast.ts`
+Source: `src/contrast.ts:43:1`
+
+Select the strongest caller-provided foreground that meets a minimum WCAG contrast ratio.
+
+### Signatures
+
+- `(background: HexColor, foregrounds: readonly HexColor[], minimumContrast: number, tiePolicy: ForegroundTiePolicy) => ForegroundSelectionResult`
+  - background: `HexColor`
+  - foregrounds: `readonly HexColor[]`
+  - minimumContrast: `number`
+  - tiePolicy: `ForegroundTiePolicy`
+  - returns: `ForegroundSelectionResult`
 
 ## SemanticColorReference
 
