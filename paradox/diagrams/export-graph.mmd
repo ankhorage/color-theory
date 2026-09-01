@@ -15,6 +15,8 @@ graph LR
   module_src_hex_ts --> export_assertHexColor
   export_COLOR_HARMONIES["COLOR_HARMONIES"]
   module_src_harmony_ts --> export_COLOR_HARMONIES
+  export_COLOR_HARMONY_CATALOG["COLOR_HARMONY_CATALOG"]
+  module_src_harmony_ts --> export_COLOR_HARMONY_CATALOG
   export_COLOR_SWATCH_BASE_LIGHTNESS["COLOR_SWATCH_BASE_LIGHTNESS"]
   module_src_swatches_ts --> export_COLOR_SWATCH_BASE_LIGHTNESS
   export_COLOR_SWATCH_BASE_STEP["COLOR_SWATCH_BASE_STEP"]
@@ -23,6 +25,8 @@ graph LR
   module_src_swatches_ts --> export_COLOR_SWATCH_STEPS
   export_ColorHarmony["ColorHarmony"]
   module_src_harmony_ts --> export_ColorHarmony
+  export_ColorHarmonyDefinition["ColorHarmonyDefinition"]
+  module_src_harmony_ts --> export_ColorHarmonyDefinition
   export_ColorSwatch["ColorSwatch"]
   module_src_swatches_ts --> export_ColorSwatch
   export_ColorSwatchDiagnostics["ColorSwatchDiagnostics"]
@@ -62,6 +66,7 @@ graph LR
   export_GeneratedHarmonyRoleColors["GeneratedHarmonyRoleColors"]
   module_src_harmony_ts --> export_GeneratedHarmonyRoleColors
   export_GeneratedHarmonyRoleColors -.-> export_GeneratedHarmonyRoleColor
+  export_GeneratedHarmonyRoleColors -.-> export_HarmonyGenerationDiagnostics
   export_GeneratedNeutralMetadata["GeneratedNeutralMetadata"]
   module_src_neutral_ts --> export_GeneratedNeutralMetadata
   export_GeneratedNeutralMetadata -.-> export_ColorSwatchDiagnostics
@@ -98,6 +103,14 @@ graph LR
   module_src_theme_colors_ts --> export_getThemeModePrimaryHex
   export_getThemeModePrimaryHex -.-> export_HexColor
   export_getThemeModePrimaryHex -.-> export_ThemeModeColorInput
+  export_HarmonyGenerationDiagnostics["HarmonyGenerationDiagnostics"]
+  module_src_harmony_ts --> export_HarmonyGenerationDiagnostics
+  export_HarmonyGenerationDiagnostics -.-> export_HarmonyGenerationWarning
+  export_HarmonyGenerationWarning["HarmonyGenerationWarning"]
+  module_src_harmony_ts --> export_HarmonyGenerationWarning
+  export_HarmonyGenerationWarning -.-> export_HarmonyGenerationWarningCode
+  export_HarmonyGenerationWarningCode["HarmonyGenerationWarningCode"]
+  module_src_harmony_ts --> export_HarmonyGenerationWarningCode
   export_HexColor["HexColor"]
   module_src_hex_ts --> export_HexColor
   export_isHexColor["isHexColor"]
@@ -105,7 +118,7 @@ graph LR
   export_LIGHT_SEMANTIC_COLOR_REFERENCES["LIGHT_SEMANTIC_COLOR_REFERENCES"]
   module_src_semantics_ts --> export_LIGHT_SEMANTIC_COLOR_REFERENCES
   export_MIN_HUEFUL_CHROMA["MIN_HUEFUL_CHROMA"]
-  module_src_neutral_ts --> export_MIN_HUEFUL_CHROMA
+  module_src_harmony_ts --> export_MIN_HUEFUL_CHROMA
   export_NeutralSwatchResult["NeutralSwatchResult"]
   module_src_neutral_ts --> export_NeutralSwatchResult
   export_NeutralSwatchResult -.-> export_ColorSwatch

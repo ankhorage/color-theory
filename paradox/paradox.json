@@ -566,11 +566,17 @@
       "dependencies": ["src/hex.ts", "src/internal-culori.ts"],
       "exports": [
         "COLOR_HARMONIES",
+        "COLOR_HARMONY_CATALOG",
         "ColorHarmony",
+        "ColorHarmonyDefinition",
         "GeneratedColorRole",
         "GeneratedHarmonyRoleColor",
         "GeneratedHarmonyRoleColors",
-        "generateHarmonyRoleColors"
+        "generateHarmonyRoleColors",
+        "HarmonyGenerationDiagnostics",
+        "HarmonyGenerationWarning",
+        "HarmonyGenerationWarningCode",
+        "MIN_HUEFUL_CHROMA"
       ]
     },
     {
@@ -592,10 +598,12 @@
       "exports": [
         "assertHexColor",
         "COLOR_HARMONIES",
+        "COLOR_HARMONY_CATALOG",
         "COLOR_SWATCH_BASE_LIGHTNESS",
         "COLOR_SWATCH_BASE_STEP",
         "COLOR_SWATCH_STEPS",
         "ColorHarmony",
+        "ColorHarmonyDefinition",
         "ColorSwatch",
         "ColorSwatchDiagnostics",
         "ColorSwatchStep",
@@ -619,6 +627,9 @@
         "generateThemeModeColors",
         "getReadableForeground",
         "getThemeModePrimaryHex",
+        "HarmonyGenerationDiagnostics",
+        "HarmonyGenerationWarning",
+        "HarmonyGenerationWarningCode",
         "HexColor",
         "isHexColor",
         "LIGHT_SEMANTIC_COLOR_REFERENCES",
@@ -654,12 +665,7 @@
       "path": "src/neutral.ts",
       "isEntrypoint": false,
       "dependencies": ["src/harmony.ts", "src/hex.ts", "src/internal-culori.ts", "src/swatches.ts"],
-      "exports": [
-        "GeneratedNeutralMetadata",
-        "generateNeutralSwatch",
-        "MIN_HUEFUL_CHROMA",
-        "NeutralSwatchResult"
-      ]
+      "exports": ["GeneratedNeutralMetadata", "generateNeutralSwatch", "NeutralSwatchResult"]
     },
     {
       "path": "src/semantic-status.ts",
@@ -761,7 +767,25 @@
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
         "filePath": "src/harmony.ts",
-        "line": 4,
+        "line": 77,
+        "column": 14
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "COLOR_HARMONY_CATALOG",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "value",
+      "modulePath": "src/harmony.ts",
+      "sourceLocation": {
+        "filePath": "src/harmony.ts",
+        "line": 15,
         "column": 14
       },
       "exportPaths": ["src/index.ts"],
@@ -833,7 +857,25 @@
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
         "filePath": "src/harmony.ts",
-        "line": 13,
+        "line": 75,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "ColorHarmonyDefinition",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "unknown",
+      "modulePath": "src/harmony.ts",
+      "sourceLocation": {
+        "filePath": "src/harmony.ts",
+        "line": 74,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1149,7 +1191,7 @@
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
         "filePath": "src/harmony.ts",
-        "line": 15,
+        "line": 4,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1167,7 +1209,7 @@
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
         "filePath": "src/harmony.ts",
-        "line": 17,
+        "line": 94,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1214,11 +1256,11 @@
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
         "filePath": "src/harmony.ts",
-        "line": 24,
+        "line": 101,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
-      "relatedSymbols": ["GeneratedHarmonyRoleColor"],
+      "relatedSymbols": ["GeneratedHarmonyRoleColor", "HarmonyGenerationDiagnostics"],
       "signatures": [],
       "members": [
         {
@@ -1229,9 +1271,16 @@
           "description": null
         },
         {
+          "name": "diagnostics",
+          "kind": "property",
+          "type": "HarmonyGenerationDiagnostics",
+          "required": true,
+          "description": null
+        },
+        {
           "name": "harmony",
           "kind": "property",
-          "type": "\"monochromatic\" | \"analogous\" | \"complementary\" | \"triadic\" | \"tetradic\" | \"splitComplementary\"",
+          "type": "\"monochromatic\" | \"analogous\" | \"complementary\" | \"splitComplementary\" | \"triadic\" | \"tetradic\" | \"square\"",
           "required": true,
           "description": null
         },
@@ -1275,7 +1324,7 @@
       "modulePath": "src/neutral.ts",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 19,
+        "line": 17,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1406,18 +1455,18 @@
       "modulePath": "src/harmony.ts",
       "sourceLocation": {
         "filePath": "src/harmony.ts",
-        "line": 69,
+        "line": 149,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
       "relatedSymbols": ["GeneratedHarmonyRoleColors", "HexColor"],
       "signatures": [
         {
-          "label": "(primaryColor: HexColor, harmony: \"monochromatic\" | \"analogous\" | \"complementary\" | \"triadic\" | \"tetradic\" | \"splitComplementary\") => GeneratedHarmonyRoleColors",
+          "label": "(primaryColor: HexColor, harmony: \"monochromatic\" | \"analogous\" | \"complementary\" | \"splitComplementary\" | \"triadic\" | \"tetradic\" | \"square\") => GeneratedHarmonyRoleColors",
           "parameters": [
             {
               "name": "harmony",
-              "type": "\"monochromatic\" | \"analogous\" | \"complementary\" | \"triadic\" | \"tetradic\" | \"splitComplementary\"",
+              "type": "\"monochromatic\" | \"analogous\" | \"complementary\" | \"splitComplementary\" | \"triadic\" | \"tetradic\" | \"square\"",
               "required": true,
               "description": null
             },
@@ -1444,7 +1493,7 @@
       "modulePath": "src/neutral.ts",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 49,
+        "line": 47,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1596,6 +1645,97 @@
       "structuredRows": []
     },
     {
+      "name": "HarmonyGenerationDiagnostics",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/harmony.ts",
+      "sourceLocation": {
+        "filePath": "src/harmony.ts",
+        "line": 88,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["HarmonyGenerationWarning"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "isHueReliable",
+          "kind": "property",
+          "type": "boolean",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "primaryChroma",
+          "kind": "property",
+          "type": "number",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "warnings",
+          "kind": "property",
+          "type": "readonly HarmonyGenerationWarning[]",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "HarmonyGenerationWarning",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/harmony.ts",
+      "sourceLocation": {
+        "filePath": "src/harmony.ts",
+        "line": 83,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["HarmonyGenerationWarningCode"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "code",
+          "kind": "property",
+          "type": "HarmonyGenerationWarningCode",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "message",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "HarmonyGenerationWarningCode",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "unknown",
+      "modulePath": "src/harmony.ts",
+      "sourceLocation": {
+        "filePath": "src/harmony.ts",
+        "line": 81,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
       "name": "HexColor",
       "description": null,
       "isReadme": false,
@@ -1669,10 +1809,10 @@
       "isReadme": false,
       "examples": [],
       "kind": "value",
-      "modulePath": "src/neutral.ts",
+      "modulePath": "src/harmony.ts",
       "sourceLocation": {
-        "filePath": "src/neutral.ts",
-        "line": 11,
+        "filePath": "src/harmony.ts",
+        "line": 79,
         "column": 14
       },
       "exportPaths": ["src/index.ts"],
@@ -1690,7 +1830,7 @@
       "modulePath": "src/neutral.ts",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 13,
+        "line": 11,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -2033,7 +2173,7 @@
         {
           "name": "harmony",
           "kind": "property",
-          "type": "\"monochromatic\" | \"analogous\" | \"complementary\" | \"triadic\" | \"tetradic\" | \"splitComplementary\"",
+          "type": "\"monochromatic\" | \"analogous\" | \"complementary\" | \"splitComplementary\" | \"triadic\" | \"tetradic\" | \"square\"",
           "required": true,
           "description": null
         },
@@ -2060,11 +2200,20 @@
       }
     },
     {
-      "name": "getHarmonyDefinition",
-      "description": "Resolve a complete harmony definition from the canonical maps.",
+      "name": "createHarmonyGenerationDiagnostics",
+      "description": "Create diagnostics for the reliability of generated hue relationships.",
       "sourceLocation": {
         "filePath": "src/harmony.ts",
-        "line": 54,
+        "line": 114,
+        "column": 1
+      }
+    },
+    {
+      "name": "getHarmonyDefinition",
+      "description": "Resolve a complete harmony definition from the canonical public catalog.",
+      "sourceLocation": {
+        "filePath": "src/harmony.ts",
+        "line": 138,
         "column": 1
       }
     },
@@ -2073,7 +2222,7 @@
       "description": "Generate role-based harmony colors from a primary color and harmony strategy.",
       "sourceLocation": {
         "filePath": "src/harmony.ts",
-        "line": 69,
+        "line": 149,
         "column": 1
       }
     },
@@ -2172,7 +2321,7 @@
       "description": "Pick the harmony color that should tint the generated neutral swatch.",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 27,
+        "line": 25,
         "column": 1
       }
     },
@@ -2181,7 +2330,7 @@
       "description": "Clamp a number to a finite minimum and maximum range.",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 41,
+        "line": 39,
         "column": 1
       }
     },
@@ -2190,7 +2339,7 @@
       "description": "Generate a softly tinted neutral swatch from generated harmony role colors.",
       "sourceLocation": {
         "filePath": "src/neutral.ts",
-        "line": 49,
+        "line": 47,
         "column": 1
       }
     },
@@ -2615,9 +2764,21 @@
         "sourcePath": "src/harmony.ts"
       },
       {
-        "fromSymbol": "generateHarmonyRoleColors",
+        "fromSymbol": "src/harmony.ts",
+        "toSymbol": "normalizeHueDegrees",
+        "callExpression": "normalizeHueDegrees",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "src/harmony.ts",
         "toSymbol": "oklchToHex",
         "callExpression": "oklchToHex",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "generateHarmonyRoleColors",
+        "toSymbol": "createHarmonyGenerationDiagnostics",
+        "callExpression": "createHarmonyGenerationDiagnostics",
         "sourcePath": "src/harmony.ts"
       },
       {
@@ -2918,6 +3079,16 @@
         "sourcePath": "src/harmony.ts"
       },
       {
+        "fromSymbol": "HarmonyGenerationWarning",
+        "toType": "HarmonyGenerationWarningCode",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "HarmonyGenerationDiagnostics",
+        "toType": "HarmonyGenerationWarning",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
         "fromSymbol": "GeneratedHarmonyRoleColor",
         "toType": "GeneratedColorRole",
         "sourcePath": "src/harmony.ts"
@@ -2930,6 +3101,11 @@
       {
         "fromSymbol": "GeneratedHarmonyRoleColors",
         "toType": "GeneratedHarmonyRoleColor",
+        "sourcePath": "src/harmony.ts"
+      },
+      {
+        "fromSymbol": "GeneratedHarmonyRoleColors",
+        "toType": "HarmonyGenerationDiagnostics",
         "sourcePath": "src/harmony.ts"
       },
       {

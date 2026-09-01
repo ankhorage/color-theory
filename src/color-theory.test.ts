@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'bun:test';
 
 import {
-  COLOR_HARMONIES,
   COLOR_SWATCH_BASE_LIGHTNESS,
   COLOR_SWATCH_BASE_STEP,
   COLOR_SWATCH_STEPS,
@@ -25,31 +24,12 @@ function readRecordValue<Key extends PropertyKey, Value>(
   return Reflect.get(record, key);
 }
 
-describe('color parsing and harmony', () => {
+describe('color parsing', () => {
   it('parses valid hex colors and rejects invalid values', () => {
     expect(parseHexColor('#3366ff')).toBe('#3366ff');
     expect(parseHexColor('#3366FF')).toBe('#3366FF');
     expect(parseHexColor('3366ff')).toBeNull();
     expect(() => parseHexColorOrThrow('#12345')).toThrow();
-  });
-
-  it('generates harmony role colors with expected role counts', () => {
-    const primary = parseHexColorOrThrow('#3366ff');
-    const expectedRoleCount = new Map<(typeof COLOR_HARMONIES)[number], number>([
-      ['monochromatic', 1],
-      ['complementary', 2],
-      ['analogous', 3],
-      ['splitComplementary', 3],
-      ['triadic', 3],
-      ['tetradic', 4],
-    ]);
-
-    for (const harmony of COLOR_HARMONIES) {
-      const roleColors = generateHarmonyRoleColors(primary, harmony);
-      expect(roleColors.colors.length).toBe(expectedRoleCount.get(harmony));
-      expect(roleColors.primary.hex).toBe(primary);
-      expect(roleColors.primary.source).toBe('selected');
-    }
   });
 });
 

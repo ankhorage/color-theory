@@ -1,18 +1,95 @@
 import type { HexColor } from './hex';
 import { normalizeHueDegrees, oklchToHex, parseHexToOklch } from './internal-culori';
 
-export const COLOR_HARMONIES = [
-  'monochromatic',
-  'analogous',
-  'complementary',
-  'triadic',
-  'tetradic',
-  'splitComplementary',
-] as const;
-
-export type ColorHarmony = (typeof COLOR_HARMONIES)[number];
-
 export type GeneratedColorRole = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
+
+interface ColorHarmonyCatalogEntry {
+  readonly id: string;
+  readonly label: string;
+  readonly description: string;
+  readonly offsets: readonly number[];
+  readonly roles: readonly GeneratedColorRole[];
+  readonly roleCount: 1 | 2 | 3 | 4;
+}
+
+export const COLOR_HARMONY_CATALOG = [
+  {
+    id: 'monochromatic',
+    label: 'Monochromatic',
+    description: 'Uses one hue with ramp variation.',
+    offsets: [0],
+    roles: ['primary'],
+    roleCount: 1,
+  },
+  {
+    id: 'analogous',
+    label: 'Analogous',
+    description: 'Uses the primary hue and its two neighboring hues at minus and plus 30 degrees.',
+    offsets: [0, -30, 30],
+    roles: ['primary', 'secondary', 'tertiary'],
+    roleCount: 3,
+  },
+  {
+    id: 'complementary',
+    label: 'Complementary',
+    description: 'Pairs the primary hue with its opposite hue at 180 degrees.',
+    offsets: [0, 180],
+    roles: ['primary', 'secondary'],
+    roleCount: 2,
+  },
+  {
+    id: 'splitComplementary',
+    label: 'Split complementary',
+    description: 'Uses the primary hue with hues at 150 and 210 degrees.',
+    offsets: [0, 150, 210],
+    roles: ['primary', 'secondary', 'tertiary'],
+    roleCount: 3,
+  },
+  {
+    id: 'triadic',
+    label: 'Triadic',
+    description: 'Uses three evenly spaced hues at 120-degree intervals.',
+    offsets: [0, 120, 240],
+    roles: ['primary', 'secondary', 'tertiary'],
+    roleCount: 3,
+  },
+  {
+    id: 'tetradic',
+    label: 'Tetradic',
+    description: 'Uses a rectangular tetrad at 0, 60, 180, and 240 degrees.',
+    offsets: [0, 60, 180, 240],
+    roles: ['primary', 'secondary', 'tertiary', 'quaternary'],
+    roleCount: 4,
+  },
+  {
+    id: 'square',
+    label: 'Square',
+    description: 'Uses four evenly spaced hues at 90-degree intervals.',
+    offsets: [0, 90, 180, 270],
+    roles: ['primary', 'secondary', 'tertiary', 'quaternary'],
+    roleCount: 4,
+  },
+] as const satisfies readonly ColorHarmonyCatalogEntry[];
+
+export type ColorHarmonyDefinition = (typeof COLOR_HARMONY_CATALOG)[number];
+export type ColorHarmony = ColorHarmonyDefinition['id'];
+
+export const COLOR_HARMONIES: readonly ColorHarmony[] = COLOR_HARMONY_CATALOG.map(({ id }) => id);
+
+export const MIN_HUEFUL_CHROMA = 0.015;
+
+export type HarmonyGenerationWarningCode = 'achromatic_primary' | 'low_chroma_primary';
+
+export interface HarmonyGenerationWarning {
+  readonly code: HarmonyGenerationWarningCode;
+  readonly message: string;
+}
+
+export interface HarmonyGenerationDiagnostics {
+  readonly isHueReliable: boolean;
+  readonly primaryChroma: number;
+  readonly warnings: readonly HarmonyGenerationWarning[];
+}
 
 export interface GeneratedHarmonyRoleColor {
   role: GeneratedColorRole;
@@ -28,39 +105,42 @@ export interface GeneratedHarmonyRoleColors {
   secondary?: GeneratedHarmonyRoleColor;
   tertiary?: GeneratedHarmonyRoleColor;
   quaternary?: GeneratedHarmonyRoleColor;
+  diagnostics: HarmonyGenerationDiagnostics;
 }
 
-const ROLE_ORDER_BY_HARMONY = new Map<ColorHarmony, readonly GeneratedColorRole[]>([
-  ['monochromatic', ['primary']],
-  ['complementary', ['primary', 'secondary']],
-  ['analogous', ['primary', 'secondary', 'tertiary']],
-  ['splitComplementary', ['primary', 'secondary', 'tertiary']],
-  ['triadic', ['primary', 'secondary', 'tertiary']],
-  ['tetradic', ['primary', 'secondary', 'tertiary', 'quaternary']],
-]);
-
-const OFFSETS_BY_HARMONY = new Map<ColorHarmony, readonly number[]>([
-  ['monochromatic', [0]],
-  ['analogous', [0, -30, 30]],
-  ['complementary', [0, 180]],
-  ['splitComplementary', [0, 150, 210]],
-  ['triadic', [0, 120, 240]],
-  ['tetradic', [0, 90, 180, 270]],
-]);
+/***
+  Create diagnostics for the reliability of generated hue relationships.
+*/
+function createHarmonyGenerationDiagnostics(primaryChroma: number): HarmonyGenerationDiagnostics {
+  const warnings: HarmonyGenerationWarning[] = [];
+  if (primaryChroma === 0) {
+    warnings.push({
+      code: 'achromatic_primary',
+      message:
+        'The selected primary is achromatic, so generated hue relationships are not visible.',
+    });
+  } else if (primaryChroma < MIN_HUEFUL_CHROMA) {
+    warnings.push({
+      code: 'low_chroma_primary',
+      message: 'The selected primary has low chroma, so generated hue relationships may be weak.',
+    });
+  }
+  return {
+    isHueReliable: primaryChroma >= MIN_HUEFUL_CHROMA,
+    primaryChroma,
+    warnings,
+  };
+}
 
 /***
-  Resolve a complete harmony definition from the canonical maps.
+  Resolve a complete harmony definition from the canonical public catalog.
 */
-function getHarmonyDefinition(harmony: ColorHarmony): {
-  readonly offsets: readonly number[];
-  readonly roles: readonly GeneratedColorRole[];
-} {
-  const roles = ROLE_ORDER_BY_HARMONY.get(harmony);
-  const offsets = OFFSETS_BY_HARMONY.get(harmony);
-  if (!roles || !offsets) {
+function getHarmonyDefinition(harmony: ColorHarmony): ColorHarmonyDefinition {
+  const definition = COLOR_HARMONY_CATALOG.find(({ id }) => id === harmony);
+  if (!definition) {
     throw new Error(`[color-theory] Missing definition for harmony ${harmony}.`);
   }
-  return { offsets, roles };
+  return definition;
 }
 
 /***
@@ -71,23 +151,18 @@ export function generateHarmonyRoleColors(
   harmony: ColorHarmony,
 ): GeneratedHarmonyRoleColors {
   const base = parseHexToOklch(primaryColor);
-  const { offsets, roles } = getHarmonyDefinition(harmony);
+  const definition = getHarmonyDefinition(harmony);
   const baseHue = normalizeHueDegrees(base.h);
 
-  const colors: GeneratedHarmonyRoleColor[] = [];
-
-  for (let index = 0; index < roles.length; index++) {
-    const role = roles.at(index);
-    if (!role) continue;
-
-    const hueDegrees = normalizeHueDegrees(baseHue + (offsets.at(index) ?? 0));
-    colors.push({
+  const colors = definition.roles.map((role, index): GeneratedHarmonyRoleColor => {
+    const hueDegrees = normalizeHueDegrees(baseHue + (definition.offsets.at(index) ?? 0));
+    return {
       role,
       hex: role === 'primary' ? primaryColor : oklchToHex({ ...base, h: hueDegrees }),
       hueDegrees,
       source: role === 'primary' ? 'selected' : 'generated',
-    });
-  }
+    };
+  });
 
   const primary = colors.find((color) => color.role === 'primary');
   if (!primary) {
@@ -105,5 +180,6 @@ export function generateHarmonyRoleColors(
     ...(secondary ? { secondary } : {}),
     ...(tertiary ? { tertiary } : {}),
     ...(quaternary ? { quaternary } : {}),
+    diagnostics: createHarmonyGenerationDiagnostics(base.c),
   };
 }

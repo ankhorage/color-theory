@@ -19,6 +19,7 @@ Standalone color theory, harmony, swatch, contrast, and theme color generation u
 - [createDefaultSemanticStatusSwatches sequence](././paradox/diagrams/sequences/create-default-semantic-status-swatches.mmd)
 - [createSemanticStatusSwatches sequence](././paradox/diagrams/sequences/create-semantic-status-swatches.mmd)
 - [generateColorSwatch sequence](././paradox/diagrams/sequences/generate-color-swatch.mmd)
+- [generateHarmonyRoleColors sequence](././paradox/diagrams/sequences/generate-harmony-role-colors.mmd)
 - [getReadableForeground sequence](././paradox/diagrams/sequences/get-readable-foreground.mmd)
 - [getThemeModePrimaryHex sequence](././paradox/diagrams/sequences/get-theme-mode-primary-hex.mmd)
 - [parseHexColorOrThrow sequence](././paradox/diagrams/sequences/parse-hex-color-or-throw.mmd)

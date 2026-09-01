@@ -18,7 +18,13 @@ Assert that a string is a valid six-digit hex color.
 
 Kind: `value`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:4:14`
+Source: `src/harmony.ts:77:14`
+
+## COLOR_HARMONY_CATALOG
+
+Kind: `value`
+Module: `src/harmony.ts`
+Source: `src/harmony.ts:15:14`
 
 ## COLOR_SWATCH_BASE_LIGHTNESS
 
@@ -42,7 +48,13 @@ Source: `src/swatches.ts:4:14`
 
 Kind: `unknown`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:13:1`
+Source: `src/harmony.ts:75:1`
+
+## ColorHarmonyDefinition
+
+Kind: `unknown`
+Module: `src/harmony.ts`
+Source: `src/harmony.ts:74:1`
 
 ## ColorSwatch
 
@@ -156,13 +168,13 @@ Generate a full color swatch and diagnostics from a base color.
 
 Kind: `unknown`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:15:1`
+Source: `src/harmony.ts:4:1`
 
 ## GeneratedHarmonyRoleColor
 
 Kind: `type`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:17:1`
+Source: `src/harmony.ts:94:1`
 
 ### Members
 
@@ -177,24 +189,25 @@ Source: `src/harmony.ts:17:1`
 
 Kind: `type`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:24:1`
+Source: `src/harmony.ts:101:1`
 
 ### Members
 
-| Name       | Kind     | Type                                                                                                   | Required | Description |
-| ---------- | -------- | ------------------------------------------------------------------------------------------------------ | -------- | ----------- |
-| colors     | property | `readonly GeneratedHarmonyRoleColor[]`                                                                 | yes      |             |
-| harmony    | property | `"monochromatic" \| "analogous" \| "complementary" \| "triadic" \| "tetradic" \| "splitComplementary"` | yes      |             |
-| primary    | property | `GeneratedHarmonyRoleColor`                                                                            | yes      |             |
-| quaternary | property | `GeneratedHarmonyRoleColor \| undefined`                                                               | no       |             |
-| secondary  | property | `GeneratedHarmonyRoleColor \| undefined`                                                               | no       |             |
-| tertiary   | property | `GeneratedHarmonyRoleColor \| undefined`                                                               | no       |             |
+| Name        | Kind     | Type                                                                                                               | Required | Description |
+| ----------- | -------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ----------- |
+| colors      | property | `readonly GeneratedHarmonyRoleColor[]`                                                                             | yes      |             |
+| diagnostics | property | `HarmonyGenerationDiagnostics`                                                                                     | yes      |             |
+| harmony     | property | `"monochromatic" \| "analogous" \| "complementary" \| "splitComplementary" \| "triadic" \| "tetradic" \| "square"` | yes      |             |
+| primary     | property | `GeneratedHarmonyRoleColor`                                                                                        | yes      |             |
+| quaternary  | property | `GeneratedHarmonyRoleColor \| undefined`                                                                           | no       |             |
+| secondary   | property | `GeneratedHarmonyRoleColor \| undefined`                                                                           | no       |             |
+| tertiary    | property | `GeneratedHarmonyRoleColor \| undefined`                                                                           | no       |             |
 
 ## GeneratedNeutralMetadata
 
 Kind: `type`
 Module: `src/neutral.ts`
-Source: `src/neutral.ts:19:1`
+Source: `src/neutral.ts:17:1`
 
 ### Members
 
@@ -237,14 +250,14 @@ Source: `src/theme-colors.ts:17:1`
 
 Kind: `function`
 Module: `src/harmony.ts`
-Source: `src/harmony.ts:69:1`
+Source: `src/harmony.ts:149:1`
 
 Generate role-based harmony colors from a primary color and harmony strategy.
 
 ### Signatures
 
-- `(primaryColor: HexColor, harmony: "monochromatic" | "analogous" | "complementary" | "triadic" | "tetradic" | "splitComplementary") => GeneratedHarmonyRoleColors`
-  - harmony: `"monochromatic" | "analogous" | "complementary" | "triadic" | "tetradic" | "splitComplementary"`
+- `(primaryColor: HexColor, harmony: "monochromatic" | "analogous" | "complementary" | "splitComplementary" | "triadic" | "tetradic" | "square") => GeneratedHarmonyRoleColors`
+  - harmony: `"monochromatic" | "analogous" | "complementary" | "splitComplementary" | "triadic" | "tetradic" | "square"`
   - primaryColor: `HexColor`
   - returns: `GeneratedHarmonyRoleColors`
 
@@ -252,7 +265,7 @@ Generate role-based harmony colors from a primary color and harmony strategy.
 
 Kind: `function`
 Module: `src/neutral.ts`
-Source: `src/neutral.ts:49:1`
+Source: `src/neutral.ts:47:1`
 
 Generate a softly tinted neutral swatch from generated harmony role colors.
 
@@ -318,6 +331,39 @@ Parse the primary color configured for a theme mode.
   - mode: `ThemeModeColorInput`
   - returns: `HexColor`
 
+## HarmonyGenerationDiagnostics
+
+Kind: `type`
+Module: `src/harmony.ts`
+Source: `src/harmony.ts:88:1`
+
+### Members
+
+| Name          | Kind     | Type                                  | Required | Description |
+| ------------- | -------- | ------------------------------------- | -------- | ----------- |
+| isHueReliable | property | `boolean`                             | yes      |             |
+| primaryChroma | property | `number`                              | yes      |             |
+| warnings      | property | `readonly HarmonyGenerationWarning[]` | yes      |             |
+
+## HarmonyGenerationWarning
+
+Kind: `type`
+Module: `src/harmony.ts`
+Source: `src/harmony.ts:83:1`
+
+### Members
+
+| Name    | Kind     | Type                           | Required | Description |
+| ------- | -------- | ------------------------------ | -------- | ----------- |
+| code    | property | `HarmonyGenerationWarningCode` | yes      |             |
+| message | property | `string`                       | yes      |             |
+
+## HarmonyGenerationWarningCode
+
+Kind: `unknown`
+Module: `src/harmony.ts`
+Source: `src/harmony.ts:81:1`
+
 ## HexColor
 
 Kind: `unknown`
@@ -347,14 +393,14 @@ Source: `src/semantics.ts:30:14`
 ## MIN_HUEFUL_CHROMA
 
 Kind: `value`
-Module: `src/neutral.ts`
-Source: `src/neutral.ts:11:14`
+Module: `src/harmony.ts`
+Source: `src/harmony.ts:79:14`
 
 ## NeutralSwatchResult
 
 Kind: `type`
 Module: `src/neutral.ts`
-Source: `src/neutral.ts:13:1`
+Source: `src/neutral.ts:11:1`
 
 ### Members
 
@@ -483,7 +529,7 @@ Source: `src/theme-colors.ts:7:1`
 
 ### Members
 
-| Name         | Kind     | Type                                                                                                   | Required | Description |
-| ------------ | -------- | ------------------------------------------------------------------------------------------------------ | -------- | ----------- |
-| harmony      | property | `"monochromatic" \| "analogous" \| "complementary" \| "triadic" \| "tetradic" \| "splitComplementary"` | yes      |             |
-| primaryColor | property | `string`                                                                                               | yes      |             |
+| Name         | Kind     | Type                                                                                                               | Required | Description |
+| ------------ | -------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ----------- |
+| harmony      | property | `"monochromatic" \| "analogous" \| "complementary" \| "splitComplementary" \| "triadic" \| "tetradic" \| "square"` | yes      |             |
+| primaryColor | property | `string`                                                                                                           | yes      |             |
