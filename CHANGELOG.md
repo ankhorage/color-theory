@@ -1,5 +1,11 @@
 # @ankhorage/color-theory
 
+## 0.2.0
+
+### Minor Changes
+
+- 78cd2ca: Publish the canonical seven-harmony catalog, distinguish tetradic and square geometry, and report unreliable hue generation for achromatic or low-chroma primary colors.
+
 ## 0.1.0
 
 ### Minor Changes
