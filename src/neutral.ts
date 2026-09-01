@@ -1,4 +1,4 @@
-import type { ColorHarmony, GeneratedHarmonyRoleColors } from './harmony';
+import { type ColorHarmony, type GeneratedHarmonyRoleColors, MIN_HUEFUL_CHROMA } from './harmony';
 import type { HexColor } from './hex';
 import { normalizeHueDegrees, oklchToHex, parseHexToOklch } from './internal-culori';
 import {
@@ -7,8 +7,6 @@ import {
   type ColorSwatchDiagnostics,
   generateColorSwatch,
 } from './swatches';
-
-export const MIN_HUEFUL_CHROMA = 0.015;
 
 export interface NeutralSwatchResult {
   neutralKeyColor: HexColor;
