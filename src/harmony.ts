@@ -30,23 +30,38 @@ export interface GeneratedHarmonyRoleColors {
   quaternary?: GeneratedHarmonyRoleColor;
 }
 
-const ROLE_ORDER_BY_HARMONY: Record<ColorHarmony, readonly GeneratedColorRole[]> = {
-  monochromatic: ['primary'],
-  complementary: ['primary', 'secondary'],
-  analogous: ['primary', 'secondary', 'tertiary'],
-  splitComplementary: ['primary', 'secondary', 'tertiary'],
-  triadic: ['primary', 'secondary', 'tertiary'],
-  tetradic: ['primary', 'secondary', 'tertiary', 'quaternary'],
-};
+const ROLE_ORDER_BY_HARMONY = new Map<ColorHarmony, readonly GeneratedColorRole[]>([
+  ['monochromatic', ['primary']],
+  ['complementary', ['primary', 'secondary']],
+  ['analogous', ['primary', 'secondary', 'tertiary']],
+  ['splitComplementary', ['primary', 'secondary', 'tertiary']],
+  ['triadic', ['primary', 'secondary', 'tertiary']],
+  ['tetradic', ['primary', 'secondary', 'tertiary', 'quaternary']],
+]);
 
-const OFFSETS_BY_HARMONY: Record<ColorHarmony, readonly number[]> = {
-  monochromatic: [0],
-  analogous: [0, -30, 30],
-  complementary: [0, 180],
-  splitComplementary: [0, 150, 210],
-  triadic: [0, 120, 240],
-  tetradic: [0, 90, 180, 270],
-};
+const OFFSETS_BY_HARMONY = new Map<ColorHarmony, readonly number[]>([
+  ['monochromatic', [0]],
+  ['analogous', [0, -30, 30]],
+  ['complementary', [0, 180]],
+  ['splitComplementary', [0, 150, 210]],
+  ['triadic', [0, 120, 240]],
+  ['tetradic', [0, 90, 180, 270]],
+]);
+
+/***
+  Resolve a complete harmony definition from the canonical maps.
+*/
+function getHarmonyDefinition(harmony: ColorHarmony): {
+  readonly offsets: readonly number[];
+  readonly roles: readonly GeneratedColorRole[];
+} {
+  const roles = ROLE_ORDER_BY_HARMONY.get(harmony);
+  const offsets = OFFSETS_BY_HARMONY.get(harmony);
+  if (!roles || !offsets) {
+    throw new Error(`[color-theory] Missing definition for harmony ${harmony}.`);
+  }
+  return { offsets, roles };
+}
 
 /***
   Generate role-based harmony colors from a primary color and harmony strategy.
@@ -56,17 +71,16 @@ export function generateHarmonyRoleColors(
   harmony: ColorHarmony,
 ): GeneratedHarmonyRoleColors {
   const base = parseHexToOklch(primaryColor);
-  const roles = ROLE_ORDER_BY_HARMONY[harmony];
-  const offsets = OFFSETS_BY_HARMONY[harmony];
+  const { offsets, roles } = getHarmonyDefinition(harmony);
   const baseHue = normalizeHueDegrees(base.h);
 
   const colors: GeneratedHarmonyRoleColor[] = [];
 
   for (let index = 0; index < roles.length; index++) {
-    const role = roles[index];
+    const role = roles.at(index);
     if (!role) continue;
 
-    const hueDegrees = normalizeHueDegrees(baseHue + (offsets[index] ?? 0));
+    const hueDegrees = normalizeHueDegrees(baseHue + (offsets.at(index) ?? 0));
     colors.push({
       role,
       hex: role === 'primary' ? primaryColor : oklchToHex({ ...base, h: hueDegrees }),

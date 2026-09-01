@@ -3,7 +3,7 @@
 
 # @ankhorage/color-theory
 
-![license: MIT](././paradox/badges/license.svg) ![npm: v0.0.7](././paradox/badges/npm.svg) ![runtime: bun](././paradox/badges/runtime.svg) ![typescript: strict](././paradox/badges/typescript.svg) ![eslint: checked](././paradox/badges/eslint.svg) ![prettier: checked](././paradox/badges/prettier.svg) ![build: checked](././paradox/badges/build.svg) ![tests: checked](././paradox/badges/tests.svg) ![docs: paradox](././paradox/badges/docs.svg)
+![license: MIT](././paradox/badges/license.svg) ![npm: v0.0.8](././paradox/badges/npm.svg) ![runtime: bun](././paradox/badges/runtime.svg) ![typescript: strict](././paradox/badges/typescript.svg) ![eslint: checked](././paradox/badges/eslint.svg) ![prettier: checked](././paradox/badges/prettier.svg) ![build: checked](././paradox/badges/build.svg) ![tests: checked](././paradox/badges/tests.svg) ![docs: paradox](././paradox/badges/docs.svg)
 
 Standalone color theory, harmony, swatch, contrast, and theme color generation utilities.
 
@@ -16,62 +16,9 @@ Standalone color theory, harmony, swatch, contrast, and theme color generation u
 - [Module relationships](././paradox/diagrams/module-relationships.mmd)
 - [Export graph](././paradox/diagrams/export-graph.mmd)
 - [assertHexColor sequence](././paradox/diagrams/sequences/assert-hex-color.mmd)
+- [createDefaultSemanticStatusSwatches sequence](././paradox/diagrams/sequences/create-default-semantic-status-swatches.mmd)
+- [createSemanticStatusSwatches sequence](././paradox/diagrams/sequences/create-semantic-status-swatches.mmd)
+- [generateColorSwatch sequence](././paradox/diagrams/sequences/generate-color-swatch.mmd)
 - [getReadableForeground sequence](././paradox/diagrams/sequences/get-readable-foreground.mmd)
 - [getThemeModePrimaryHex sequence](././paradox/diagrams/sequences/get-theme-mode-primary-hex.mmd)
 - [parseHexColorOrThrow sequence](././paradox/diagrams/sequences/parse-hex-color-or-throw.mmd)
-
-## Architecture preview
-
-<details>
-<summary>Architecture overview</summary>
-
-```mermaid
-graph TD
-  package__ankhorage_color_theory["@ankhorage/color-theory"]
-  entrypoint_src_index_ts["src/index.ts"]
-  package__ankhorage_color_theory --> entrypoint_src_index_ts
-  module_src_contrast_ts["src/contrast.ts"]
-  package__ankhorage_color_theory -.-> module_src_contrast_ts
-  module_src_contrast_ts --> module_src_hex_ts
-  module_src_contrast_ts --> module_src_internal_culori_ts
-  module_src_culori_fn_ts["src/culori-fn.ts"]
-  package__ankhorage_color_theory -.-> module_src_culori_fn_ts
-  module_src_culori_ts["src/culori.ts"]
-  package__ankhorage_color_theory -.-> module_src_culori_ts
-  module_src_harmony_ts["src/harmony.ts"]
-  package__ankhorage_color_theory -.-> module_src_harmony_ts
-  module_src_harmony_ts --> module_src_hex_ts
-  module_src_harmony_ts --> module_src_internal_culori_ts
-  module_src_hex_ts["src/hex.ts"]
-  package__ankhorage_color_theory -.-> module_src_hex_ts
-  module_src_index_ts["src/index.ts"]
-  module_src_internal_culori_ts["src/internal-culori.ts"]
-  package__ankhorage_color_theory -.-> module_src_internal_culori_ts
-  module_src_internal_culori_ts --> module_src_hex_ts
-  module_src_neutral_ts["src/neutral.ts"]
-  package__ankhorage_color_theory -.-> module_src_neutral_ts
-  module_src_neutral_ts --> module_src_harmony_ts
-  module_src_neutral_ts --> module_src_hex_ts
-  module_src_neutral_ts --> module_src_internal_culori_ts
-  module_src_neutral_ts --> module_src_swatches_ts
-  module_src_semantic_status_ts["src/semantic-status.ts"]
-  package__ankhorage_color_theory -.-> module_src_semantic_status_ts
-  module_src_semantic_status_ts --> module_src_hex_ts
-  module_src_semantic_status_ts --> module_src_swatches_ts
-  module_src_semantics_ts["src/semantics.ts"]
-  package__ankhorage_color_theory -.-> module_src_semantics_ts
-  module_src_semantics_ts --> module_src_harmony_ts
-  module_src_semantics_ts --> module_src_swatches_ts
-  module_src_swatches_ts["src/swatches.ts"]
-  package__ankhorage_color_theory -.-> module_src_swatches_ts
-  module_src_swatches_ts --> module_src_hex_ts
-  module_src_swatches_ts --> module_src_internal_culori_ts
-  module_src_theme_colors_ts["src/theme-colors.ts"]
-  package__ankhorage_color_theory -.-> module_src_theme_colors_ts
-  module_src_theme_colors_ts --> module_src_harmony_ts
-  module_src_theme_colors_ts --> module_src_hex_ts
-  module_src_theme_colors_ts --> module_src_neutral_ts
-  module_src_theme_colors_ts --> module_src_swatches_ts
-```
-
-</details>

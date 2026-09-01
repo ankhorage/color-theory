@@ -1,0 +1,23 @@
+sequenceDiagram
+  participant participant_clampNumber as clampNumber
+  participant participant_createSwatchDiagnostics as createSwatchDiagnostics
+  participant participant_generateColorSwatch as generateColorSwatch
+  participant participant_generateSwatchSamples as generateSwatchSamples
+  participant participant_measureAdjacentSamples as measureAdjacentSamples
+  participant participant_normalizeHueDegrees as normalizeHueDegrees
+  participant participant_parseHexToOklch as parseHexToOklch
+  participant participant_toOklch as toOklch
+  participant_generateColorSwatch->>participant_generateSwatchSamples: generateSwatchSamples()
+  participant_generateSwatchSamples->>participant_parseHexToOklch: parseHexToOklch()
+  participant_parseHexToOklch->>participant_toOklch: toOklch()
+  participant_toOklch-->>participant_parseHexToOklch: return
+  participant_parseHexToOklch->>participant_clampNumber: clampNumber()
+  participant_clampNumber-->>participant_parseHexToOklch: return
+  participant_parseHexToOklch->>participant_normalizeHueDegrees: normalizeHueDegrees()
+  participant_normalizeHueDegrees-->>participant_parseHexToOklch: return
+  participant_parseHexToOklch-->>participant_generateSwatchSamples: return
+  participant_generateSwatchSamples-->>participant_generateColorSwatch: return
+  participant_generateColorSwatch->>participant_measureAdjacentSamples: measureAdjacentSamples()
+  participant_measureAdjacentSamples-->>participant_generateColorSwatch: return
+  participant_generateColorSwatch->>participant_createSwatchDiagnostics: createSwatchDiagnostics()
+  participant_createSwatchDiagnostics-->>participant_generateColorSwatch: return

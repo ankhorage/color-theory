@@ -1,0 +1,8 @@
+sequenceDiagram
+  participant participant_createDefaultSemanticStatusSwatches as createDefaultSemanticStatusSwatches
+  participant participant_createRoleRecord as createRoleRecord
+  participant participant_createSemanticStatusSwatches as createSemanticStatusSwatches
+  participant_createDefaultSemanticStatusSwatches->>participant_createSemanticStatusSwatches: createSemanticStatusSwatches()
+  participant_createSemanticStatusSwatches->>participant_createRoleRecord: createRoleRecord()
+  participant_createRoleRecord-->>participant_createSemanticStatusSwatches: return
+  participant_createSemanticStatusSwatches-->>participant_createDefaultSemanticStatusSwatches: return

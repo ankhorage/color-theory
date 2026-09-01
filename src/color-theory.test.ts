@@ -18,7 +18,14 @@ import {
 } from './index';
 import { parseHexToOklch } from './internal-culori';
 
-describe('color theory', () => {
+function readRecordValue<Key extends PropertyKey, Value>(
+  record: Readonly<Record<Key, Value>>,
+  key: Key,
+): Value {
+  return Reflect.get(record, key);
+}
+
+describe('color parsing and harmony', () => {
   it('parses valid hex colors and rejects invalid values', () => {
     expect(parseHexColor('#3366ff')).toBe('#3366ff');
     expect(parseHexColor('#3366FF')).toBe('#3366FF');
@@ -28,29 +35,31 @@ describe('color theory', () => {
 
   it('generates harmony role colors with expected role counts', () => {
     const primary = parseHexColorOrThrow('#3366ff');
-    const expectedRoleCount: Record<(typeof COLOR_HARMONIES)[number], number> = {
-      monochromatic: 1,
-      complementary: 2,
-      analogous: 3,
-      splitComplementary: 3,
-      triadic: 3,
-      tetradic: 4,
-    };
+    const expectedRoleCount = new Map<(typeof COLOR_HARMONIES)[number], number>([
+      ['monochromatic', 1],
+      ['complementary', 2],
+      ['analogous', 3],
+      ['splitComplementary', 3],
+      ['triadic', 3],
+      ['tetradic', 4],
+    ]);
 
     for (const harmony of COLOR_HARMONIES) {
       const roleColors = generateHarmonyRoleColors(primary, harmony);
-      expect(roleColors.colors.length).toBe(expectedRoleCount[harmony]);
+      expect(roleColors.colors.length).toBe(expectedRoleCount.get(harmony));
       expect(roleColors.primary.hex).toBe(primary);
       expect(roleColors.primary.source).toBe('selected');
     }
   });
+});
 
+describe('color swatches and theme modes', () => {
   it('generates 11-step swatches that preserve the base color at step 500', () => {
     const base = parseHexColorOrThrow('#3366ff');
     const { swatch, diagnostics } = generateColorSwatch(base);
 
     expect(Object.keys(swatch).length).toBe(COLOR_SWATCH_STEPS.length);
-    expect(swatch[COLOR_SWATCH_BASE_STEP]).toBe(base);
+    expect(readRecordValue(swatch, COLOR_SWATCH_BASE_STEP)).toBe(base);
     expect(diagnostics.lightnessRange.max).toBeGreaterThanOrEqual(diagnostics.lightnessRange.min);
   });
 
@@ -59,10 +68,10 @@ describe('color theory', () => {
     const roleColors = generateHarmonyRoleColors(primary, 'triadic');
     const neutral = generateNeutralSwatch(roleColors);
 
-    expect(neutral.neutral[COLOR_SWATCH_BASE_STEP]).toBe(neutral.neutralKeyColor);
+    expect(readRecordValue(neutral.neutral, COLOR_SWATCH_BASE_STEP)).toBe(neutral.neutralKeyColor);
     expect(parseHexToOklch(neutral.neutralKeyColor).l).toBeCloseTo(COLOR_SWATCH_BASE_LIGHTNESS, 2);
-    expect(neutral.neutral[50]).not.toBe(neutral.neutral[100]);
-    expect(neutral.neutral[100]).not.toBe(neutral.neutral[200]);
+    expect(readRecordValue(neutral.neutral, 50)).not.toBe(readRecordValue(neutral.neutral, 100));
+    expect(readRecordValue(neutral.neutral, 100)).not.toBe(readRecordValue(neutral.neutral, 200));
     expect(neutral.diagnostics.isUsable).toBe(true);
     expect(neutral.diagnostics.lightnessRange.max).toBeGreaterThanOrEqual(
       neutral.diagnostics.lightnessRange.min,
@@ -73,23 +82,28 @@ describe('color theory', () => {
     const generated = generateThemeModeColors({ primaryColor: '#3366ff', harmony: 'tetradic' });
 
     expect(generated.harmonyRoleColors.primary.hex).toBe('#3366ff');
-    expect(generated.swatches.primary[COLOR_SWATCH_BASE_STEP]).toBe('#3366ff');
-    expect(generated.swatches.secondary?.[COLOR_SWATCH_BASE_STEP]).toBe(
-      generated.harmonyRoleColors.secondary?.hex,
-    );
-    expect(generated.swatches.tertiary?.[COLOR_SWATCH_BASE_STEP]).toBe(
-      generated.harmonyRoleColors.tertiary?.hex,
-    );
-    expect(generated.swatches.quaternary?.[COLOR_SWATCH_BASE_STEP]).toBe(
-      generated.harmonyRoleColors.quaternary?.hex,
-    );
-    expect(generated.swatches.neutral[COLOR_SWATCH_BASE_STEP]).toBe(
+    expect(readRecordValue(generated.swatches.primary, COLOR_SWATCH_BASE_STEP)).toBe('#3366ff');
+    expect(
+      generated.swatches.secondary &&
+        readRecordValue(generated.swatches.secondary, COLOR_SWATCH_BASE_STEP),
+    ).toBe(generated.harmonyRoleColors.secondary?.hex);
+    expect(
+      generated.swatches.tertiary &&
+        readRecordValue(generated.swatches.tertiary, COLOR_SWATCH_BASE_STEP),
+    ).toBe(generated.harmonyRoleColors.tertiary?.hex);
+    expect(
+      generated.swatches.quaternary &&
+        readRecordValue(generated.swatches.quaternary, COLOR_SWATCH_BASE_STEP),
+    ).toBe(generated.harmonyRoleColors.quaternary?.hex);
+    expect(readRecordValue(generated.swatches.neutral, COLOR_SWATCH_BASE_STEP)).toBe(
       generated.neutral.neutralKeyColor,
     );
     expect(Object.hasOwn(generated, 'primary')).toBe(false);
     expect(Object.hasOwn(generated, 'secondary')).toBe(false);
   });
+});
 
+describe('readability and semantic statuses', () => {
   it('returns black or white readable foreground colors', () => {
     const white = parseHexColorOrThrow('#FFFFFF');
     const foreground = getReadableForeground(white);
@@ -111,9 +125,12 @@ describe('color theory', () => {
     expect(first).toEqual(second);
 
     for (const role of ['danger', 'success', 'warning'] as const) {
-      expect(first.seeds[role]).toBe(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS[role]);
-      expect(first.swatches[role][COLOR_SWATCH_BASE_STEP]).toBe(first.seeds[role]);
-      expect(first.diagnostics[role].warnings).toBeDefined();
+      const seed = readRecordValue(first.seeds, role);
+      expect(seed).toBe(readRecordValue(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS, role));
+      expect(readRecordValue(readRecordValue(first.swatches, role), COLOR_SWATCH_BASE_STEP)).toBe(
+        seed,
+      );
+      expect(readRecordValue(first.diagnostics, role).warnings).toBeDefined();
     }
   });
 

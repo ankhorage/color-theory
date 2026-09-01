@@ -206,7 +206,7 @@
             <li>
               <button class="nav-button" type="button" data-target="src/harmony.ts">
                 src/harmony.ts
-                <small>1 function</small>
+                <small>2 functions</small>
               </button>
             </li>
             <li>
@@ -230,13 +230,13 @@
             <li>
               <button class="nav-button" type="button" data-target="src/semantic-status.ts">
                 src/semantic-status.ts
-                <small>2 functions</small>
+                <small>4 functions</small>
               </button>
             </li>
             <li>
               <button class="nav-button" type="button" data-target="src/swatches.ts">
                 src/swatches.ts
-                <small>3 functions</small>
+                <small>9 functions</small>
               </button>
             </li>
             <li>
@@ -922,7 +922,7 @@
                 data-search='generateHarmonyRoleColors function src/harmony.ts Generate role-based harmony colors from a primary color and harmony strategy. GeneratedHarmonyRoleColors HexColor (primaryColor: HexColor, harmony: "monochromatic" | "analogous" | "complementary" | "triadic" | "tetradic" | "splitComplementary") =&gt; GeneratedHarmonyRoleColors'
               >
                 <h4>generateHarmonyRoleColors</h4>
-                <p class="muted">function • <code>src/harmony.ts:54:1</code></p>
+                <p class="muted">function • <code>src/harmony.ts:69:1</code></p>
                 <p>Generate role-based harmony colors from a primary color and harmony strategy.</p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
@@ -935,8 +935,7 @@
                 <div>
                   <h5>Signature</h5>
                   <pre>
-(primaryColor: HexColor, harmony: &quot;monochromatic&quot; | &quot;analogous&quot; | &quot;complementary&quot; | &quot;triadic&quot; | &quot;tetradic&quot; | &quot;splitComplementary&quot;) =&gt; GeneratedHarmonyRoleColors</pre
-                  >
+(primaryColor: HexColor, harmony: &quot;monochromatic&quot; | &quot;analogous&quot; | &quot;complementary&quot; | &quot;triadic&quot; | &quot;tetradic&quot; | &quot;splitComplementary&quot;) =&gt; GeneratedHarmonyRoleColors</pre>
                   <table>
                     <thead>
                       <tr>
@@ -1180,7 +1179,7 @@
                 data-search="generateNeutralSwatch function src/neutral.ts Generate a softly tinted neutral swatch from generated harmony role colors. GeneratedHarmonyRoleColors NeutralSwatchResult (roleColors: GeneratedHarmonyRoleColors) =&gt; NeutralSwatchResult"
               >
                 <h4>generateNeutralSwatch</h4>
-                <p class="muted">function • <code>src/neutral.ts:59:1</code></p>
+                <p class="muted">function • <code>src/neutral.ts:49:1</code></p>
                 <p>Generate a softly tinted neutral swatch from generated harmony role colors.</p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
@@ -1284,11 +1283,11 @@
               <article
                 class="item"
                 id="symbol-createdefaultsemanticstatusswatches"
-                data-search='createDefaultSemanticStatusSwatches function src/semantic-status.ts  SemanticStatusSwatches () =&gt; SemanticStatusSwatches&lt;"danger" | "success" | "warning"&gt;'
+                data-search='createDefaultSemanticStatusSwatches function src/semantic-status.ts Generate the canonical default semantic status swatches. SemanticStatusSwatches () =&gt; SemanticStatusSwatches&lt;"danger" | "success" | "warning"&gt;'
               >
                 <h4>createDefaultSemanticStatusSwatches</h4>
-                <p class="muted">function • <code>src/semantic-status.ts:44:1</code></p>
-
+                <p class="muted">function • <code>src/semantic-status.ts:74:1</code></p>
+                <p>Generate the canonical default semantic status swatches.</p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
                   <strong>Related symbols:</strong>
@@ -1299,8 +1298,7 @@
                 <div>
                   <h5>Signature</h5>
                   <pre>
-() =&gt; SemanticStatusSwatches&lt;&quot;danger&quot; | &quot;success&quot; | &quot;warning&quot;&gt;</pre
-                  >
+() =&gt; SemanticStatusSwatches&lt;&quot;danger&quot; | &quot;success&quot; | &quot;warning&quot;&gt;</pre>
 
                   <p>
                     <strong>Returns:</strong>
@@ -1314,11 +1312,11 @@
               <article
                 class="item"
                 id="symbol-createsemanticstatusswatches"
-                data-search="createSemanticStatusSwatches function src/semantic-status.ts  SemanticStatusSeedInput SemanticStatusSwatches (seeds: Record&lt;Role, SemanticStatusSeedInput&gt;) =&gt; SemanticStatusSwatches&lt;Role&gt;"
+                data-search="createSemanticStatusSwatches function src/semantic-status.ts Generate semantic status swatches from a role-to-seed record. SemanticStatusSeedInput SemanticStatusSwatches (seeds: Record&lt;Role, SemanticStatusSeedInput&gt;) =&gt; SemanticStatusSwatches&lt;Role&gt;"
               >
                 <h4>createSemanticStatusSwatches</h4>
-                <p class="muted">function • <code>src/semantic-status.ts:22:1</code></p>
-
+                <p class="muted">function • <code>src/semantic-status.ts:58:1</code></p>
+                <p>Generate semantic status swatches from a role-to-seed record.</p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
                   <strong>Related symbols:</strong>
@@ -1330,8 +1328,7 @@
                 <div>
                   <h5>Signature</h5>
                   <pre>
-(seeds: Record&lt;Role, SemanticStatusSeedInput&gt;) =&gt; SemanticStatusSwatches&lt;Role&gt;</pre
-                  >
+(seeds: Record&lt;Role, SemanticStatusSeedInput&gt;) =&gt; SemanticStatusSwatches&lt;Role&gt;</pre>
                   <table>
                     <thead>
                       <tr>
@@ -1607,7 +1604,7 @@
                 data-search="ColorSwatchDiagnostics type src/swatches.ts  ColorSwatchWarning"
               >
                 <h4>ColorSwatchDiagnostics</h4>
-                <p class="muted">type • <code>src/swatches.ts:24:1</code></p>
+                <p class="muted">type • <code>src/swatches.ts:22:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
@@ -1683,7 +1680,7 @@
                 data-search="ColorSwatchWarning type src/swatches.ts  ColorSwatchWarningCode"
               >
                 <h4>ColorSwatchWarning</h4>
-                <p class="muted">type • <code>src/swatches.ts:17:1</code></p>
+                <p class="muted">type • <code>src/swatches.ts:15:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
@@ -1757,7 +1754,7 @@
                 data-search="generateColorSwatch function src/swatches.ts Generate a full color swatch and diagnostics from a base color. ColorSwatch ColorSwatchDiagnostics HexColor (baseColor: HexColor) =&gt; { swatch: ColorSwatch; diagnostics: ColorSwatchDiagnostics; }"
               >
                 <h4>generateColorSwatch</h4>
-                <p class="muted">function • <code>src/swatches.ts:74:1</code></p>
+                <p class="muted">function • <code>src/swatches.ts:210:1</code></p>
                 <p>Generate a full color swatch and diagnostics from a base color.</p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
@@ -1771,8 +1768,7 @@
                 <div>
                   <h5>Signature</h5>
                   <pre>
-(baseColor: HexColor) =&gt; { swatch: ColorSwatch; diagnostics: ColorSwatchDiagnostics; }</pre
-                  >
+(baseColor: HexColor) =&gt; { swatch: ColorSwatch; diagnostics: ColorSwatchDiagnostics; }</pre>
                   <table>
                     <thead>
                       <tr>
@@ -1937,8 +1933,7 @@
                 <div>
                   <h5>Signature</h5>
                   <pre>
-(theme: ThemeColorInput) =&gt; { light: GeneratedThemeModeColors; dark: GeneratedThemeModeColors; }</pre
-                  >
+(theme: ThemeColorInput) =&gt; { light: GeneratedThemeModeColors; dark: GeneratedThemeModeColors; }</pre>
                   <table>
                     <thead>
                       <tr>
@@ -2236,8 +2231,7 @@ graph TD
   module_src_theme_colors_ts --&gt; module_src_hex_ts
   module_src_theme_colors_ts --&gt; module_src_neutral_ts
   module_src_theme_colors_ts --&gt; module_src_swatches_ts
-</pre
-                >
+</pre>
               </details>
             </article>
             <article
@@ -2308,8 +2302,7 @@ graph LR
   module_src_theme_colors_ts --&gt; module_src_hex_ts
   module_src_theme_colors_ts --&gt; module_src_neutral_ts
   module_src_theme_colors_ts --&gt; module_src_swatches_ts
-</pre
-                >
+</pre>
               </details>
             </article>
             <article class="item" data-search="Export graph diagrams/export-graph.mmd">
@@ -2598,8 +2591,7 @@ graph LR
   module_src_semantics_ts --&gt; export_ThemeColorMode
   export_ThemeModeColorInput[&quot;ThemeModeColorInput&quot;]
   module_src_theme_colors_ts --&gt; export_ThemeModeColorInput
-</pre
-                >
+</pre>
               </details>
             </article>
             <article
@@ -2622,8 +2614,132 @@ sequenceDiagram
   participant participant_isHexColor as isHexColor
   participant_assertHexColor-&gt;&gt;participant_isHexColor: isHexColor()
   participant_isHexColor--&gt;&gt;participant_assertHexColor: return
-</pre
-                >
+</pre>
+              </details>
+            </article>
+            <article
+              class="item"
+              data-search="createDefaultSemanticStatusSwatches sequence diagrams/sequences/create-default-semantic-status-swatches.mmd"
+            >
+              <h3>createDefaultSemanticStatusSwatches sequence</h3>
+              <p class="muted">
+                <code>diagrams/sequences/create-default-semantic-status-swatches.mmd</code>
+              </p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_createDefaultSemanticStatusSwatches as
+                createDefaultSemanticStatusSwatches participant participant_createRoleRecord as
+                createRoleRecord participant participant_createSemanticStatusSwatches as
+                createSemanticStatusSwatches
+                participant_createDefaultSemanticStatusSwatches-&gt;&gt;participant_createSemanticStatusSwatches:
+                createSemanticStatusSwatches()
+                participant_createSemanticStatusSwatches-&gt;&gt;participant_createRoleRecord:
+                createRoleRecord()
+                participant_createRoleRecord--&gt;&gt;participant_createSemanticStatusSwatches:
+                return
+                participant_createSemanticStatusSwatches--&gt;&gt;participant_createDefaultSemanticStatusSwatches:
+                return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_createDefaultSemanticStatusSwatches as createDefaultSemanticStatusSwatches
+  participant participant_createRoleRecord as createRoleRecord
+  participant participant_createSemanticStatusSwatches as createSemanticStatusSwatches
+  participant_createDefaultSemanticStatusSwatches-&gt;&gt;participant_createSemanticStatusSwatches: createSemanticStatusSwatches()
+  participant_createSemanticStatusSwatches-&gt;&gt;participant_createRoleRecord: createRoleRecord()
+  participant_createRoleRecord--&gt;&gt;participant_createSemanticStatusSwatches: return
+  participant_createSemanticStatusSwatches--&gt;&gt;participant_createDefaultSemanticStatusSwatches: return
+</pre>
+              </details>
+            </article>
+            <article
+              class="item"
+              data-search="createSemanticStatusSwatches sequence diagrams/sequences/create-semantic-status-swatches.mmd"
+            >
+              <h3>createSemanticStatusSwatches sequence</h3>
+              <p class="muted">
+                <code>diagrams/sequences/create-semantic-status-swatches.mmd</code>
+              </p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_createRoleRecord as createRoleRecord
+                participant participant_createSemanticStatusSwatches as createSemanticStatusSwatches
+                participant_createSemanticStatusSwatches-&gt;&gt;participant_createRoleRecord:
+                createRoleRecord()
+                participant_createRoleRecord--&gt;&gt;participant_createSemanticStatusSwatches:
+                return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_createRoleRecord as createRoleRecord
+  participant participant_createSemanticStatusSwatches as createSemanticStatusSwatches
+  participant_createSemanticStatusSwatches-&gt;&gt;participant_createRoleRecord: createRoleRecord()
+  participant_createRoleRecord--&gt;&gt;participant_createSemanticStatusSwatches: return
+</pre>
+              </details>
+            </article>
+            <article
+              class="item"
+              data-search="generateColorSwatch sequence diagrams/sequences/generate-color-swatch.mmd"
+            >
+              <h3>generateColorSwatch sequence</h3>
+              <p class="muted"><code>diagrams/sequences/generate-color-swatch.mmd</code></p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_clampNumber as clampNumber participant
+                participant_createSwatchDiagnostics as createSwatchDiagnostics participant
+                participant_generateColorSwatch as generateColorSwatch participant
+                participant_generateSwatchSamples as generateSwatchSamples participant
+                participant_measureAdjacentSamples as measureAdjacentSamples participant
+                participant_normalizeHueDegrees as normalizeHueDegrees participant
+                participant_parseHexToOklch as parseHexToOklch participant participant_toOklch as
+                toOklch participant_generateColorSwatch-&gt;&gt;participant_generateSwatchSamples:
+                generateSwatchSamples()
+                participant_generateSwatchSamples-&gt;&gt;participant_parseHexToOklch:
+                parseHexToOklch() participant_parseHexToOklch-&gt;&gt;participant_toOklch: toOklch()
+                participant_toOklch--&gt;&gt;participant_parseHexToOklch: return
+                participant_parseHexToOklch-&gt;&gt;participant_clampNumber: clampNumber()
+                participant_clampNumber--&gt;&gt;participant_parseHexToOklch: return
+                participant_parseHexToOklch-&gt;&gt;participant_normalizeHueDegrees:
+                normalizeHueDegrees()
+                participant_normalizeHueDegrees--&gt;&gt;participant_parseHexToOklch: return
+                participant_parseHexToOklch--&gt;&gt;participant_generateSwatchSamples: return
+                participant_generateSwatchSamples--&gt;&gt;participant_generateColorSwatch: return
+                participant_generateColorSwatch-&gt;&gt;participant_measureAdjacentSamples:
+                measureAdjacentSamples()
+                participant_measureAdjacentSamples--&gt;&gt;participant_generateColorSwatch: return
+                participant_generateColorSwatch-&gt;&gt;participant_createSwatchDiagnostics:
+                createSwatchDiagnostics()
+                participant_createSwatchDiagnostics--&gt;&gt;participant_generateColorSwatch: return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_clampNumber as clampNumber
+  participant participant_createSwatchDiagnostics as createSwatchDiagnostics
+  participant participant_generateColorSwatch as generateColorSwatch
+  participant participant_generateSwatchSamples as generateSwatchSamples
+  participant participant_measureAdjacentSamples as measureAdjacentSamples
+  participant participant_normalizeHueDegrees as normalizeHueDegrees
+  participant participant_parseHexToOklch as parseHexToOklch
+  participant participant_toOklch as toOklch
+  participant_generateColorSwatch-&gt;&gt;participant_generateSwatchSamples: generateSwatchSamples()
+  participant_generateSwatchSamples-&gt;&gt;participant_parseHexToOklch: parseHexToOklch()
+  participant_parseHexToOklch-&gt;&gt;participant_toOklch: toOklch()
+  participant_toOklch--&gt;&gt;participant_parseHexToOklch: return
+  participant_parseHexToOklch-&gt;&gt;participant_clampNumber: clampNumber()
+  participant_clampNumber--&gt;&gt;participant_parseHexToOklch: return
+  participant_parseHexToOklch-&gt;&gt;participant_normalizeHueDegrees: normalizeHueDegrees()
+  participant_normalizeHueDegrees--&gt;&gt;participant_parseHexToOklch: return
+  participant_parseHexToOklch--&gt;&gt;participant_generateSwatchSamples: return
+  participant_generateSwatchSamples--&gt;&gt;participant_generateColorSwatch: return
+  participant_generateColorSwatch-&gt;&gt;participant_measureAdjacentSamples: measureAdjacentSamples()
+  participant_measureAdjacentSamples--&gt;&gt;participant_generateColorSwatch: return
+  participant_generateColorSwatch-&gt;&gt;participant_createSwatchDiagnostics: createSwatchDiagnostics()
+  participant_createSwatchDiagnostics--&gt;&gt;participant_generateColorSwatch: return
+</pre>
               </details>
             </article>
             <article
@@ -2652,8 +2768,7 @@ sequenceDiagram
   participant_contrastRatio-&gt;&gt;participant_wcagContrast: wcagContrast()
   participant_wcagContrast--&gt;&gt;participant_contrastRatio: return
   participant_contrastRatio--&gt;&gt;participant_getReadableForeground: return
-</pre
-                >
+</pre>
               </details>
             </article>
             <article
@@ -2683,8 +2798,7 @@ sequenceDiagram
   participant_parseHexColorOrThrow-&gt;&gt;participant_parseHexColor: parseHexColor()
   participant_parseHexColor--&gt;&gt;participant_parseHexColorOrThrow: return
   participant_parseHexColorOrThrow--&gt;&gt;participant_getThemeModePrimaryHex: return
-</pre
-                >
+</pre>
               </details>
             </article>
             <article
@@ -2707,8 +2821,7 @@ sequenceDiagram
   participant participant_parseHexColorOrThrow as parseHexColorOrThrow
   participant_parseHexColorOrThrow-&gt;&gt;participant_parseHexColor: parseHexColor()
   participant_parseHexColor--&gt;&gt;participant_parseHexColorOrThrow: return
-</pre
-                >
+</pre>
               </details>
             </article>
           </section>
@@ -2734,10 +2847,18 @@ sequenceDiagram
             <h2>src/harmony.ts</h2>
             <article
               class="item"
+              data-search="getHarmonyDefinition src/harmony.ts Resolve a complete harmony definition from the canonical maps."
+            >
+              <h3>getHarmonyDefinition</h3>
+              <p class="muted"><code>src/harmony.ts:54:1</code></p>
+              <p>Resolve a complete harmony definition from the canonical maps.</p>
+            </article>
+            <article
+              class="item"
               data-search="generateHarmonyRoleColors src/harmony.ts Generate role-based harmony colors from a primary color and harmony strategy."
             >
               <h3>generateHarmonyRoleColors</h3>
-              <p class="muted"><code>src/harmony.ts:54:1</code></p>
+              <p class="muted"><code>src/harmony.ts:69:1</code></p>
               <p>Generate role-based harmony colors from a primary color and harmony strategy.</p>
             </article>
           </section>
@@ -2853,7 +2974,7 @@ sequenceDiagram
               data-search="clampNumber src/neutral.ts Clamp a number to a finite minimum and maximum range."
             >
               <h3>clampNumber</h3>
-              <p class="muted"><code>src/neutral.ts:51:1</code></p>
+              <p class="muted"><code>src/neutral.ts:41:1</code></p>
               <p>Clamp a number to a finite minimum and maximum range.</p>
             </article>
             <article
@@ -2861,7 +2982,7 @@ sequenceDiagram
               data-search="generateNeutralSwatch src/neutral.ts Generate a softly tinted neutral swatch from generated harmony role colors."
             >
               <h3>generateNeutralSwatch</h3>
-              <p class="muted"><code>src/neutral.ts:59:1</code></p>
+              <p class="muted"><code>src/neutral.ts:49:1</code></p>
               <p>Generate a softly tinted neutral swatch from generated harmony role colors.</p>
             </article>
           </section>
@@ -2876,19 +2997,35 @@ sequenceDiagram
             <h2>src/semantic-status.ts</h2>
             <article
               class="item"
-              data-search="createSemanticStatusSwatches src/semantic-status.ts "
+              data-search="createRoleRecord src/semantic-status.ts Convert typed entries into a role-keyed immutable result record."
             >
-              <h3>createSemanticStatusSwatches</h3>
-              <p class="muted"><code>src/semantic-status.ts:22:1</code></p>
-              <p class="empty">No description available.</p>
+              <h3>createRoleRecord</h3>
+              <p class="muted"><code>src/semantic-status.ts:32:1</code></p>
+              <p>Convert typed entries into a role-keyed immutable result record.</p>
             </article>
             <article
               class="item"
-              data-search="createDefaultSemanticStatusSwatches src/semantic-status.ts "
+              data-search="generateSemanticStatus src/semantic-status.ts Normalize and generate one semantic status role."
+            >
+              <h3>generateSemanticStatus</h3>
+              <p class="muted"><code>src/semantic-status.ts:41:1</code></p>
+              <p>Normalize and generate one semantic status role.</p>
+            </article>
+            <article
+              class="item"
+              data-search="createSemanticStatusSwatches src/semantic-status.ts Generate semantic status swatches from a role-to-seed record."
+            >
+              <h3>createSemanticStatusSwatches</h3>
+              <p class="muted"><code>src/semantic-status.ts:58:1</code></p>
+              <p>Generate semantic status swatches from a role-to-seed record.</p>
+            </article>
+            <article
+              class="item"
+              data-search="createDefaultSemanticStatusSwatches src/semantic-status.ts Generate the canonical default semantic status swatches."
             >
               <h3>createDefaultSemanticStatusSwatches</h3>
-              <p class="muted"><code>src/semantic-status.ts:44:1</code></p>
-              <p class="empty">No description available.</p>
+              <p class="muted"><code>src/semantic-status.ts:74:1</code></p>
+              <p>Generate the canonical default semantic status swatches.</p>
             </article>
           </section>
         </section>
@@ -2900,7 +3037,7 @@ sequenceDiagram
               data-search="clamp01 src/swatches.ts Clamp a number into the normalized zero-to-one range."
             >
               <h3>clamp01</h3>
-              <p class="muted"><code>src/swatches.ts:55:1</code></p>
+              <p class="muted"><code>src/swatches.ts:64:1</code></p>
               <p>Clamp a number into the normalized zero-to-one range.</p>
             </article>
             <article
@@ -2908,15 +3045,63 @@ sequenceDiagram
               data-search="chromaMultiplierForStep src/swatches.ts Return the chroma multiplier used for a swatch step."
             >
               <h3>chromaMultiplierForStep</h3>
-              <p class="muted"><code>src/swatches.ts:63:1</code></p>
+              <p class="muted"><code>src/swatches.ts:72:1</code></p>
               <p>Return the chroma multiplier used for a swatch step.</p>
+            </article>
+            <article
+              class="item"
+              data-search="getBaselineLightness src/swatches.ts Resolve the canonical baseline lightness for a swatch step."
+            >
+              <h3>getBaselineLightness</h3>
+              <p class="muted"><code>src/swatches.ts:83:1</code></p>
+              <p>Resolve the canonical baseline lightness for a swatch step.</p>
+            </article>
+            <article
+              class="item"
+              data-search="createSwatchSample src/swatches.ts Generate one immutable swatch sample from the base color."
+            >
+              <h3>createSwatchSample</h3>
+              <p class="muted"><code>src/swatches.ts:94:1</code></p>
+              <p>Generate one immutable swatch sample from the base color.</p>
+            </article>
+            <article
+              class="item"
+              data-search="createWeakStepWarning src/swatches.ts Create any weak-step warning for a generated sample."
+            >
+              <h3>createWeakStepWarning</h3>
+              <p class="muted"><code>src/swatches.ts:115:1</code></p>
+              <p>Create any weak-step warning for a generated sample.</p>
+            </article>
+            <article
+              class="item"
+              data-search="generateSwatchSamples src/swatches.ts Generate immutable swatch samples and their per-step warnings."
+            >
+              <h3>generateSwatchSamples</h3>
+              <p class="muted"><code>src/swatches.ts:133:1</code></p>
+              <p>Generate immutable swatch samples and their per-step warnings.</p>
+            </article>
+            <article
+              class="item"
+              data-search="measureAdjacentSamples src/swatches.ts Measure adjacent swatch samples and report weak transitions."
+            >
+              <h3>measureAdjacentSamples</h3>
+              <p class="muted"><code>src/swatches.ts:145:1</code></p>
+              <p>Measure adjacent swatch samples and report weak transitions.</p>
+            </article>
+            <article
+              class="item"
+              data-search="createSwatchDiagnostics src/swatches.ts Create diagnostics from generated samples and their adjacent deltas."
+            >
+              <h3>createSwatchDiagnostics</h3>
+              <p class="muted"><code>src/swatches.ts:177:1</code></p>
+              <p>Create diagnostics from generated samples and their adjacent deltas.</p>
             </article>
             <article
               class="item"
               data-search="generateColorSwatch src/swatches.ts Generate a full color swatch and diagnostics from a base color."
             >
               <h3>generateColorSwatch</h3>
-              <p class="muted"><code>src/swatches.ts:74:1</code></p>
+              <p class="muted"><code>src/swatches.ts:210:1</code></p>
               <p>Generate a full color swatch and diagnostics from a base color.</p>
             </article>
           </section>
