@@ -5,6 +5,7 @@ import { generateColorSwatch } from './swatches';
 
 export const DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS = {
   danger: '#ef4444',
+  info: '#3b82f6',
   success: '#22c55e',
   warning: '#f59e0b',
 } as const satisfies Record<string, string>;
