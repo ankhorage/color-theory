@@ -26,6 +26,12 @@ graph TD
   module_src_neutral_ts --> module_src_hex_ts
   module_src_neutral_ts --> module_src_internal_culori_ts
   module_src_neutral_ts --> module_src_swatches_ts
+  module_src_selection_ts["src/selection.ts"]
+  package__ankhorage_color_theory -.-> module_src_selection_ts
+  module_src_selection_ts --> module_src_contrast_ts
+  module_src_selection_ts --> module_src_hex_ts
+  module_src_selection_ts --> module_src_internal_culori_ts
+  module_src_selection_ts --> module_src_swatches_ts
   module_src_semantic_status_ts["src/semantic-status.ts"]
   package__ankhorage_color_theory -.-> module_src_semantic_status_ts
   module_src_semantic_status_ts --> module_src_hex_ts

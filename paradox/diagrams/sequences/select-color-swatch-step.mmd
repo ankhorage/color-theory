@@ -1,0 +1,11 @@
+sequenceDiagram
+  participant participant_normalizeContexts as normalizeContexts
+  participant participant_normalizeHueDegrees as normalizeHueDegrees
+  participant participant_normalizeTarget as normalizeTarget
+  participant participant_selectColorSwatchStep as selectColorSwatchStep
+  participant_selectColorSwatchStep->>participant_normalizeTarget: normalizeTarget()
+  participant_normalizeTarget->>participant_normalizeHueDegrees: normalizeHueDegrees()
+  participant_normalizeHueDegrees-->>participant_normalizeTarget: return
+  participant_normalizeTarget-->>participant_selectColorSwatchStep: return
+  participant_selectColorSwatchStep->>participant_normalizeContexts: normalizeContexts()
+  participant_normalizeContexts-->>participant_selectColorSwatchStep: return

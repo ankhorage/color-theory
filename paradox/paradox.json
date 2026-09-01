@@ -72,7 +72,15 @@
       "path": "src/contrast.ts",
       "isEntrypoint": false,
       "dependencies": ["src/hex.ts", "src/internal-culori.ts"],
-      "exports": ["getReadableForeground", "ReadableForegroundResult"]
+      "exports": [
+        "ForegroundSelectionCandidate",
+        "ForegroundSelectionResult",
+        "ForegroundTiePolicy",
+        "getContrastRatio",
+        "getReadableForeground",
+        "ReadableForegroundResult",
+        "selectReadableForeground"
+      ]
     },
     {
       "path": "src/culori-fn.ts",
@@ -595,10 +603,17 @@
         "COLOR_SWATCH_BASE_LIGHTNESS",
         "COLOR_SWATCH_BASE_STEP",
         "COLOR_SWATCH_STEPS",
+        "ColorContrastContext",
+        "ColorContrastMeasurement",
         "ColorHarmony",
+        "ColorSelectionTarget",
         "ColorSwatch",
+        "ColorSwatchCandidateRejectionReason",
         "ColorSwatchDiagnostics",
+        "ColorSwatchSelectionCandidate",
+        "ColorSwatchSelectionResult",
         "ColorSwatchStep",
+        "ColorSwatchTiePolicy",
         "ColorSwatchWarning",
         "ColorSwatchWarningCode",
         "createDefaultSemanticStatusSwatches",
@@ -606,6 +621,9 @@
         "DARK_SEMANTIC_COLOR_REFERENCES",
         "DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS",
         "DefaultSemanticStatusRole",
+        "ForegroundSelectionCandidate",
+        "ForegroundSelectionResult",
+        "ForegroundTiePolicy",
         "generateColorSwatch",
         "GeneratedColorRole",
         "GeneratedHarmonyRoleColor",
@@ -617,6 +635,7 @@
         "generateNeutralSwatch",
         "generateThemeColors",
         "generateThemeModeColors",
+        "getContrastRatio",
         "getReadableForeground",
         "getThemeModePrimaryHex",
         "HexColor",
@@ -627,6 +646,8 @@
         "parseHexColor",
         "parseHexColorOrThrow",
         "ReadableForegroundResult",
+        "selectColorSwatchStep",
+        "selectReadableForeground",
         "SemanticColorReference",
         "SemanticColorReferenceMap",
         "SemanticColorRole",
@@ -659,6 +680,26 @@
         "generateNeutralSwatch",
         "MIN_HUEFUL_CHROMA",
         "NeutralSwatchResult"
+      ]
+    },
+    {
+      "path": "src/selection.ts",
+      "isEntrypoint": false,
+      "dependencies": [
+        "src/contrast.ts",
+        "src/hex.ts",
+        "src/internal-culori.ts",
+        "src/swatches.ts"
+      ],
+      "exports": [
+        "ColorContrastContext",
+        "ColorContrastMeasurement",
+        "ColorSelectionTarget",
+        "ColorSwatchCandidateRejectionReason",
+        "ColorSwatchSelectionCandidate",
+        "ColorSwatchSelectionResult",
+        "ColorSwatchTiePolicy",
+        "selectColorSwatchStep"
       ]
     },
     {
@@ -825,6 +866,100 @@
       "structuredRows": []
     },
     {
+      "name": "ColorContrastContext",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/selection.ts",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 15,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["HexColor"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "against",
+          "kind": "property",
+          "type": "HexColor",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "id",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "minimumContrast",
+          "kind": "property",
+          "type": "number",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "ColorContrastMeasurement",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/selection.ts",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 21,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["HexColor"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "against",
+          "kind": "property",
+          "type": "HexColor",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "contrast",
+          "kind": "property",
+          "type": "number",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "id",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "minimumContrast",
+          "kind": "property",
+          "type": "number",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "passes",
+          "kind": "property",
+          "type": "boolean",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
       "name": "ColorHarmony",
       "description": null,
       "isReadme": false,
@@ -843,6 +978,46 @@
       "structuredRows": []
     },
     {
+      "name": "ColorSelectionTarget",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/selection.ts",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 9,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [
+        {
+          "name": "chroma",
+          "kind": "property",
+          "type": "number",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "hueDegrees",
+          "kind": "property",
+          "type": "number | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "lightness",
+          "kind": "property",
+          "type": "number",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
       "name": "ColorSwatch",
       "description": null,
       "isReadme": false,
@@ -852,6 +1027,24 @@
       "sourceLocation": {
         "filePath": "src/swatches.ts",
         "line": 10,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "ColorSwatchCandidateRejectionReason",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "unknown",
+      "modulePath": "src/selection.ts",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 26,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -915,6 +1108,130 @@
       "structuredRows": []
     },
     {
+      "name": "ColorSwatchSelectionCandidate",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/selection.ts",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 28,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [
+        "ColorContrastMeasurement",
+        "ColorSwatchCandidateRejectionReason",
+        "HexColor"
+      ],
+      "signatures": [],
+      "members": [
+        {
+          "name": "contrasts",
+          "kind": "property",
+          "type": "readonly ColorContrastMeasurement[]",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "hex",
+          "kind": "property",
+          "type": "HexColor",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "rejectionReasons",
+          "kind": "property",
+          "type": "readonly ColorSwatchCandidateRejectionReason[]",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "selected",
+          "kind": "property",
+          "type": "boolean",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "step",
+          "kind": "property",
+          "type": "50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "targetDistance",
+          "kind": "property",
+          "type": "number",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "ColorSwatchSelectionResult",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/selection.ts",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 37,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [
+        "ColorSelectionTarget",
+        "ColorSwatchSelectionCandidate",
+        "ColorSwatchStep",
+        "ColorSwatchTiePolicy"
+      ],
+      "signatures": [],
+      "members": [
+        {
+          "name": "candidates",
+          "kind": "property",
+          "type": "readonly ColorSwatchSelectionCandidate[]",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "rejectedCandidates",
+          "kind": "property",
+          "type": "readonly ColorSwatchSelectionCandidate[]",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "selected",
+          "kind": "property",
+          "type": "ColorSwatchSelectionCandidate | null",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "target",
+          "kind": "property",
+          "type": "ColorSelectionTarget",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "tieBreak",
+          "kind": "property",
+          "type": "{ policy: ColorSwatchTiePolicy; applied: boolean; candidateSteps: readonly ColorSwatchStep[]; }",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
       "name": "ColorSwatchStep",
       "description": null,
       "isReadme": false,
@@ -924,6 +1241,24 @@
       "sourceLocation": {
         "filePath": "src/swatches.ts",
         "line": 5,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "ColorSwatchTiePolicy",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "unknown",
+      "modulePath": "src/selection.ts",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 7,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1100,6 +1435,125 @@
       "sourceLocation": {
         "filePath": "src/semantic-status.ts",
         "line": 12,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "ForegroundSelectionCandidate",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/contrast.ts",
+      "sourceLocation": {
+        "filePath": "src/contrast.ts",
+        "line": 12,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["HexColor"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "contrast",
+          "kind": "property",
+          "type": "number",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "foreground",
+          "kind": "property",
+          "type": "HexColor",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "passesMinimum",
+          "kind": "property",
+          "type": "boolean",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "rejectionReason",
+          "kind": "property",
+          "type": "\"minimum-contrast\" | \"weaker-contrast\" | \"tie-break\" | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "selected",
+          "kind": "property",
+          "type": "boolean",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "ForegroundSelectionResult",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/contrast.ts",
+      "sourceLocation": {
+        "filePath": "src/contrast.ts",
+        "line": 20,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["ForegroundSelectionCandidate", "ForegroundTiePolicy"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "candidates",
+          "kind": "property",
+          "type": "readonly ForegroundSelectionCandidate[]",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "minimumContrast",
+          "kind": "property",
+          "type": "number",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "selected",
+          "kind": "property",
+          "type": "ForegroundSelectionCandidate | null",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "tieBreak",
+          "kind": "property",
+          "type": "{ policy: ForegroundTiePolicy; applied: boolean; }",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "ForegroundTiePolicy",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "unknown",
+      "modulePath": "src/contrast.ts",
+      "sourceLocation": {
+        "filePath": "src/contrast.ts",
+        "line": 10,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1532,6 +1986,44 @@
       "structuredRows": []
     },
     {
+      "name": "getContrastRatio",
+      "description": "Measure the WCAG contrast ratio between two validated hex colors.",
+      "isReadme": false,
+      "examples": [],
+      "kind": "function",
+      "modulePath": "src/contrast.ts",
+      "sourceLocation": {
+        "filePath": "src/contrast.ts",
+        "line": 36,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["HexColor"],
+      "signatures": [
+        {
+          "label": "(colorA: HexColor, colorB: HexColor) => number",
+          "parameters": [
+            {
+              "name": "colorA",
+              "type": "HexColor",
+              "required": true,
+              "description": null
+            },
+            {
+              "name": "colorB",
+              "type": "HexColor",
+              "required": true,
+              "description": null
+            }
+          ],
+          "returnType": "number",
+          "returnDescription": null
+        }
+      ],
+      "members": [],
+      "structuredRows": []
+    },
+    {
       "name": "getReadableForeground",
       "description": "Return the readable black or white foreground color with the stronger contrast against a background color.",
       "isReadme": false,
@@ -1540,7 +2032,7 @@
       "modulePath": "src/contrast.ts",
       "sourceLocation": {
         "filePath": "src/contrast.ts",
-        "line": 16,
+        "line": 99,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1819,6 +2311,112 @@
       "structuredRows": []
     },
     {
+      "name": "selectColorSwatchStep",
+      "description": "Select the swatch step nearest a perceptual target that passes every required contrast context.",
+      "isReadme": false,
+      "examples": [],
+      "kind": "function",
+      "modulePath": "src/selection.ts",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 62,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [
+        "ColorContrastContext",
+        "ColorSelectionTarget",
+        "ColorSwatch",
+        "ColorSwatchSelectionResult",
+        "ColorSwatchTiePolicy"
+      ],
+      "signatures": [
+        {
+          "label": "(swatch: ColorSwatch, target: ColorSelectionTarget, contexts: readonly ColorContrastContext[], tiePolicy: ColorSwatchTiePolicy) => ColorSwatchSelectionResult",
+          "parameters": [
+            {
+              "name": "contexts",
+              "type": "readonly ColorContrastContext[]",
+              "required": true,
+              "description": null
+            },
+            {
+              "name": "swatch",
+              "type": "ColorSwatch",
+              "required": true,
+              "description": null
+            },
+            {
+              "name": "target",
+              "type": "ColorSelectionTarget",
+              "required": true,
+              "description": null
+            },
+            {
+              "name": "tiePolicy",
+              "type": "ColorSwatchTiePolicy",
+              "required": true,
+              "description": null
+            }
+          ],
+          "returnType": "ColorSwatchSelectionResult",
+          "returnDescription": null
+        }
+      ],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "selectReadableForeground",
+      "description": "Select the strongest caller-provided foreground that meets a minimum WCAG contrast ratio.",
+      "isReadme": false,
+      "examples": [],
+      "kind": "function",
+      "modulePath": "src/contrast.ts",
+      "sourceLocation": {
+        "filePath": "src/contrast.ts",
+        "line": 43,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["ForegroundSelectionResult", "ForegroundTiePolicy", "HexColor"],
+      "signatures": [
+        {
+          "label": "(background: HexColor, foregrounds: readonly HexColor[], minimumContrast: number, tiePolicy: ForegroundTiePolicy) => ForegroundSelectionResult",
+          "parameters": [
+            {
+              "name": "background",
+              "type": "HexColor",
+              "required": true,
+              "description": null
+            },
+            {
+              "name": "foregrounds",
+              "type": "readonly HexColor[]",
+              "required": true,
+              "description": null
+            },
+            {
+              "name": "minimumContrast",
+              "type": "number",
+              "required": true,
+              "description": null
+            },
+            {
+              "name": "tiePolicy",
+              "type": "ForegroundTiePolicy",
+              "required": true,
+              "description": null
+            }
+          ],
+          "returnType": "ForegroundSelectionResult",
+          "returnDescription": null
+        }
+      ],
+      "members": [],
+      "structuredRows": []
+    },
+    {
       "name": "SemanticColorReference",
       "description": null,
       "isReadme": false,
@@ -2051,11 +2649,47 @@
   "components": [],
   "sourceFunctions": [
     {
+      "name": "getContrastRatio",
+      "description": "Measure the WCAG contrast ratio between two validated hex colors.",
+      "sourceLocation": {
+        "filePath": "src/contrast.ts",
+        "line": 36,
+        "column": 1
+      }
+    },
+    {
+      "name": "selectReadableForeground",
+      "description": "Select the strongest caller-provided foreground that meets a minimum WCAG contrast ratio.",
+      "sourceLocation": {
+        "filePath": "src/contrast.ts",
+        "line": 43,
+        "column": 1
+      }
+    },
+    {
       "name": "getReadableForeground",
       "description": "Return the readable black or white foreground color with the stronger contrast against a background color.",
       "sourceLocation": {
         "filePath": "src/contrast.ts",
-        "line": 16,
+        "line": 99,
+        "column": 1
+      }
+    },
+    {
+      "name": "assertMinimumContrast",
+      "description": "Validate a WCAG contrast threshold.",
+      "sourceLocation": {
+        "filePath": "src/contrast.ts",
+        "line": 114,
+        "column": 1
+      }
+    },
+    {
+      "name": "getForegroundRejectionReason",
+      "description": "Explain why a foreground candidate was not selected.",
+      "sourceLocation": {
+        "filePath": "src/contrast.ts",
+        "line": 125,
         "column": 1
       }
     },
@@ -2191,6 +2825,69 @@
       "sourceLocation": {
         "filePath": "src/neutral.ts",
         "line": 49,
+        "column": 1
+      }
+    },
+    {
+      "name": "selectColorSwatchStep",
+      "description": "Select the swatch step nearest a perceptual target that passes every required contrast context.",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 62,
+        "column": 1
+      }
+    },
+    {
+      "name": "createSelectionCandidate",
+      "description": "Convert a measured candidate into its public selection diagnostic.",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 101,
+        "column": 1
+      }
+    },
+    {
+      "name": "getCandidateRejectionReasons",
+      "description": "Explain every reason a candidate was not selected.",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 126,
+        "column": 1
+      }
+    },
+    {
+      "name": "measureCandidate",
+      "description": "Measure a swatch candidate against the target and required contrast contexts.",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 144,
+        "column": 1
+      }
+    },
+    {
+      "name": "measureTargetDistance",
+      "description": "Measure target distance with hue included only when the caller supplied it.",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 171,
+        "column": 1
+      }
+    },
+    {
+      "name": "normalizeContexts",
+      "description": "Validate and normalize contrast contexts for deterministic measurement.",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 187,
+        "column": 1
+      }
+    },
+    {
+      "name": "normalizeTarget",
+      "description": "Validate and normalize a perceptual color-selection target.",
+      "sourceLocation": {
+        "filePath": "src/selection.ts",
+        "line": 221,
         "column": 1
       }
     },
@@ -2406,6 +3103,14 @@
     },
     {
       "kind": "export",
+      "name": "getContrastRatio",
+      "sourcePath": "src/contrast.ts",
+      "symbolName": "getContrastRatio",
+      "description": "Measure the WCAG contrast ratio between two validated hex colors.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
       "name": "getReadableForeground",
       "sourcePath": "src/contrast.ts",
       "symbolName": "getReadableForeground",
@@ -2442,6 +3147,22 @@
       "sourcePath": "src/hex.ts",
       "symbolName": "parseHexColorOrThrow",
       "description": "Parse a string as a six-digit hex color or throw when it is invalid.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "selectColorSwatchStep",
+      "sourcePath": "src/selection.ts",
+      "symbolName": "selectColorSwatchStep",
+      "description": "Select the swatch step nearest a perceptual target that passes every required contrast context.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "selectReadableForeground",
+      "sourcePath": "src/contrast.ts",
+      "symbolName": "selectReadableForeground",
+      "description": "Select the strongest caller-provided foreground that meets a minimum WCAG contrast ratio.",
       "isReadme": false
     }
   ],
@@ -2489,6 +3210,11 @@
       },
       {
         "fromPath": "src/index.ts",
+        "toPath": "src/selection.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
         "toPath": "src/semantic-status.ts",
         "sourcePath": "src/index.ts"
       },
@@ -2531,6 +3257,26 @@
         "fromPath": "src/neutral.ts",
         "toPath": "src/swatches.ts",
         "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromPath": "src/selection.ts",
+        "toPath": "src/contrast.ts",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromPath": "src/selection.ts",
+        "toPath": "src/hex.ts",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromPath": "src/selection.ts",
+        "toPath": "src/internal-culori.ts",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromPath": "src/selection.ts",
+        "toPath": "src/swatches.ts",
+        "sourcePath": "src/selection.ts"
       },
       {
         "fromPath": "src/semantic-status.ts",
@@ -2591,9 +3337,39 @@
         "sourcePath": "src/contrast.ts"
       },
       {
-        "fromSymbol": "getReadableForeground",
+        "fromSymbol": "getContrastRatio",
         "toSymbol": "contrastRatio",
         "callExpression": "contrastRatio",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "selectReadableForeground",
+        "toSymbol": "assertMinimumContrast",
+        "callExpression": "assertMinimumContrast",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "selectReadableForeground",
+        "toSymbol": "parseHexColorOrThrow",
+        "callExpression": "parseHexColorOrThrow",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "src/contrast.ts",
+        "toSymbol": "getContrastRatio",
+        "callExpression": "getContrastRatio",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "src/contrast.ts",
+        "toSymbol": "getForegroundRejectionReason",
+        "callExpression": "getForegroundRejectionReason",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "getReadableForeground",
+        "toSymbol": "selectReadableForeground",
+        "callExpression": "selectReadableForeground",
         "sourcePath": "src/contrast.ts"
       },
       {
@@ -2733,6 +3509,78 @@
         "toSymbol": "generateColorSwatch",
         "callExpression": "generateColorSwatch",
         "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "selectColorSwatchStep",
+        "toSymbol": "normalizeTarget",
+        "callExpression": "normalizeTarget",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "selectColorSwatchStep",
+        "toSymbol": "normalizeContexts",
+        "callExpression": "normalizeContexts",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "src/selection.ts",
+        "toSymbol": "measureCandidate",
+        "callExpression": "measureCandidate",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "src/selection.ts",
+        "toSymbol": "createSelectionCandidate",
+        "callExpression": "createSelectionCandidate",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "createSelectionCandidate",
+        "toSymbol": "getCandidateRejectionReasons",
+        "callExpression": "getCandidateRejectionReasons",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "measureCandidate",
+        "toSymbol": "parseHexColorOrThrow",
+        "callExpression": "parseHexColorOrThrow",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "src/selection.ts",
+        "toSymbol": "getContrastRatio",
+        "callExpression": "getContrastRatio",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "measureCandidate",
+        "toSymbol": "measureTargetDistance",
+        "callExpression": "measureTargetDistance",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "measureTargetDistance",
+        "toSymbol": "parseHexToOklch",
+        "callExpression": "parseHexToOklch",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "measureTargetDistance",
+        "toSymbol": "deltaEoklch",
+        "callExpression": "deltaEoklch",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "src/selection.ts",
+        "toSymbol": "parseHexColorOrThrow",
+        "callExpression": "parseHexColorOrThrow",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "normalizeTarget",
+        "toSymbol": "normalizeHueDegrees",
+        "callExpression": "normalizeHueDegrees",
+        "sourcePath": "src/selection.ts"
       },
       {
         "fromSymbol": "generateSemanticStatus",
@@ -2893,6 +3741,26 @@
     ],
     "typeReferences": [
       {
+        "fromSymbol": "getContrastRatio",
+        "toType": "HexColor",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "selectReadableForeground",
+        "toType": "ForegroundSelectionResult",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "selectReadableForeground",
+        "toType": "ForegroundTiePolicy",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "selectReadableForeground",
+        "toType": "HexColor",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
         "fromSymbol": "getReadableForeground",
         "toType": "HexColor",
         "sourcePath": "src/contrast.ts"
@@ -2905,6 +3773,21 @@
       {
         "fromSymbol": "ReadableForegroundResult",
         "toType": "HexColor",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "ForegroundSelectionCandidate",
+        "toType": "HexColor",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "ForegroundSelectionResult",
+        "toType": "ForegroundSelectionCandidate",
+        "sourcePath": "src/contrast.ts"
+      },
+      {
+        "fromSymbol": "ForegroundSelectionResult",
+        "toType": "ForegroundTiePolicy",
         "sourcePath": "src/contrast.ts"
       },
       {
@@ -2976,6 +3859,76 @@
         "fromSymbol": "GeneratedNeutralMetadata",
         "toType": "HexColor",
         "sourcePath": "src/neutral.ts"
+      },
+      {
+        "fromSymbol": "selectColorSwatchStep",
+        "toType": "ColorContrastContext",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "selectColorSwatchStep",
+        "toType": "ColorSelectionTarget",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "selectColorSwatchStep",
+        "toType": "ColorSwatch",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "selectColorSwatchStep",
+        "toType": "ColorSwatchSelectionResult",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "selectColorSwatchStep",
+        "toType": "ColorSwatchTiePolicy",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "ColorContrastContext",
+        "toType": "HexColor",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "ColorContrastMeasurement",
+        "toType": "HexColor",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "ColorSwatchSelectionCandidate",
+        "toType": "ColorContrastMeasurement",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "ColorSwatchSelectionCandidate",
+        "toType": "ColorSwatchCandidateRejectionReason",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "ColorSwatchSelectionCandidate",
+        "toType": "HexColor",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "ColorSwatchSelectionResult",
+        "toType": "ColorSelectionTarget",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "ColorSwatchSelectionResult",
+        "toType": "ColorSwatchSelectionCandidate",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "ColorSwatchSelectionResult",
+        "toType": "ColorSwatchStep",
+        "sourcePath": "src/selection.ts"
+      },
+      {
+        "fromSymbol": "ColorSwatchSelectionResult",
+        "toType": "ColorSwatchTiePolicy",
+        "sourcePath": "src/selection.ts"
       },
       {
         "fromSymbol": "createSemanticStatusSwatches",
