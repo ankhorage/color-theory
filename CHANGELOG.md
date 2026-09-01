@@ -1,5 +1,11 @@
 # @ankhorage/color-theory
 
+## 0.1.0
+
+### Minor Changes
+
+- be8317b: Add public contrast measurement, caller-defined foreground selection, and deterministic swatch-step selection with perceptual and contrast diagnostics.
+
 ## 0.0.8
 
 ### Patch Changes
