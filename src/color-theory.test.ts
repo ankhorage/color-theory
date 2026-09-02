@@ -7,6 +7,7 @@ import {
   createDefaultSemanticStatusSwatches,
   createSemanticStatusSwatches,
   DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS,
+  type DefaultSemanticStatusRole,
   generateColorSwatch,
   generateHarmonyRoleColors,
   generateNeutralSwatch,
@@ -15,7 +16,7 @@ import {
   parseHexColor,
   parseHexColorOrThrow,
 } from './index';
-import { parseHexToOklch } from './internal-culori';
+import { deltaEoklch, parseHexToOklch } from './internal-culori';
 
 function readRecordValue<Key extends PropertyKey, Value>(
   record: Readonly<Record<Key, Value>>,
@@ -94,8 +95,22 @@ describe('readability and semantic statuses', () => {
 
   it('ships stable default semantic status color seeds', () => {
     expect(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS.danger).toBe('#ef4444');
+    expect(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS.info).toBe('#3b82f6');
     expect(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS.success).toBe('#22c55e');
     expect(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS.warning).toBe('#f59e0b');
+
+    const roles = Object.keys(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS);
+    expect(roles).toEqual(['danger', 'info', 'success', 'warning']);
+    expect(new Set(Object.values(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS)).size).toBe(roles.length);
+  });
+
+  it('keeps the canonical info seed perceptually distinct from other status seeds', () => {
+    const info = parseHexToOklch(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS.info);
+
+    for (const role of ['danger', 'success', 'warning'] as const) {
+      const other = parseHexToOklch(readRecordValue(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS, role));
+      expect(deltaEoklch(info, other)).toBeGreaterThan(0.3);
+    }
   });
 
   it('generates deterministic semantic status swatches from default seeds', () => {
@@ -104,7 +119,8 @@ describe('readability and semantic statuses', () => {
 
     expect(first).toEqual(second);
 
-    for (const role of ['danger', 'success', 'warning'] as const) {
+    const roles: readonly DefaultSemanticStatusRole[] = ['danger', 'info', 'success', 'warning'];
+    for (const role of roles) {
       const seed = readRecordValue(first.seeds, role);
       expect(seed).toBe(readRecordValue(DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS, role));
       expect(readRecordValue(readRecordValue(first.swatches, role), COLOR_SWATCH_BASE_STEP)).toBe(
