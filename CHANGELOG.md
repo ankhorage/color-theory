@@ -1,5 +1,11 @@
 # @ankhorage/color-theory
 
+## 0.3.0
+
+### Minor Changes
+
+- a4068c6: Add a canonical informational status seed and generated swatch independent of brand harmony.
+
 ## 0.2.0
 
 ### Minor Changes
