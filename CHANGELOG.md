@@ -1,5 +1,11 @@
 # @ankhorage/color-theory
 
+## 0.3.1
+
+### Patch Changes
+
+- 40c7c2d: Use package metadata as the default Paradox documentation title and description.
+
 ## 0.3.0
 
 ### Minor Changes
