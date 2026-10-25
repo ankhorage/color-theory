@@ -1,9 +1,11 @@
 [
   {
     "name": "assertHexColor",
+    "title": null,
     "description": "Assert that a string is a valid six-digit hex color.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/hex.ts",
     "sourceLocation": {
@@ -11,7 +13,9 @@
       "line": 34,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [
       {
@@ -33,17 +37,43 @@
   },
   {
     "name": "COLOR_HARMONIES",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "value",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
       "filePath": "src/harmony.ts",
-      "line": 4,
+      "line": 77,
       "column": 14
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [],
+    "signatures": [],
+    "members": [],
+    "structuredRows": []
+  },
+  {
+    "name": "COLOR_HARMONY_CATALOG",
+    "title": null,
+    "description": null,
+    "isReadme": false,
+    "see": [],
+    "security": [],
+    "kind": "value",
+    "modulePath": "src/harmony.ts",
+    "sourceLocation": {
+      "filePath": "src/harmony.ts",
+      "line": 15,
+      "column": 14
+    },
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -51,9 +81,11 @@
   },
   {
     "name": "COLOR_SWATCH_BASE_LIGHTNESS",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "value",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -61,7 +93,9 @@
       "line": 8,
       "column": 14
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -69,9 +103,11 @@
   },
   {
     "name": "COLOR_SWATCH_BASE_STEP",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "value",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -79,7 +115,9 @@
       "line": 7,
       "column": 14
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -87,9 +125,11 @@
   },
   {
     "name": "COLOR_SWATCH_STEPS",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "value",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -97,7 +137,9 @@
       "line": 4,
       "column": 14
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -105,9 +147,11 @@
   },
   {
     "name": "ColorContrastContext",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/selection.ts",
     "sourceLocation": {
@@ -115,8 +159,12 @@
       "line": 15,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "HexColor"
+    ],
     "signatures": [],
     "members": [
       {
@@ -145,9 +193,11 @@
   },
   {
     "name": "ColorContrastMeasurement",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/selection.ts",
     "sourceLocation": {
@@ -155,8 +205,12 @@
       "line": 21,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "HexColor"
+    ],
     "signatures": [],
     "members": [
       {
@@ -199,17 +253,43 @@
   },
   {
     "name": "ColorHarmony",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
       "filePath": "src/harmony.ts",
-      "line": 13,
+      "line": 75,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [],
+    "signatures": [],
+    "members": [],
+    "structuredRows": []
+  },
+  {
+    "name": "ColorHarmonyDefinition",
+    "title": null,
+    "description": null,
+    "isReadme": false,
+    "see": [],
+    "security": [],
+    "kind": "unknown",
+    "modulePath": "src/harmony.ts",
+    "sourceLocation": {
+      "filePath": "src/harmony.ts",
+      "line": 74,
+      "column": 1
+    },
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -217,9 +297,11 @@
   },
   {
     "name": "ColorSelectionTarget",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/selection.ts",
     "sourceLocation": {
@@ -227,7 +309,9 @@
       "line": 9,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [
@@ -257,9 +341,11 @@
   },
   {
     "name": "ColorSwatch",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -267,7 +353,9 @@
       "line": 10,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -275,9 +363,11 @@
   },
   {
     "name": "ColorSwatchCandidateRejectionReason",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/selection.ts",
     "sourceLocation": {
@@ -285,7 +375,9 @@
       "line": 26,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -293,9 +385,11 @@
   },
   {
     "name": "ColorSwatchDiagnostics",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -303,8 +397,12 @@
       "line": 22,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["ColorSwatchWarning"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "ColorSwatchWarning"
+    ],
     "signatures": [],
     "members": [
       {
@@ -347,9 +445,11 @@
   },
   {
     "name": "ColorSwatchSelectionCandidate",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/selection.ts",
     "sourceLocation": {
@@ -357,7 +457,9 @@
       "line": 28,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [
       "ColorContrastMeasurement",
       "ColorSwatchCandidateRejectionReason",
@@ -412,9 +514,11 @@
   },
   {
     "name": "ColorSwatchSelectionResult",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/selection.ts",
     "sourceLocation": {
@@ -422,7 +526,9 @@
       "line": 37,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [
       "ColorSelectionTarget",
       "ColorSwatchSelectionCandidate",
@@ -471,9 +577,11 @@
   },
   {
     "name": "ColorSwatchStep",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -481,7 +589,9 @@
       "line": 5,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -489,9 +599,11 @@
   },
   {
     "name": "ColorSwatchTiePolicy",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/selection.ts",
     "sourceLocation": {
@@ -499,7 +611,9 @@
       "line": 7,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -507,9 +621,11 @@
   },
   {
     "name": "ColorSwatchWarning",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -517,8 +633,12 @@
       "line": 15,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["ColorSwatchWarningCode"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "ColorSwatchWarningCode"
+    ],
     "signatures": [],
     "members": [
       {
@@ -554,9 +674,11 @@
   },
   {
     "name": "ColorSwatchWarningCode",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -564,7 +686,9 @@
       "line": 12,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -572,23 +696,29 @@
   },
   {
     "name": "createDefaultSemanticStatusSwatches",
+    "title": null,
     "description": "Generate the canonical default semantic status swatches.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
       "filePath": "src/semantic-status.ts",
-      "line": 74,
+      "line": 75,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["SemanticStatusSwatches"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "SemanticStatusSwatches"
+    ],
     "signatures": [
       {
-        "label": "() => SemanticStatusSwatches<\"danger\" | \"success\" | \"warning\">",
+        "label": "() => SemanticStatusSwatches<\"danger\" | \"info\" | \"success\" | \"warning\">",
         "parameters": [],
-        "returnType": "SemanticStatusSwatches<\"danger\" | \"success\" | \"warning\">",
+        "returnType": "SemanticStatusSwatches<\"danger\" | \"info\" | \"success\" | \"warning\">",
         "returnDescription": null
       }
     ],
@@ -597,18 +727,25 @@
   },
   {
     "name": "createSemanticStatusSwatches",
+    "title": null,
     "description": "Generate semantic status swatches from a role-to-seed record.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
       "filePath": "src/semantic-status.ts",
-      "line": 58,
+      "line": 59,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["SemanticStatusSeedInput", "SemanticStatusSwatches"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "SemanticStatusSeedInput",
+      "SemanticStatusSwatches"
+    ],
     "signatures": [
       {
         "label": "(seeds: Record<Role, SemanticStatusSeedInput>) => SemanticStatusSwatches<Role>",
@@ -629,9 +766,11 @@
   },
   {
     "name": "DARK_SEMANTIC_COLOR_REFERENCES",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "value",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -639,7 +778,9 @@
       "line": 46,
       "column": 14
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -647,9 +788,11 @@
   },
   {
     "name": "DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "value",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
@@ -657,7 +800,9 @@
       "line": 6,
       "column": 14
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -665,17 +810,21 @@
   },
   {
     "name": "DefaultSemanticStatusRole",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
       "filePath": "src/semantic-status.ts",
-      "line": 12,
+      "line": 13,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -683,9 +832,11 @@
   },
   {
     "name": "ForegroundSelectionCandidate",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/contrast.ts",
     "sourceLocation": {
@@ -693,8 +844,12 @@
       "line": 12,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "HexColor"
+    ],
     "signatures": [],
     "members": [
       {
@@ -737,9 +892,11 @@
   },
   {
     "name": "ForegroundSelectionResult",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/contrast.ts",
     "sourceLocation": {
@@ -747,8 +904,13 @@
       "line": 20,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["ForegroundSelectionCandidate", "ForegroundTiePolicy"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "ForegroundSelectionCandidate",
+      "ForegroundTiePolicy"
+    ],
     "signatures": [],
     "members": [
       {
@@ -784,9 +946,11 @@
   },
   {
     "name": "ForegroundTiePolicy",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/contrast.ts",
     "sourceLocation": {
@@ -794,7 +958,9 @@
       "line": 10,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -802,9 +968,11 @@
   },
   {
     "name": "generateColorSwatch",
+    "title": null,
     "description": "Generate a full color swatch and diagnostics from a base color.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/swatches.ts",
     "sourceLocation": {
@@ -812,8 +980,14 @@
       "line": 210,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["ColorSwatch", "ColorSwatchDiagnostics", "HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "ColorSwatch",
+      "ColorSwatchDiagnostics",
+      "HexColor"
+    ],
     "signatures": [
       {
         "label": "(baseColor: HexColor) => { swatch: ColorSwatch; diagnostics: ColorSwatchDiagnostics; }",
@@ -834,17 +1008,21 @@
   },
   {
     "name": "GeneratedColorRole",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
       "filePath": "src/harmony.ts",
-      "line": 15,
+      "line": 4,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -852,18 +1030,25 @@
   },
   {
     "name": "GeneratedHarmonyRoleColor",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
       "filePath": "src/harmony.ts",
-      "line": 17,
+      "line": 94,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["GeneratedColorRole", "HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "GeneratedColorRole",
+      "HexColor"
+    ],
     "signatures": [],
     "members": [
       {
@@ -899,18 +1084,25 @@
   },
   {
     "name": "GeneratedHarmonyRoleColors",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
       "filePath": "src/harmony.ts",
-      "line": 24,
+      "line": 101,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["GeneratedHarmonyRoleColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "GeneratedHarmonyRoleColor",
+      "HarmonyGenerationDiagnostics"
+    ],
     "signatures": [],
     "members": [
       {
@@ -921,9 +1113,16 @@
         "description": null
       },
       {
+        "name": "diagnostics",
+        "kind": "property",
+        "type": "HarmonyGenerationDiagnostics",
+        "required": true,
+        "description": null
+      },
+      {
         "name": "harmony",
         "kind": "property",
-        "type": "\"monochromatic\" | \"analogous\" | \"complementary\" | \"triadic\" | \"tetradic\" | \"splitComplementary\"",
+        "type": "\"monochromatic\" | \"analogous\" | \"complementary\" | \"splitComplementary\" | \"triadic\" | \"tetradic\" | \"square\"",
         "required": true,
         "description": null
       },
@@ -960,18 +1159,25 @@
   },
   {
     "name": "GeneratedNeutralMetadata",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/neutral.ts",
     "sourceLocation": {
       "filePath": "src/neutral.ts",
-      "line": 19,
+      "line": 21,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["ColorSwatchDiagnostics", "HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "ColorSwatchDiagnostics",
+      "HexColor"
+    ],
     "signatures": [],
     "members": [
       {
@@ -993,9 +1199,11 @@
   },
   {
     "name": "GeneratedThemeModeColors",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -1003,7 +1211,9 @@
       "line": 25,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [
       "GeneratedHarmonyRoleColors",
       "GeneratedNeutralMetadata",
@@ -1037,9 +1247,11 @@
   },
   {
     "name": "GeneratedThemeSwatches",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -1047,8 +1259,12 @@
       "line": 17,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["ColorSwatch"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "ColorSwatch"
+    ],
     "signatures": [],
     "members": [
       {
@@ -1091,25 +1307,32 @@
   },
   {
     "name": "generateHarmonyRoleColors",
+    "title": null,
     "description": "Generate role-based harmony colors from a primary color and harmony strategy.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/harmony.ts",
     "sourceLocation": {
       "filePath": "src/harmony.ts",
-      "line": 69,
+      "line": 149,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["GeneratedHarmonyRoleColors", "HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "GeneratedHarmonyRoleColors",
+      "HexColor"
+    ],
     "signatures": [
       {
-        "label": "(primaryColor: HexColor, harmony: \"monochromatic\" | \"analogous\" | \"complementary\" | \"triadic\" | \"tetradic\" | \"splitComplementary\") => GeneratedHarmonyRoleColors",
+        "label": "(primaryColor: HexColor, harmony: \"monochromatic\" | \"analogous\" | \"complementary\" | \"splitComplementary\" | \"triadic\" | \"tetradic\" | \"square\") => GeneratedHarmonyRoleColors",
         "parameters": [
           {
             "name": "harmony",
-            "type": "\"monochromatic\" | \"analogous\" | \"complementary\" | \"triadic\" | \"tetradic\" | \"splitComplementary\"",
+            "type": "\"monochromatic\" | \"analogous\" | \"complementary\" | \"splitComplementary\" | \"triadic\" | \"tetradic\" | \"square\"",
             "required": true,
             "description": null
           },
@@ -1129,18 +1352,25 @@
   },
   {
     "name": "generateNeutralSwatch",
+    "title": null,
     "description": "Generate a softly tinted neutral swatch from generated harmony role colors.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/neutral.ts",
     "sourceLocation": {
       "filePath": "src/neutral.ts",
-      "line": 49,
+      "line": 51,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["GeneratedHarmonyRoleColors", "NeutralSwatchResult"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "GeneratedHarmonyRoleColors",
+      "NeutralSwatchResult"
+    ],
     "signatures": [
       {
         "label": "(roleColors: GeneratedHarmonyRoleColors) => NeutralSwatchResult",
@@ -1161,9 +1391,11 @@
   },
   {
     "name": "generateThemeColors",
+    "title": null,
     "description": "Generate light and dark theme color outputs from theme color input.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -1171,8 +1403,13 @@
       "line": 78,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["GeneratedThemeModeColors", "ThemeColorInput"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "GeneratedThemeModeColors",
+      "ThemeColorInput"
+    ],
     "signatures": [
       {
         "label": "(theme: ThemeColorInput) => { light: GeneratedThemeModeColors; dark: GeneratedThemeModeColors; }",
@@ -1193,9 +1430,11 @@
   },
   {
     "name": "generateThemeModeColors",
+    "title": null,
     "description": "Generate harmony role colors, swatches, and neutral metadata for a theme mode.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -1203,8 +1442,13 @@
       "line": 41,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["GeneratedThemeModeColors", "ThemeModeColorInput"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "GeneratedThemeModeColors",
+      "ThemeModeColorInput"
+    ],
     "signatures": [
       {
         "label": "(mode: ThemeModeColorInput) => GeneratedThemeModeColors",
@@ -1225,9 +1469,11 @@
   },
   {
     "name": "getContrastRatio",
+    "title": null,
     "description": "Measure the WCAG contrast ratio between two validated hex colors.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/contrast.ts",
     "sourceLocation": {
@@ -1235,8 +1481,12 @@
       "line": 36,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "HexColor"
+    ],
     "signatures": [
       {
         "label": "(colorA: HexColor, colorB: HexColor) => number",
@@ -1263,9 +1513,11 @@
   },
   {
     "name": "getReadableForeground",
+    "title": null,
     "description": "Return the readable black or white foreground color with the stronger contrast against a background color.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/contrast.ts",
     "sourceLocation": {
@@ -1273,8 +1525,13 @@
       "line": 99,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["HexColor", "ReadableForegroundResult"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "HexColor",
+      "ReadableForegroundResult"
+    ],
     "signatures": [
       {
         "label": "(background: HexColor) => ReadableForegroundResult",
@@ -1295,9 +1552,11 @@
   },
   {
     "name": "getThemeModePrimaryHex",
+    "title": null,
     "description": "Parse the primary color configured for a theme mode.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -1305,8 +1564,13 @@
       "line": 34,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["HexColor", "ThemeModeColorInput"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "HexColor",
+      "ThemeModeColorInput"
+    ],
     "signatures": [
       {
         "label": "(mode: ThemeModeColorInput) => HexColor",
@@ -1326,10 +1590,119 @@
     "structuredRows": []
   },
   {
-    "name": "HexColor",
+    "name": "HarmonyGenerationDiagnostics",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
+    "kind": "type",
+    "modulePath": "src/harmony.ts",
+    "sourceLocation": {
+      "filePath": "src/harmony.ts",
+      "line": 88,
+      "column": 1
+    },
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "HarmonyGenerationWarning"
+    ],
+    "signatures": [],
+    "members": [
+      {
+        "name": "isHueReliable",
+        "kind": "property",
+        "type": "boolean",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "primaryChroma",
+        "kind": "property",
+        "type": "number",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "warnings",
+        "kind": "property",
+        "type": "readonly HarmonyGenerationWarning[]",
+        "required": true,
+        "description": null
+      }
+    ],
+    "structuredRows": []
+  },
+  {
+    "name": "HarmonyGenerationWarning",
+    "title": null,
+    "description": null,
+    "isReadme": false,
+    "see": [],
+    "security": [],
+    "kind": "type",
+    "modulePath": "src/harmony.ts",
+    "sourceLocation": {
+      "filePath": "src/harmony.ts",
+      "line": 83,
+      "column": 1
+    },
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "HarmonyGenerationWarningCode"
+    ],
+    "signatures": [],
+    "members": [
+      {
+        "name": "code",
+        "kind": "property",
+        "type": "HarmonyGenerationWarningCode",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "message",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      }
+    ],
+    "structuredRows": []
+  },
+  {
+    "name": "HarmonyGenerationWarningCode",
+    "title": null,
+    "description": null,
+    "isReadme": false,
+    "see": [],
+    "security": [],
+    "kind": "unknown",
+    "modulePath": "src/harmony.ts",
+    "sourceLocation": {
+      "filePath": "src/harmony.ts",
+      "line": 81,
+      "column": 1
+    },
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [],
+    "signatures": [],
+    "members": [],
+    "structuredRows": []
+  },
+  {
+    "name": "HexColor",
+    "title": null,
+    "description": null,
+    "isReadme": false,
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/hex.ts",
     "sourceLocation": {
@@ -1337,7 +1710,9 @@
       "line": 1,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -1345,9 +1720,11 @@
   },
   {
     "name": "isHexColor",
+    "title": null,
     "description": "Check whether a string is a valid six-digit hex color.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/hex.ts",
     "sourceLocation": {
@@ -1355,7 +1732,9 @@
       "line": 8,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [
       {
@@ -1377,9 +1756,11 @@
   },
   {
     "name": "LIGHT_SEMANTIC_COLOR_REFERENCES",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "value",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -1387,7 +1768,9 @@
       "line": 30,
       "column": 14
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -1395,17 +1778,21 @@
   },
   {
     "name": "MIN_HUEFUL_CHROMA",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "value",
-    "modulePath": "src/neutral.ts",
+    "modulePath": "src/harmony.ts",
     "sourceLocation": {
-      "filePath": "src/neutral.ts",
-      "line": 11,
+      "filePath": "src/harmony.ts",
+      "line": 79,
       "column": 14
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -1413,18 +1800,26 @@
   },
   {
     "name": "NeutralSwatchResult",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/neutral.ts",
     "sourceLocation": {
       "filePath": "src/neutral.ts",
-      "line": 13,
+      "line": 15,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["ColorSwatch", "ColorSwatchDiagnostics", "HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "ColorSwatch",
+      "ColorSwatchDiagnostics",
+      "HexColor"
+    ],
     "signatures": [],
     "members": [
       {
@@ -1453,9 +1848,11 @@
   },
   {
     "name": "parseHexColor",
+    "title": null,
     "description": "Parse a string as a six-digit hex color and return null when it is invalid.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/hex.ts",
     "sourceLocation": {
@@ -1463,8 +1860,12 @@
       "line": 15,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "HexColor"
+    ],
     "signatures": [
       {
         "label": "(value: string) => HexColor | null",
@@ -1485,9 +1886,11 @@
   },
   {
     "name": "parseHexColorOrThrow",
+    "title": null,
     "description": "Parse a string as a six-digit hex color or throw when it is invalid.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/hex.ts",
     "sourceLocation": {
@@ -1495,8 +1898,12 @@
       "line": 23,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "HexColor"
+    ],
     "signatures": [
       {
         "label": "(value: string) => HexColor",
@@ -1517,9 +1924,11 @@
   },
   {
     "name": "ReadableForegroundResult",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/contrast.ts",
     "sourceLocation": {
@@ -1527,8 +1936,12 @@
       "line": 5,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "HexColor"
+    ],
     "signatures": [],
     "members": [
       {
@@ -1550,9 +1963,11 @@
   },
   {
     "name": "selectColorSwatchStep",
+    "title": null,
     "description": "Select the swatch step nearest a perceptual target that passes every required contrast context.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/selection.ts",
     "sourceLocation": {
@@ -1560,7 +1975,9 @@
       "line": 62,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [
       "ColorContrastContext",
       "ColorSelectionTarget",
@@ -1606,9 +2023,11 @@
   },
   {
     "name": "selectReadableForeground",
+    "title": null,
     "description": "Select the strongest caller-provided foreground that meets a minimum WCAG contrast ratio.",
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/contrast.ts",
     "sourceLocation": {
@@ -1616,8 +2035,14 @@
       "line": 43,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["ForegroundSelectionResult", "ForegroundTiePolicy", "HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "ForegroundSelectionResult",
+      "ForegroundTiePolicy",
+      "HexColor"
+    ],
     "signatures": [
       {
         "label": "(background: HexColor, foregrounds: readonly HexColor[], minimumContrast: number, tiePolicy: ForegroundTiePolicy) => ForegroundSelectionResult",
@@ -1656,9 +2081,11 @@
   },
   {
     "name": "SemanticColorReference",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -1666,8 +2093,12 @@
       "line": 23,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["SemanticColorRole"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "SemanticColorRole"
+    ],
     "signatures": [],
     "members": [
       {
@@ -1689,9 +2120,11 @@
   },
   {
     "name": "SemanticColorReferenceMap",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -1699,7 +2132,9 @@
       "line": 28,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -1707,9 +2142,11 @@
   },
   {
     "name": "SemanticColorRole",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -1717,7 +2154,9 @@
       "line": 21,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -1725,9 +2164,11 @@
   },
   {
     "name": "SemanticColorToken",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -1735,7 +2176,9 @@
       "line": 6,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -1743,17 +2186,21 @@
   },
   {
     "name": "SemanticStatusSeedInput",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
       "filePath": "src/semantic-status.ts",
-      "line": 14,
+      "line": 15,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -1761,18 +2208,26 @@
   },
   {
     "name": "SemanticStatusSwatches",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/semantic-status.ts",
     "sourceLocation": {
       "filePath": "src/semantic-status.ts",
-      "line": 16,
+      "line": 17,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["ColorSwatch", "ColorSwatchDiagnostics", "HexColor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "ColorSwatch",
+      "ColorSwatchDiagnostics",
+      "HexColor"
+    ],
     "signatures": [],
     "members": [
       {
@@ -1801,9 +2256,11 @@
   },
   {
     "name": "ThemeColorInput",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -1811,8 +2268,12 @@
       "line": 12,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["ThemeModeColorInput"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "ThemeModeColorInput"
+    ],
     "signatures": [],
     "members": [
       {
@@ -1834,9 +2295,11 @@
   },
   {
     "name": "ThemeColorMode",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/semantics.ts",
     "sourceLocation": {
@@ -1844,7 +2307,9 @@
       "line": 4,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -1852,9 +2317,11 @@
   },
   {
     "name": "ThemeModeColorInput",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/theme-colors.ts",
     "sourceLocation": {
@@ -1862,14 +2329,16 @@
       "line": 7,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [
       {
         "name": "harmony",
         "kind": "property",
-        "type": "\"monochromatic\" | \"analogous\" | \"complementary\" | \"triadic\" | \"tetradic\" | \"splitComplementary\"",
+        "type": "\"monochromatic\" | \"analogous\" | \"complementary\" | \"splitComplementary\" | \"triadic\" | \"tetradic\" | \"square\"",
         "required": true,
         "description": null
       },

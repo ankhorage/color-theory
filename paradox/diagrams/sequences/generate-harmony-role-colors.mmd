@@ -1,0 +1,22 @@
+sequenceDiagram
+  participant participant_clampNumber as clampNumber
+  participant participant_createHarmonyGenerationDiagnostics as createHarmonyGenerationDiagnostics
+  participant participant_generateHarmonyRoleColors as generateHarmonyRoleColors
+  participant participant_getHarmonyDefinition as getHarmonyDefinition
+  participant participant_normalizeHueDegrees as normalizeHueDegrees
+  participant participant_parseHexToOklch as parseHexToOklch
+  participant participant_toOklch as toOklch
+  participant_generateHarmonyRoleColors->>participant_parseHexToOklch: parseHexToOklch()
+  participant_parseHexToOklch->>participant_toOklch: toOklch()
+  participant_toOklch-->>participant_parseHexToOklch: return
+  participant_parseHexToOklch->>participant_clampNumber: clampNumber()
+  participant_clampNumber-->>participant_parseHexToOklch: return
+  participant_parseHexToOklch->>participant_normalizeHueDegrees: normalizeHueDegrees()
+  participant_normalizeHueDegrees-->>participant_parseHexToOklch: return
+  participant_parseHexToOklch-->>participant_generateHarmonyRoleColors: return
+  participant_generateHarmonyRoleColors->>participant_getHarmonyDefinition: getHarmonyDefinition()
+  participant_getHarmonyDefinition-->>participant_generateHarmonyRoleColors: return
+  participant_generateHarmonyRoleColors->>participant_normalizeHueDegrees: normalizeHueDegrees()
+  participant_normalizeHueDegrees-->>participant_generateHarmonyRoleColors: return
+  participant_generateHarmonyRoleColors->>participant_createHarmonyGenerationDiagnostics: createHarmonyGenerationDiagnostics()
+  participant_createHarmonyGenerationDiagnostics-->>participant_generateHarmonyRoleColors: return
