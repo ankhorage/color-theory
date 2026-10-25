@@ -1,5 +1,5 @@
-import type { HexColor } from './hex';
-import { normalizeHueDegrees, oklchToHex, parseHexToOklch } from './internal-culori';
+import type { HexColor } from './hex.js';
+import { normalizeHueDegrees, oklchToHex, parseHexToOklch } from './internal-culori.js';
 
 export type GeneratedColorRole = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 

@@ -15,8 +15,8 @@ import {
   getReadableForeground,
   parseHexColor,
   parseHexColorOrThrow,
-} from './index';
-import { deltaEoklch, parseHexToOklch } from './internal-culori';
+} from './index.js';
+import { deltaEoklch, parseHexToOklch } from './internal-culori.js';
 
 function readRecordValue<Key extends PropertyKey, Value>(
   record: Readonly<Record<Key, Value>>,

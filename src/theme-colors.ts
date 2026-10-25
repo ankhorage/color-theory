@@ -1,8 +1,8 @@
-import { type GeneratedHarmonyRoleColors, generateHarmonyRoleColors } from './harmony';
-import type { HexColor } from './hex';
-import { parseHexColorOrThrow } from './hex';
-import { type GeneratedNeutralMetadata, generateNeutralSwatch } from './neutral';
-import { type ColorSwatch, generateColorSwatch } from './swatches';
+import { type GeneratedHarmonyRoleColors, generateHarmonyRoleColors } from './harmony.js';
+import type { HexColor } from './hex.js';
+import { parseHexColorOrThrow } from './hex.js';
+import { type GeneratedNeutralMetadata, generateNeutralSwatch } from './neutral.js';
+import { type ColorSwatch, generateColorSwatch } from './swatches.js';
 
 export interface ThemeModeColorInput {
   primaryColor: string;

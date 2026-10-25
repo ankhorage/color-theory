@@ -7,7 +7,7 @@ import {
   generateThemeColors,
   MIN_HUEFUL_CHROMA,
   parseHexColorOrThrow,
-} from './index';
+} from './index.js';
 
 function normalizeHue(hueDegrees: number): number {
   return ((hueDegrees % 360) + 360) % 360;

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'bun:test';
 
-import type { ColorSwatch } from './index';
-import { generateColorSwatch, parseHexColorOrThrow, selectColorSwatchStep } from './index';
+import type { ColorSwatch } from './index.js';
+import { generateColorSwatch, parseHexColorOrThrow, selectColorSwatchStep } from './index.js';
 
 const WHITE = parseHexColorOrThrow('#FFFFFF');
 

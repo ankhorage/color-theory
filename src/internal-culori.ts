@@ -1,7 +1,7 @@
 import { converter, differenceEuclidean, formatHex, toGamut, wcagContrast } from 'culori';
 
-import type { HexColor } from './hex';
-import { parseHexColorOrThrow } from './hex';
+import type { HexColor } from './hex.js';
+import { parseHexColorOrThrow } from './hex.js';
 
 interface OklchColor {
   mode: 'oklch';

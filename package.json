@@ -69,7 +69,8 @@
     "docs": "paradox",
     "prepack": "bun run build",
     "test": "bun test src",
-    "typecheck": "bun x tsc --noEmit -p tsconfig.json",
+    "typecheck": "bun x tsc --noEmit -p tsconfig.json && bun x tsc --noEmit -p tsconfig.node-esm.json && bun run test:packed-consumer",
+    "test:packed-consumer": "bun consumer-tests/packedConsumer.ts",
     "version-packages": "ankhorage-changeset version",
     "knip:check": "ankhorage-knip"
   },

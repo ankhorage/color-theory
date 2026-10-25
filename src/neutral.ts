@@ -1,12 +1,16 @@
-import { type ColorHarmony, type GeneratedHarmonyRoleColors, MIN_HUEFUL_CHROMA } from './harmony';
-import type { HexColor } from './hex';
-import { normalizeHueDegrees, oklchToHex, parseHexToOklch } from './internal-culori';
+import {
+  type ColorHarmony,
+  type GeneratedHarmonyRoleColors,
+  MIN_HUEFUL_CHROMA,
+} from './harmony.js';
+import type { HexColor } from './hex.js';
+import { normalizeHueDegrees, oklchToHex, parseHexToOklch } from './internal-culori.js';
 import {
   COLOR_SWATCH_BASE_LIGHTNESS,
   type ColorSwatch,
   type ColorSwatchDiagnostics,
   generateColorSwatch,
-} from './swatches';
+} from './swatches.js';
 
 export interface NeutralSwatchResult {
   neutralKeyColor: HexColor;

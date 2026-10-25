@@ -1,5 +1,5 @@
-import type { GeneratedColorRole } from './harmony';
-import type { ColorSwatchStep } from './swatches';
+import type { GeneratedColorRole } from './harmony.js';
+import type { ColorSwatchStep } from './swatches.js';
 
 export type ThemeColorMode = 'light' | 'dark';
 
