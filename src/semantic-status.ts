@@ -1,7 +1,7 @@
-import type { HexColor } from './hex';
-import { parseHexColorOrThrow } from './hex';
-import type { ColorSwatch, ColorSwatchDiagnostics } from './swatches';
-import { generateColorSwatch } from './swatches';
+import type { HexColor } from './hex.js';
+import { parseHexColorOrThrow } from './hex.js';
+import type { ColorSwatch, ColorSwatchDiagnostics } from './swatches.js';
+import { generateColorSwatch } from './swatches.js';
 
 export const DEFAULT_SEMANTIC_STATUS_COLOR_SEEDS = {
   danger: '#ef4444',

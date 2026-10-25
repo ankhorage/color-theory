@@ -5,7 +5,7 @@ import {
   getReadableForeground,
   parseHexColorOrThrow,
   selectReadableForeground,
-} from './index';
+} from './index.js';
 
 describe('contrast measurement', () => {
   it('measures the WCAG contrast ratio for public validated colors', () => {

@@ -1,8 +1,8 @@
-import { getContrastRatio } from './contrast';
-import type { HexColor } from './hex';
-import { parseHexColorOrThrow } from './hex';
-import { deltaEoklch, normalizeHueDegrees, parseHexToOklch } from './internal-culori';
-import { COLOR_SWATCH_STEPS, type ColorSwatch, type ColorSwatchStep } from './swatches';
+import { getContrastRatio } from './contrast.js';
+import type { HexColor } from './hex.js';
+import { parseHexColorOrThrow } from './hex.js';
+import { deltaEoklch, normalizeHueDegrees, parseHexToOklch } from './internal-culori.js';
+import { COLOR_SWATCH_STEPS, type ColorSwatch, type ColorSwatchStep } from './swatches.js';
 
 export type ColorSwatchTiePolicy = 'lower-step' | 'higher-step';
 
