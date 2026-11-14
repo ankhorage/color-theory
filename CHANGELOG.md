@@ -1,5 +1,11 @@
 # @ankhorage/color-theory
 
+## 0.3.3
+
+### Patch Changes
+
+- bca48d0: Add canonical repository metadata for package discovery and documentation.
+
 ## 0.3.2
 
 ### Patch Changes

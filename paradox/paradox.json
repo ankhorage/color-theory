@@ -2,8 +2,10 @@
   "packageName": "@ankhorage/color-theory",
   "packageId": "@ankhorage/color-theory",
   "description": "Standalone color theory, harmony, swatch, contrast, and theme color generation utilities.",
-  "collaborators": null,
-  "donation": null,
+  "collaborators": true,
+  "donation": {
+    "account": "ankhorage"
+  },
   "badges": [
     {
       "id": "license",
@@ -14,7 +16,7 @@
     {
       "id": "npm",
       "label": "npm",
-      "value": "v0.3.2",
+      "value": "v0.3.3",
       "color": "cb3837"
     },
     {
@@ -62,7 +64,7 @@
   ],
   "usage": {
     "packageName": "@ankhorage/color-theory",
-    "command": "ankh color-theory --help"
+    "command": null
   },
   "usageEntries": [],
   "exampleCount": 0,
