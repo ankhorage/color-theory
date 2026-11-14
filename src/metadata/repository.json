@@ -5,10 +5,24 @@
   "summary": "Provides standalone color harmony, swatch, contrast, and theme color generation utilities.",
   "purpose": "Give applications reusable color-theory operations without owning their rendering or design-system policy.",
   "domain": "color theory",
-  "responsibilities": ["Generate harmonies, swatches, contrast data, and theme colors.", "Expose color utility entrypoints including Culori-compatible helpers."],
-  "boundaries": ["Does not render user interfaces.", "Does not own an application's design tokens or theme policy."],
+  "responsibilities": [
+    "Generate harmonies, swatches, contrast data, and theme colors.",
+    "Expose color utility entrypoints including Culori-compatible helpers."
+  ],
+  "boundaries": [
+    "Does not render user interfaces.",
+    "Does not own an application's design tokens or theme policy."
+  ],
   "audience": ["Applications and design tools that need reusable color calculations."],
-  "useCases": ["Generate color palettes and harmonies.", "Evaluate contrast and derive theme colors."],
-  "architecture": {"role": "Standalone functional color utility library.", "invariants": ["Color calculations remain reusable across browser and React Native consumers."]},
-  "constraints": {"limitations": ["Consumers choose how generated colors are stored and rendered."]}
+  "useCases": [
+    "Generate color palettes and harmonies.",
+    "Evaluate contrast and derive theme colors."
+  ],
+  "architecture": {
+    "role": "Standalone functional color utility library.",
+    "invariants": ["Color calculations remain reusable across browser and React Native consumers."]
+  },
+  "constraints": {
+    "limitations": ["Consumers choose how generated colors are stored and rendered."]
+  }
 }
