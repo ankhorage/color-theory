@@ -39,12 +39,13 @@ try {
 
   await Bun.write(
     join(consumerDirectory, 'consumer.ts'),
-    "import { COLOR_HARMONIES, type ColorHarmony } from '@ankhorage/color-theory';\nconst harmony: ColorHarmony = COLOR_HARMONIES[0]!;\nvoid harmony;\n",
+    "import { COLOR_HARMONIES, type ColorHarmony } from '@ankhorage/color-theory';\nimport { converter, formatHex } from '@ankhorage/color-theory/culori/fn';\nconst harmony: ColorHarmony = COLOR_HARMONIES[0]!;\nconst toOklch = converter('oklch');\nvoid harmony;\nvoid toOklch;\nvoid formatHex;\n",
   );
   const typecheckResult = Bun.spawnSync(
     [
       join(process.cwd(), 'node_modules/.bin/tsc'),
       '--noEmit',
+      '--ignoreConfig',
       '--module',
       'NodeNext',
       '--moduleResolution',
@@ -54,7 +55,51 @@ try {
     { cwd: consumerDirectory },
   );
   if (typecheckResult.exitCode !== 0) {
-    throw new Error(new TextDecoder().decode(typecheckResult.stderr));
+    throw new Error(
+      `${new TextDecoder().decode(typecheckResult.stdout)}${new TextDecoder().decode(typecheckResult.stderr)}`,
+    );
+  }
+
+  const reactNativeTypecheckResult = Bun.spawnSync(
+    [
+      join(process.cwd(), 'node_modules/.bin/tsc'),
+      '--noEmit',
+      '--ignoreConfig',
+      '--module',
+      'ESNext',
+      '--moduleResolution',
+      'bundler',
+      '--customConditions',
+      'react-native',
+      'consumer.ts',
+    ],
+    { cwd: consumerDirectory },
+  );
+  if (reactNativeTypecheckResult.exitCode !== 0) {
+    throw new Error(
+      `${new TextDecoder().decode(reactNativeTypecheckResult.stdout)}${new TextDecoder().decode(reactNativeTypecheckResult.stderr)}`,
+    );
+  }
+
+  const browserTypecheckResult = Bun.spawnSync(
+    [
+      join(process.cwd(), 'node_modules/.bin/tsc'),
+      '--noEmit',
+      '--ignoreConfig',
+      '--module',
+      'ESNext',
+      '--moduleResolution',
+      'bundler',
+      '--customConditions',
+      'browser',
+      'consumer.ts',
+    ],
+    { cwd: consumerDirectory },
+  );
+  if (browserTypecheckResult.exitCode !== 0) {
+    throw new Error(
+      `${new TextDecoder().decode(browserTypecheckResult.stdout)}${new TextDecoder().decode(browserTypecheckResult.stderr)}`,
+    );
   }
 
   const nodeResult = Bun.spawnSync(
@@ -62,12 +107,26 @@ try {
       'node',
       '--input-type=module',
       '--eval',
-      "import { COLOR_HARMONIES } from '@ankhorage/color-theory'; if (!COLOR_HARMONIES.includes('triadic')) process.exit(1);",
+      "import { COLOR_HARMONIES } from '@ankhorage/color-theory'; import { converter, formatHex } from '@ankhorage/color-theory/culori/fn'; if (!COLOR_HARMONIES.includes('triadic') || typeof converter !== 'function' || typeof formatHex !== 'function') process.exit(1);",
     ],
     { cwd: consumerDirectory },
   );
   if (nodeResult.exitCode !== 0) {
     throw new Error(new TextDecoder().decode(nodeResult.stderr));
+  }
+
+  const browserResult = Bun.spawnSync(
+    [
+      'node',
+      '--conditions=browser',
+      '--input-type=module',
+      '--eval',
+      "import { converter, formatHex } from '@ankhorage/color-theory/culori/fn'; if (typeof converter !== 'function' || typeof formatHex !== 'function') process.exit(1);",
+    ],
+    { cwd: consumerDirectory },
+  );
+  if (browserResult.exitCode !== 0) {
+    throw new Error(new TextDecoder().decode(browserResult.stderr));
   }
 } finally {
   await rm(consumerDirectory, { force: true, recursive: true });
