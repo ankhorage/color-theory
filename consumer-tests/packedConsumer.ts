@@ -45,6 +45,7 @@ try {
     [
       join(process.cwd(), 'node_modules/.bin/tsc'),
       '--noEmit',
+      '--ignoreConfig',
       '--module',
       'NodeNext',
       '--moduleResolution',
@@ -63,6 +64,7 @@ try {
     [
       join(process.cwd(), 'node_modules/.bin/tsc'),
       '--noEmit',
+      '--ignoreConfig',
       '--module',
       'ESNext',
       '--moduleResolution',
@@ -83,6 +85,7 @@ try {
     [
       join(process.cwd(), 'node_modules/.bin/tsc'),
       '--noEmit',
+      '--ignoreConfig',
       '--module',
       'ESNext',
       '--moduleResolution',
