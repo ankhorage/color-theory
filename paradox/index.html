@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>@ankhorage/color-theory • Paradox</title>
+    <title>Ankhorage Color Theory • Paradox</title>
     <style>
       :root {
         color-scheme: light;
@@ -115,8 +115,9 @@
     <div class="layout">
       <aside class="sidebar">
         <p class="muted">Generated with Paradox</p>
-        <h1>@ankhorage/color-theory</h1>
-        <p>Standalone color theory, harmony, swatch, contrast, and theme color generation utilities.</p>
+        <h1>Ankhorage Color Theory</h1>
+        <p>Provides standalone color harmony, swatch, contrast, and theme color generation utilities.</p>
+        <p>Give applications reusable color-theory operations without owning their rendering or design-system policy.</p>
         <input id="search" class="search" type="search" placeholder="Search current view" />
         <nav aria-label="Documentation sections">
           <ul class="nav-list">
@@ -191,6 +192,7 @@
         <li><code>src/index.ts</code></li>
       </ul>
     </section>
+
     
     <section class="panel"><h2>Policy</h2><p>No documentation findings.</p></section>
     <section class="panel">
@@ -1812,7 +1814,7 @@
     <h3>Architecture overview</h3>
     <p class="muted"><code>diagrams/architecture-overview.mmd</code></p>
     <div class="mermaid">graph TD
-  package__ankhorage_color_theory[&quot;@ankhorage/color-theory&quot;]
+  package__ankhorage_color_theory[&quot;Ankhorage Color Theory&quot;]
   entrypoint_src_index_ts[&quot;src/index.ts&quot;]
   package__ankhorage_color_theory --&gt; entrypoint_src_index_ts
   module_src_contrast_ts[&quot;src/contrast.ts&quot;]
@@ -1867,7 +1869,7 @@
     <details>
       <summary>View Mermaid source</summary>
       <pre>graph TD
-  package__ankhorage_color_theory[&quot;@ankhorage/color-theory&quot;]
+  package__ankhorage_color_theory[&quot;Ankhorage Color Theory&quot;]
   entrypoint_src_index_ts[&quot;src/index.ts&quot;]
   package__ankhorage_color_theory --&gt; entrypoint_src_index_ts
   module_src_contrast_ts[&quot;src/contrast.ts&quot;]
@@ -2765,28 +2767,23 @@
     <h3>getContrastRatio</h3>
     <p class="muted"><code>src/contrast.ts:36:1</code></p>
     <p>Measure the WCAG contrast ratio between two validated hex colors.</p>
-    
-  </article><article class="item" data-search="selectReadableForeground src/contrast.ts Select the strongest caller-provided foreground that meets a minimum WCAG contrast ratio.">
+</article><article class="item" data-search="selectReadableForeground src/contrast.ts Select the strongest caller-provided foreground that meets a minimum WCAG contrast ratio.">
     <h3>selectReadableForeground</h3>
     <p class="muted"><code>src/contrast.ts:43:1</code></p>
     <p>Select the strongest caller-provided foreground that meets a minimum WCAG contrast ratio.</p>
-    
-  </article><article class="item" data-search="getReadableForeground src/contrast.ts Return the readable black or white foreground color with the stronger contrast against a background color.">
+</article><article class="item" data-search="getReadableForeground src/contrast.ts Return the readable black or white foreground color with the stronger contrast against a background color.">
     <h3>getReadableForeground</h3>
     <p class="muted"><code>src/contrast.ts:99:1</code></p>
     <p>Return the readable black or white foreground color with the stronger contrast against a background color.</p>
-    
-  </article><article class="item" data-search="assertMinimumContrast src/contrast.ts Validate a WCAG contrast threshold.">
+</article><article class="item" data-search="assertMinimumContrast src/contrast.ts Validate a WCAG contrast threshold.">
     <h3>assertMinimumContrast</h3>
     <p class="muted"><code>src/contrast.ts:114:1</code></p>
     <p>Validate a WCAG contrast threshold.</p>
-    
-  </article><article class="item" data-search="getForegroundRejectionReason src/contrast.ts Explain why a foreground candidate was not selected.">
+</article><article class="item" data-search="getForegroundRejectionReason src/contrast.ts Explain why a foreground candidate was not selected.">
     <h3>getForegroundRejectionReason</h3>
     <p class="muted"><code>src/contrast.ts:125:1</code></p>
     <p>Explain why a foreground candidate was not selected.</p>
-    
-  </article>
+</article>
     </section>
   </section><section id="view-src-harmony-ts" class="view" data-view="src/harmony.ts" hidden>
     <section class="panel">
@@ -2795,18 +2792,15 @@
     <h3>createHarmonyGenerationDiagnostics</h3>
     <p class="muted"><code>src/harmony.ts:114:1</code></p>
     <p>Create diagnostics for the reliability of generated hue relationships.</p>
-    
-  </article><article class="item" data-search="getHarmonyDefinition src/harmony.ts Resolve a complete harmony definition from the canonical public catalog.">
+</article><article class="item" data-search="getHarmonyDefinition src/harmony.ts Resolve a complete harmony definition from the canonical public catalog.">
     <h3>getHarmonyDefinition</h3>
     <p class="muted"><code>src/harmony.ts:138:1</code></p>
     <p>Resolve a complete harmony definition from the canonical public catalog.</p>
-    
-  </article><article class="item" data-search="generateHarmonyRoleColors src/harmony.ts Generate role-based harmony colors from a primary color and harmony strategy.">
+</article><article class="item" data-search="generateHarmonyRoleColors src/harmony.ts Generate role-based harmony colors from a primary color and harmony strategy.">
     <h3>generateHarmonyRoleColors</h3>
     <p class="muted"><code>src/harmony.ts:149:1</code></p>
     <p>Generate role-based harmony colors from a primary color and harmony strategy.</p>
-    
-  </article>
+</article>
     </section>
   </section><section id="view-src-hex-ts" class="view" data-view="src/hex.ts" hidden>
     <section class="panel">
@@ -2815,23 +2809,19 @@
     <h3>isHexColor</h3>
     <p class="muted"><code>src/hex.ts:8:1</code></p>
     <p>Check whether a string is a valid six-digit hex color.</p>
-    
-  </article><article class="item" data-search="parseHexColor src/hex.ts Parse a string as a six-digit hex color and return null when it is invalid.">
+</article><article class="item" data-search="parseHexColor src/hex.ts Parse a string as a six-digit hex color and return null when it is invalid.">
     <h3>parseHexColor</h3>
     <p class="muted"><code>src/hex.ts:15:1</code></p>
     <p>Parse a string as a six-digit hex color and return null when it is invalid.</p>
-    
-  </article><article class="item" data-search="parseHexColorOrThrow src/hex.ts Parse a string as a six-digit hex color or throw when it is invalid.">
+</article><article class="item" data-search="parseHexColorOrThrow src/hex.ts Parse a string as a six-digit hex color or throw when it is invalid.">
     <h3>parseHexColorOrThrow</h3>
     <p class="muted"><code>src/hex.ts:23:1</code></p>
     <p>Parse a string as a six-digit hex color or throw when it is invalid.</p>
-    
-  </article><article class="item" data-search="assertHexColor src/hex.ts Assert that a string is a valid six-digit hex color.">
+</article><article class="item" data-search="assertHexColor src/hex.ts Assert that a string is a valid six-digit hex color.">
     <h3>assertHexColor</h3>
     <p class="muted"><code>src/hex.ts:34:1</code></p>
     <p>Assert that a string is a valid six-digit hex color.</p>
-    
-  </article>
+</article>
     </section>
   </section><section id="view-src-internal-culori-ts" class="view" data-view="src/internal-culori.ts" hidden>
     <section class="panel">
@@ -2840,33 +2830,27 @@
     <h3>clampNumber</h3>
     <p class="muted"><code>src/internal-culori.ts:29:1</code></p>
     <p>Clamp a number to a finite minimum and maximum range.</p>
-    
-  </article><article class="item" data-search="normalizeHueDegrees src/internal-culori.ts Normalize hue degrees into the zero-to-three-sixty range.">
+</article><article class="item" data-search="normalizeHueDegrees src/internal-culori.ts Normalize hue degrees into the zero-to-three-sixty range.">
     <h3>normalizeHueDegrees</h3>
     <p class="muted"><code>src/internal-culori.ts:37:1</code></p>
     <p>Normalize hue degrees into the zero-to-three-sixty range.</p>
-    
-  </article><article class="item" data-search="parseHexToOklch src/internal-culori.ts Convert a hex color into a normalized OKLCH color object.">
+</article><article class="item" data-search="parseHexToOklch src/internal-culori.ts Convert a hex color into a normalized OKLCH color object.">
     <h3>parseHexToOklch</h3>
     <p class="muted"><code>src/internal-culori.ts:45:1</code></p>
     <p>Convert a hex color into a normalized OKLCH color object.</p>
-    
-  </article><article class="item" data-search="oklchToHex src/internal-culori.ts Convert an OKLCH color object into an in-gamut hex color.">
+</article><article class="item" data-search="oklchToHex src/internal-culori.ts Convert an OKLCH color object into an in-gamut hex color.">
     <h3>oklchToHex</h3>
     <p class="muted"><code>src/internal-culori.ts:61:1</code></p>
     <p>Convert an OKLCH color object into an in-gamut hex color.</p>
-    
-  </article><article class="item" data-search="deltaEoklch src/internal-culori.ts Calculate the perceptual OKLCH distance between two OKLCH colors.">
+</article><article class="item" data-search="deltaEoklch src/internal-culori.ts Calculate the perceptual OKLCH distance between two OKLCH colors.">
     <h3>deltaEoklch</h3>
     <p class="muted"><code>src/internal-culori.ts:70:1</code></p>
     <p>Calculate the perceptual OKLCH distance between two OKLCH colors.</p>
-    
-  </article><article class="item" data-search="contrastRatio src/internal-culori.ts Calculate the WCAG contrast ratio between two color inputs.">
+</article><article class="item" data-search="contrastRatio src/internal-culori.ts Calculate the WCAG contrast ratio between two color inputs.">
     <h3>contrastRatio</h3>
     <p class="muted"><code>src/internal-culori.ts:77:1</code></p>
     <p>Calculate the WCAG contrast ratio between two color inputs.</p>
-    
-  </article>
+</article>
     </section>
   </section><section id="view-src-neutral-ts" class="view" data-view="src/neutral.ts" hidden>
     <section class="panel">
@@ -2875,18 +2859,15 @@
     <h3>pickTintSourceHex</h3>
     <p class="muted"><code>src/neutral.ts:29:1</code></p>
     <p>Pick the harmony color that should tint the generated neutral swatch.</p>
-    
-  </article><article class="item" data-search="clampNumber src/neutral.ts Clamp a number to a finite minimum and maximum range.">
+</article><article class="item" data-search="clampNumber src/neutral.ts Clamp a number to a finite minimum and maximum range.">
     <h3>clampNumber</h3>
     <p class="muted"><code>src/neutral.ts:43:1</code></p>
     <p>Clamp a number to a finite minimum and maximum range.</p>
-    
-  </article><article class="item" data-search="generateNeutralSwatch src/neutral.ts Generate a softly tinted neutral swatch from generated harmony role colors.">
+</article><article class="item" data-search="generateNeutralSwatch src/neutral.ts Generate a softly tinted neutral swatch from generated harmony role colors.">
     <h3>generateNeutralSwatch</h3>
     <p class="muted"><code>src/neutral.ts:51:1</code></p>
     <p>Generate a softly tinted neutral swatch from generated harmony role colors.</p>
-    
-  </article>
+</article>
     </section>
   </section><section id="view-src-selection-ts" class="view" data-view="src/selection.ts" hidden>
     <section class="panel">
@@ -2895,38 +2876,31 @@
     <h3>selectColorSwatchStep</h3>
     <p class="muted"><code>src/selection.ts:62:1</code></p>
     <p>Select the swatch step nearest a perceptual target that passes every required contrast context.</p>
-    
-  </article><article class="item" data-search="createSelectionCandidate src/selection.ts Convert a measured candidate into its public selection diagnostic.">
+</article><article class="item" data-search="createSelectionCandidate src/selection.ts Convert a measured candidate into its public selection diagnostic.">
     <h3>createSelectionCandidate</h3>
     <p class="muted"><code>src/selection.ts:101:1</code></p>
     <p>Convert a measured candidate into its public selection diagnostic.</p>
-    
-  </article><article class="item" data-search="getCandidateRejectionReasons src/selection.ts Explain every reason a candidate was not selected.">
+</article><article class="item" data-search="getCandidateRejectionReasons src/selection.ts Explain every reason a candidate was not selected.">
     <h3>getCandidateRejectionReasons</h3>
     <p class="muted"><code>src/selection.ts:126:1</code></p>
     <p>Explain every reason a candidate was not selected.</p>
-    
-  </article><article class="item" data-search="measureCandidate src/selection.ts Measure a swatch candidate against the target and required contrast contexts.">
+</article><article class="item" data-search="measureCandidate src/selection.ts Measure a swatch candidate against the target and required contrast contexts.">
     <h3>measureCandidate</h3>
     <p class="muted"><code>src/selection.ts:144:1</code></p>
     <p>Measure a swatch candidate against the target and required contrast contexts.</p>
-    
-  </article><article class="item" data-search="measureTargetDistance src/selection.ts Measure target distance with hue included only when the caller supplied it.">
+</article><article class="item" data-search="measureTargetDistance src/selection.ts Measure target distance with hue included only when the caller supplied it.">
     <h3>measureTargetDistance</h3>
     <p class="muted"><code>src/selection.ts:171:1</code></p>
     <p>Measure target distance with hue included only when the caller supplied it.</p>
-    
-  </article><article class="item" data-search="normalizeContexts src/selection.ts Validate and normalize contrast contexts for deterministic measurement.">
+</article><article class="item" data-search="normalizeContexts src/selection.ts Validate and normalize contrast contexts for deterministic measurement.">
     <h3>normalizeContexts</h3>
     <p class="muted"><code>src/selection.ts:187:1</code></p>
     <p>Validate and normalize contrast contexts for deterministic measurement.</p>
-    
-  </article><article class="item" data-search="normalizeTarget src/selection.ts Validate and normalize a perceptual color-selection target.">
+</article><article class="item" data-search="normalizeTarget src/selection.ts Validate and normalize a perceptual color-selection target.">
     <h3>normalizeTarget</h3>
     <p class="muted"><code>src/selection.ts:221:1</code></p>
     <p>Validate and normalize a perceptual color-selection target.</p>
-    
-  </article>
+</article>
     </section>
   </section><section id="view-src-semantic-status-ts" class="view" data-view="src/semantic-status.ts" hidden>
     <section class="panel">
@@ -2935,23 +2909,19 @@
     <h3>createRoleRecord</h3>
     <p class="muted"><code>src/semantic-status.ts:33:1</code></p>
     <p>Convert typed entries into a role-keyed immutable result record.</p>
-    
-  </article><article class="item" data-search="generateSemanticStatus src/semantic-status.ts Normalize and generate one semantic status role.">
+</article><article class="item" data-search="generateSemanticStatus src/semantic-status.ts Normalize and generate one semantic status role.">
     <h3>generateSemanticStatus</h3>
     <p class="muted"><code>src/semantic-status.ts:42:1</code></p>
     <p>Normalize and generate one semantic status role.</p>
-    
-  </article><article class="item" data-search="createSemanticStatusSwatches src/semantic-status.ts Generate semantic status swatches from a role-to-seed record.">
+</article><article class="item" data-search="createSemanticStatusSwatches src/semantic-status.ts Generate semantic status swatches from a role-to-seed record.">
     <h3>createSemanticStatusSwatches</h3>
     <p class="muted"><code>src/semantic-status.ts:59:1</code></p>
     <p>Generate semantic status swatches from a role-to-seed record.</p>
-    
-  </article><article class="item" data-search="createDefaultSemanticStatusSwatches src/semantic-status.ts Generate the canonical default semantic status swatches.">
+</article><article class="item" data-search="createDefaultSemanticStatusSwatches src/semantic-status.ts Generate the canonical default semantic status swatches.">
     <h3>createDefaultSemanticStatusSwatches</h3>
     <p class="muted"><code>src/semantic-status.ts:75:1</code></p>
     <p>Generate the canonical default semantic status swatches.</p>
-    
-  </article>
+</article>
     </section>
   </section><section id="view-src-swatches-ts" class="view" data-view="src/swatches.ts" hidden>
     <section class="panel">
@@ -2960,48 +2930,39 @@
     <h3>clamp01</h3>
     <p class="muted"><code>src/swatches.ts:64:1</code></p>
     <p>Clamp a number into the normalized zero-to-one range.</p>
-    
-  </article><article class="item" data-search="chromaMultiplierForStep src/swatches.ts Return the chroma multiplier used for a swatch step.">
+</article><article class="item" data-search="chromaMultiplierForStep src/swatches.ts Return the chroma multiplier used for a swatch step.">
     <h3>chromaMultiplierForStep</h3>
     <p class="muted"><code>src/swatches.ts:72:1</code></p>
     <p>Return the chroma multiplier used for a swatch step.</p>
-    
-  </article><article class="item" data-search="getBaselineLightness src/swatches.ts Resolve the canonical baseline lightness for a swatch step.">
+</article><article class="item" data-search="getBaselineLightness src/swatches.ts Resolve the canonical baseline lightness for a swatch step.">
     <h3>getBaselineLightness</h3>
     <p class="muted"><code>src/swatches.ts:83:1</code></p>
     <p>Resolve the canonical baseline lightness for a swatch step.</p>
-    
-  </article><article class="item" data-search="createSwatchSample src/swatches.ts Generate one immutable swatch sample from the base color.">
+</article><article class="item" data-search="createSwatchSample src/swatches.ts Generate one immutable swatch sample from the base color.">
     <h3>createSwatchSample</h3>
     <p class="muted"><code>src/swatches.ts:94:1</code></p>
     <p>Generate one immutable swatch sample from the base color.</p>
-    
-  </article><article class="item" data-search="createWeakStepWarning src/swatches.ts Create any weak-step warning for a generated sample.">
+</article><article class="item" data-search="createWeakStepWarning src/swatches.ts Create any weak-step warning for a generated sample.">
     <h3>createWeakStepWarning</h3>
     <p class="muted"><code>src/swatches.ts:115:1</code></p>
     <p>Create any weak-step warning for a generated sample.</p>
-    
-  </article><article class="item" data-search="generateSwatchSamples src/swatches.ts Generate immutable swatch samples and their per-step warnings.">
+</article><article class="item" data-search="generateSwatchSamples src/swatches.ts Generate immutable swatch samples and their per-step warnings.">
     <h3>generateSwatchSamples</h3>
     <p class="muted"><code>src/swatches.ts:133:1</code></p>
     <p>Generate immutable swatch samples and their per-step warnings.</p>
-    
-  </article><article class="item" data-search="measureAdjacentSamples src/swatches.ts Measure adjacent swatch samples and report weak transitions.">
+</article><article class="item" data-search="measureAdjacentSamples src/swatches.ts Measure adjacent swatch samples and report weak transitions.">
     <h3>measureAdjacentSamples</h3>
     <p class="muted"><code>src/swatches.ts:145:1</code></p>
     <p>Measure adjacent swatch samples and report weak transitions.</p>
-    
-  </article><article class="item" data-search="createSwatchDiagnostics src/swatches.ts Create diagnostics from generated samples and their adjacent deltas.">
+</article><article class="item" data-search="createSwatchDiagnostics src/swatches.ts Create diagnostics from generated samples and their adjacent deltas.">
     <h3>createSwatchDiagnostics</h3>
     <p class="muted"><code>src/swatches.ts:177:1</code></p>
     <p>Create diagnostics from generated samples and their adjacent deltas.</p>
-    
-  </article><article class="item" data-search="generateColorSwatch src/swatches.ts Generate a full color swatch and diagnostics from a base color.">
+</article><article class="item" data-search="generateColorSwatch src/swatches.ts Generate a full color swatch and diagnostics from a base color.">
     <h3>generateColorSwatch</h3>
     <p class="muted"><code>src/swatches.ts:210:1</code></p>
     <p>Generate a full color swatch and diagnostics from a base color.</p>
-    
-  </article>
+</article>
     </section>
   </section><section id="view-src-theme-colors-ts" class="view" data-view="src/theme-colors.ts" hidden>
     <section class="panel">
@@ -3010,18 +2971,15 @@
     <h3>getThemeModePrimaryHex</h3>
     <p class="muted"><code>src/theme-colors.ts:34:1</code></p>
     <p>Parse the primary color configured for a theme mode.</p>
-    
-  </article><article class="item" data-search="generateThemeModeColors src/theme-colors.ts Generate harmony role colors, swatches, and neutral metadata for a theme mode.">
+</article><article class="item" data-search="generateThemeModeColors src/theme-colors.ts Generate harmony role colors, swatches, and neutral metadata for a theme mode.">
     <h3>generateThemeModeColors</h3>
     <p class="muted"><code>src/theme-colors.ts:41:1</code></p>
     <p>Generate harmony role colors, swatches, and neutral metadata for a theme mode.</p>
-    
-  </article><article class="item" data-search="generateThemeColors src/theme-colors.ts Generate light and dark theme color outputs from theme color input.">
+</article><article class="item" data-search="generateThemeColors src/theme-colors.ts Generate light and dark theme color outputs from theme color input.">
     <h3>generateThemeColors</h3>
     <p class="muted"><code>src/theme-colors.ts:78:1</code></p>
     <p>Generate light and dark theme color outputs from theme color input.</p>
-    
-  </article>
+</article>
     </section>
   </section>
       </main>

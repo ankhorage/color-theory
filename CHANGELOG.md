@@ -1,5 +1,11 @@
 # @ankhorage/color-theory
 
+## 0.3.4
+
+### Patch Changes
+
+- bb8047d: fix: publish the Culori type declarations required by the culori/fn export
+
 ## 0.3.3
 
 ### Patch Changes

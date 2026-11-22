@@ -1,7 +1,9 @@
 {
-  "packageName": "@ankhorage/color-theory",
+  "packageName": "Ankhorage Color Theory",
   "packageId": "@ankhorage/color-theory",
-  "description": "Standalone color theory, harmony, swatch, contrast, and theme color generation utilities.",
+  "description": "Provides standalone color harmony, swatch, contrast, and theme color generation utilities.",
+  "purpose": "Give applications reusable color-theory operations without owning their rendering or design-system policy.",
+  "productDocumentation": null,
   "collaborators": true,
   "donation": {
     "account": "ankhorage"
@@ -16,7 +18,7 @@
     {
       "id": "npm",
       "label": "npm",
-      "value": "v0.3.3",
+      "value": "v0.3.4",
       "color": "cb3837"
     },
     {
@@ -52,8 +54,8 @@
     {
       "id": "tests",
       "label": "tests",
-      "value": "checked",
-      "color": "0a7f3f"
+      "value": "configured",
+      "color": "6f42c1"
     },
     {
       "id": "docs",
