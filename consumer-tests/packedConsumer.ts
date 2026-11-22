@@ -128,6 +128,20 @@ try {
   if (browserResult.exitCode !== 0) {
     throw new Error(new TextDecoder().decode(browserResult.stderr));
   }
+
+  const reactNativeResult = Bun.spawnSync(
+    [
+      'node',
+      '--conditions=react-native',
+      '--input-type=module',
+      '--eval',
+      "import { converter, formatHex } from '@ankhorage/color-theory/culori/fn'; if (typeof converter !== 'function' || typeof formatHex !== 'function') process.exit(1);",
+    ],
+    { cwd: consumerDirectory },
+  );
+  if (reactNativeResult.exitCode !== 0) {
+    throw new Error(new TextDecoder().decode(reactNativeResult.stderr));
+  }
 } finally {
   await rm(consumerDirectory, { force: true, recursive: true });
 }
